@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kyungmoon Kim, M.D., MPH — Medical Affairs</title>
-<meta name="description" content="Kyungmoon Kim, M.D., MPH — Medical Lead in Obesity & MASH at Boehringer Ingelheim Korea. Pediatrician, MPH in health economics, and a builder of practical AI tools for medical work.">
+<title>Kyungmoon Kim, M.D., MPH, Medical Affairs</title>
+<meta name="description" content="Kyungmoon Kim, M.D., MPH, Medical Lead in Obesity & MASH at Boehringer Ingelheim Korea. Pediatrician, MPH in health economics, and a builder of practical AI tools for medical work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
@@ -125,7 +125,10 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 
 /* ============ HERO ============ */
 .hero{min-height:100vh;display:flex;align-items:flex-end;padding-bottom:clamp(40px,7vh,90px);padding-top:140px;overflow:hidden;}
-.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:clamp(30px,5vw,80px);align-items:end;width:100%;}
+.hero{position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;opacity:.15;filter:grayscale(35%) contrast(1.05);z-index:0;pointer-events:none;}
+.hero-cred2{position:absolute;right:clamp(22px,5vw,72px);bottom:34px;font-size:10.5px;letter-spacing:.06em;color:var(--faint);z-index:3;}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,80px);align-items:end;width:100%;}
 .hero-role{margin-bottom:26px;}
 .hero-title{font-weight:600;font-size:clamp(58px,12vw,168px);line-height:.9;letter-spacing:-.035em;}
 .hero-title .thin{font-weight:200;}
@@ -139,6 +142,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .btn-fill:hover{background:var(--gold-2);}
 .btn-ghost{border:1px solid var(--line-2);color:var(--ink);}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+[data-magnetic]{transition:transform .3s var(--ease);}
 .hero-media{position:relative;}
 .hero-media .frame{position:relative;margin:0;border-radius:6px;overflow:hidden;background:#0D1315;border:1px solid var(--line);}
 .hero-media .frame img{width:100%;height:auto;display:block;filter:grayscale(8%) contrast(1.02);}
@@ -153,8 +157,8 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 /* marquee */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:22px 0;margin-top:0;}
 .marquee-track{display:inline-block;will-change:transform;animation:marq 32s linear infinite;}
-.marquee span{font-size:clamp(20px,3vw,40px);font-weight:300;letter-spacing:-.01em;color:var(--faint);margin:0 28px;}
-.marquee span b{color:var(--ink);font-weight:500;}
+.marquee span{font-size:clamp(20px,3vw,40px);font-weight:400;letter-spacing:-.01em;color:var(--gold);margin:0 28px;}
+.marquee span b{color:var(--gold-2);font-weight:500;}
 .marquee .dot{color:var(--gold);}
 @keyframes marq{to{transform:translateX(-50%)}}
 
@@ -167,14 +171,16 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .sec-lead{margin-top:22px;max-width:52ch;color:var(--muted);font-size:clamp(15px,1.5vw,18px);font-weight:300;line-height:1.7;}
 
 /* ============ STATS ============ */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);}
-.stat{padding:40px 26px 40px 0;border-right:1px solid var(--line);}
-.stat:last-child{border-right:0;}
-.stat .n{font-size:clamp(48px,6vw,84px);font-weight:200;line-height:1;letter-spacing:-.03em;}
-.stat .n u{text-decoration:none;color:var(--gold);font-weight:300;}
-.stat .l{margin-top:16px;font-size:13px;color:var(--muted);line-height:1.5;font-weight:300;max-width:26ch;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);}
+.stat{padding:30px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stat .n{font-size:clamp(30px,3.6vw,52px);font-weight:200;line-height:1;letter-spacing:-.03em;white-space:nowrap;}
+.stat .n u{text-decoration:none;color:var(--gold);font-weight:300;margin:0 1px;}
+.stat .l{margin-top:13px;font-size:12.5px;color:var(--muted);line-height:1.5;font-weight:300;max-width:30ch;}
 
 /* ============ WORK (cases) ============ */
+.work-row{overflow:hidden;}
+.wr-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.07;filter:grayscale(45%) contrast(1.05);z-index:0;pointer-events:none;}
+.work-row>.wr-num,.work-row>.wr-main,.work-row>.wr-metric,.work-row>.wr-toggle{position:relative;z-index:1;}
 .work-row{display:grid;grid-template-columns:70px 1fr auto;gap:clamp(20px,4vw,60px);align-items:center;
   padding:clamp(26px,4vw,46px) 0;border-top:1px solid var(--line);cursor:pointer;transition:padding-left .5s var(--ease);position:relative;}
 .work-row:last-of-type{border-bottom:1px solid var(--line);}
@@ -197,8 +203,14 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 @media(max-width:820px){.wr-toggle-in{grid-template-columns:1fr;}}
 
 /* ============ CAREER timeline ============ */
-.tl-item{display:grid;grid-template-columns:minmax(150px,.5fr) 1fr;gap:clamp(24px,4vw,64px);
+.timeline{position:relative;padding-left:40px;}
+.timeline::before{content:"";position:absolute;left:14px;top:10px;bottom:10px;width:2px;background:var(--line);}
+.tl-progress{position:absolute;left:14px;top:10px;width:2px;height:0;background:linear-gradient(var(--gold),var(--gold-2));z-index:1;box-shadow:0 0 12px rgba(230,177,94,.4);}
+.tl-item{position:relative;display:grid;grid-template-columns:minmax(150px,.5fr) 1fr;gap:clamp(24px,4vw,64px);
   padding:clamp(34px,5vw,60px) 0;border-top:1px solid var(--line);}
+.tl-item::before{content:"";position:absolute;left:-32px;top:46px;width:14px;height:14px;border-radius:50%;background:var(--bg-2);border:2px solid var(--faint);z-index:2;transition:border-color .6s,background .6s,box-shadow .6s;}
+.js .tl-item.in::before{border-color:var(--gold)!important;background:var(--gold)!important;box-shadow:0 0 0 5px rgba(230,177,94,.16)!important;}
+@media(max-width:1000px){.timeline{padding-left:34px;}.tl-item::before{top:38px;left:-28px;}.timeline::before,.tl-progress{left:11px;}}
 .tl-item:last-child{border-bottom:1px solid var(--line);}
 .tl-when .yr{font-size:clamp(28px,3.4vw,46px);font-weight:200;letter-spacing:-.02em;line-height:1;}
 .tl-when .org{margin-top:14px;font-size:15px;font-weight:600;}
@@ -223,11 +235,20 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .tool .role{font-size:12px;color:var(--faint);letter-spacing:.02em;margin-bottom:16px;}
 .tool p{font-size:13.5px;color:var(--muted);line-height:1.65;font-weight:300;flex:1;}
 .tool a.live{margin-top:18px;font-size:12.5px;color:var(--gold);font-weight:500;display:inline-flex;align-items:center;gap:7px;}
+.ax-cap{max-width:70ch;margin:0 0 30px;}
+.ax-cap p{font-size:clamp(15px,1.6vw,19px);line-height:1.7;color:#C6CECB;font-weight:300;}
+.ax-cap p .no{color:var(--gold-2);}
+.ax-photo{margin:0 0 44px;}
+.ax-photo img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);filter:grayscale(18%) brightness(.92);cursor:pointer;transition:filter .5s;}
+.ax-photo img:hover{filter:grayscale(0%) brightness(1);}
+.ax-photo figcaption{margin-top:9px;font-size:11.5px;color:var(--faint);}
 .throughline{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:40px;}
 .ts{background:var(--bg);padding:26px clamp(20px,2vw,28px);}
 .ts .yr{font-size:13px;color:var(--gold);font-weight:600;letter-spacing:.06em;margin-bottom:12px;}
 .ts .d{font-size:13px;color:var(--muted);line-height:1.55;font-weight:300;}
 .ts .d b{color:var(--ink);font-weight:600;}
+.demos-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 18px;font-weight:500;}
+.demos-label-2{margin-top:46px;color:var(--muted);}
 .gov{margin-top:40px;padding:clamp(30px,4vw,54px);border:1px solid var(--line-2);border-radius:8px;
   font-family:"Fraunces",serif;font-style:italic;font-size:clamp(19px,2.4vw,30px);line-height:1.4;color:#D8DFDC;max-width:24ch;}
 .gov b{font-style:normal;color:var(--gold);}
@@ -292,6 +313,12 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .intro{padding:clamp(70px,11vh,130px) 0;border-bottom:1px solid var(--line);}
 .intro-lead{font-size:clamp(21px,2.9vw,38px);font-weight:300;line-height:1.36;letter-spacing:-.01em;max-width:30ch;color:#C6CECB;}
 .intro-lead em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--gold);}
+.tl-body em, .wr-toggle-in em, .sec-lead em{font-style:normal;color:var(--gold-2);font-weight:500;}
+.tl-photos{display:flex;gap:12px;margin:18px 0 4px;}
+.tl-photos figure{flex:1;margin:0;}
+.tl-photos img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line);cursor:pointer;filter:grayscale(16%) brightness(.94);transition:filter .4s;}
+.tl-photos img:hover{filter:grayscale(0%) brightness(1);}
+.tl-photos figcaption{margin-top:7px;font-size:11px;color:var(--faint);}
 /* strategic asset link in work detail */
 .wr-asset{grid-column:1/-1;margin-top:20px;display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--gold);border:1px solid var(--line-2);border-radius:100px;padding:11px 20px;transition:border-color .25s,background .25s;width:-moz-fit-content;width:fit-content;}
 .wr-asset:hover{border-color:var(--gold);background:rgba(230,177,94,.07);}
@@ -305,11 +332,20 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .wr-press-h{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:500;}
 .wr-press a{display:flex;gap:14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);transition:color .25s,padding-left .25s;}
 .wr-press a:last-child{border-bottom:0;}
-.wr-press a:hover{color:var(--ink);padding-left:8px;}
+.wr-press a:hover{background:var(--gold);border-bottom-color:transparent;border-radius:5px;padding-left:12px;padding-right:12px;}
+.wr-press a:hover, .wr-press a:hover b, .wr-press a:hover span, .wr-press a:hover .arr{color:#12100A;}
 .wr-press a b{color:var(--gold-2);font-weight:600;font-size:11.5px;min-width:132px;flex-shrink:0;letter-spacing:.01em;}
 .wr-press a .arr{margin-left:auto;color:var(--faint);}
 @media(max-width:640px){.wr-press a{flex-wrap:wrap;gap:2px 12px;}.wr-press a b{min-width:0;}}
 
+.origin-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,64px);align-items:center;}
+.origin-photo{margin:0;}
+.origin-photo img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);filter:grayscale(24%) brightness(.9);cursor:pointer;transition:filter .5s;}
+.origin-photo img:hover{filter:grayscale(0%) brightness(1);}
+.origin-photo figcaption{margin-top:10px;font-size:11.5px;color:var(--faint);letter-spacing:.02em;}
+.origin-text p{font-size:15px;line-height:1.78;color:var(--muted);font-weight:300;margin:0 0 16px;}
+.origin-quote{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(19px,2.2vw,27px);color:var(--gold-2);line-height:1.4;margin-top:20px;}
+@media(max-width:820px){.origin-grid{grid-template-columns:1fr;}}
 /* ============ CONTACT / FOOTER ============ */
 .contact{padding:clamp(90px,15vh,190px) 0 60px;text-align:center;}
 .contact .k{margin-bottom:26px;justify-content:center;}
@@ -325,7 +361,6 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   .hero-grid{grid-template-columns:1fr;gap:44px;}
   .hero-media{max-width:360px;}
   .stats{grid-template-columns:1fr 1fr;}
-  .stat:nth-child(2){border-right:0;}
   .tools{grid-template-columns:1fr 1fr;}
   .throughline{grid-template-columns:1fr 1fr;}
   .sec-head{grid-template-columns:1fr;gap:18px;}
@@ -341,7 +376,6 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 @media(max-width:640px){
   .tools{grid-template-columns:1fr;}.throughline{grid-template-columns:1fr 1fr;}
   .stats{grid-template-columns:1fr;}
-  .stat{border-right:0;}
   .aw{grid-template-columns:64px 1fr;}.aw .by{display:none;}
 }
 </style>
@@ -375,7 +409,8 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <a href="#notes" data-scroll data-cursor="Open"><span class="ix">04</span><span class="lx-en">Notes</span><span class="lx-ko">노트</span></a>
     <a href="#awards" data-scroll data-cursor="Open"><span class="ix">05</span><span class="lx-en">Awards</span><span class="lx-ko">수상</span></a>
     <a href="#gallery" data-scroll data-cursor="Open"><span class="ix">06</span><span class="lx-en">Gallery</span><span class="lx-ko">갤러리</span></a>
-    <a href="#contact" data-scroll data-cursor="Open"><span class="ix">07</span><span class="lx-en">Contact</span><span class="lx-ko">연락</span></a>
+    <a href="#origin" data-scroll data-cursor="Open"><span class="ix">07</span><span class="lx-en">Origin</span><span class="lx-ko">시작</span></a>
+    <a href="#contact" data-scroll data-cursor="Open"><span class="ix">08</span><span class="lx-en">Contact</span><span class="lx-ko">연락</span></a>
   </nav>
   <div class="ov-side">
     <div class="k">Kyungmoon Kim, M.D., MPH</div>
@@ -389,6 +424,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 <!-- ============ HERO ============ -->
 <span id="top"></span>
 <section class="hero">
+  <img class="hero-bg" src="assets/img/liverweek-plenary.jpg" alt="">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
@@ -398,7 +434,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
           <span class="rv-line"><span class="thin">Kim<em>.</em></span></span>
         </h1>
         <div class="hero-sub rv">
-          <p class="r lx-en">Pediatrician by training, now in pharma medical affairs — leading pre-launch strategy for a metabolic-disease therapy, and building the partnerships, evidence, and AI tools a launch needs.</p>
+          <p class="r lx-en">Pediatrician by training, now in pharma medical affairs, leading pre-launch strategy for a metabolic-disease therapy, and building the partnerships, evidence, and AI tools a launch needs.</p>
           <p class="r lx-ko">소아과 전문의로 출발해 제약 메디컬 어페어즈에서 일한다. 대사질환 치료제의 런칭 전 전략을 맡고, 런칭에 필요한 파트너십·근거·AI 도구를 만든다.</p>
         </div>
         <div class="hero-cta rv">
@@ -406,23 +442,17 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
           <a class="btn btn-ghost" href="#ax" data-scroll data-magnetic data-cursor><span class="lx-en">The AI work</span><span class="lx-ko">AI 작업</span></a>
         </div>
       </div>
-      <div class="hero-media rv">
-        <figure class="frame">
-          <span class="badge">The Liver Week 2026</span>
-          <img src="assets/img/liverweek-plenary.jpg" alt="Plenary presentation, The Liver Week 2026">
-        </figure>
-        <div class="cap">Plenary presentation &middot; The Liver Week 2026</div>
-      </div>
     </div>
   </div>
   <div class="scrollcue"><span class="bar"></span><span class="lx-en">Scroll</span><span class="lx-ko">스크롤</span></div>
+  <div class="hero-cred2">The Liver Week 2026 &middot; plenary</div>
 </section>
 
 <!-- intro / positioning -->
 <section class="intro"><div class="wrap">
   <p class="intro-lead rv">
-    <span class="lx-en">Outside the US and Europe, pre-launch medical work usually stays quiet — a small booth, a poster. His hasn't. A congress <em>plenary</em>, three ecosystem MOUs, an AI-transformation program, HEOR and health-policy work, and a step into clinical genetics and omics. The aim is openly ambitious: build, in Korea, the kind of Medical Affairs usually reserved for global headquarters, and then push past it.</span>
-    <span class="lx-ko">미국·유럽 밖에서 허가 전 Medical Affairs는 대개 조용하다. 작은 부스와 포스터 한 장 정도다. 그의 활동은 달랐다. 학회 <em>plenary</em>, ecosystem MOU 세 건, AI transformation 프로그램, HEOR와 health policy, 그리고 clinical genetics와 omics까지. 목표는 숨기지 않는다. 글로벌 HQ에서나 보던 수준의 Medical Affairs를 한국에서 만들고, 그 기준을 넘어서는 것이다.</span>
+    <span class="lx-en">Pre-launch medical affairs is usually a quiet phase, a booth, a poster, a long wait for approval. This role covers <em>a lot more ground</em>: market access and reimbursement, government affairs, a disease-detection ecosystem, evidence generation and HEOR, congress science, clinical-trial execution, MSL leadership, and an AI-transformation program, rooted in clinical medicine, health policy, and clinical genetics. The through-line: build, in Korea, the kind of Medical Affairs usually reserved for global headquarters.</span>
+    <span class="lx-ko">허가 전 Medical Affairs는 대개 조용한 국면이다. 작은 부스, 포스터 한 장, 그리고 허가를 기다리는 시간. 이 역할이 다루는 범위는 <em>훨씬 넓다</em>. Market access와 급여, 대관, 질환 발견 생태계, 근거 생성과 HEOR, 학회 과학, 임상시험 실행, MSL 조직 운영, 그리고 AI transformation 프로그램. 임상·보건정책·clinical genetics에 뿌리를 둔다. 관통하는 목표는 하나다. 글로벌 HQ에서나 보던 수준의 Medical Affairs를 한국에서 만드는 것.</span>
   </p>
 </div></section>
 
@@ -439,10 +469,14 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 <!-- ============ STATS ============ -->
 <section class="block"><div class="wrap">
   <div class="stats rv">
-    <div class="stat"><div class="n" data-count="11">0<u>+</u></div><div class="l"><span class="lx-en">Years across clinical medicine, public health &amp; pharma</span><span class="lx-ko">임상·공중보건·제약을 아우른 경력</span></div></div>
-    <div class="stat"><div class="n" data-count="9">0</div><div class="l"><span class="lx-en">Team &amp; regional awards at MSD and Boehringer Ingelheim</span><span class="lx-ko">MSD·베링거인겔하임 팀·리전 수상</span></div></div>
-    <div class="stat"><div class="n" data-count="3">0</div><div class="l"><span class="lx-en">MOU partnerships anchoring a MASH diagnosis ecosystem</span><span class="lx-ko">MASH 진단 생태계를 잇는 파트너십</span></div></div>
-    <div class="stat"><div class="n" data-count="5">0<u>+</u></div><div class="l"><span class="lx-en">Self-built AI tools in live medical workflows</span><span class="lx-ko">실무에 배치된 자체 제작 AI 도구</span></div></div>
+    <div class="stat"><div class="n" data-count="12">0<u>+</u></div><div class="l"><span class="lx-en">Years across clinical medicine, public health &amp; pharma (since 2014)</span><span class="lx-ko">2014년부터 임상·공중보건·제약을 아우른 경력</span></div></div>
+    <div class="stat"><div class="n" data-count="8">0<u>+</u></div><div class="l"><span class="lx-en">Therapeutic areas, infectious, AMR, HSCT/CMV, rare/PAH, obesity/MASH, IBD, HIV, vaccines</span><span class="lx-ko">치료영역, 감염, 다제내성균, HSCT/CMV, 희귀/PAH, 비만/MASH, IBD, HIV, 백신</span></div></div>
+    <div class="stat"><div class="n">5<u>→</u>50%</div><div class="l"><span class="lx-en">COVID-19 antiviral market share, with no sales force</span><span class="lx-ko">영업조직 없이 COVID-19 항바이러스제 점유율</span></div></div>
+    <div class="stat"><div class="n">55<u>→</u>80%</div><div class="l"><span class="lx-en">HSCT prophylaxis duration of therapy</span><span class="lx-ko">조혈모세포이식 예방요법 투약 기간</span></div></div>
+    <div class="stat"><div class="n" data-count="9">0</div><div class="l"><span class="lx-en">Awards, one in every year of pharma (2022–2026)</span><span class="lx-ko">제약 재직 매해 수상 (2022–2026)</span></div></div>
+    <div class="stat"><div class="n" data-count="20">0<u>+</u></div><div class="l"><span class="lx-en">People led across teams, ecosystem cross-functional TFT, the Medicine AX program &amp; the MSL team</span><span class="lx-ko">직접 이끄는 인원, 생태계 크로스펑셔널 TFT + Medicine AX 프로그램 + MSL 팀</span></div></div>
+    <div class="stat"><div class="n" data-count="6">0</div><div class="l"><span class="lx-en">Self-built, full-stack AI tools in live use</span><span class="lx-ko">실무에 쓰는 자체 제작 풀스택 AI 도구</span></div></div>
+    <div class="stat"><div class="n">1,000<u>+</u></div><div class="l"><span class="lx-en">Hours a year reclaimed for science by AX tools</span><span class="lx-ko">AX 도구로 연간 되찾은 시간</span></div></div>
   </div>
 </div></section>
 
@@ -459,6 +493,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   <div class="work">
     <!-- 01 LAGEVRIO -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/lagevrio-convalescent-lecture-2023.jpg" alt="">
       <div class="wr-num">01</div>
       <div class="wr-main">
         <div class="k">MSD · Anti-viral · 2022–2023</div>
@@ -467,12 +502,13 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
       </div>
       <div class="wr-metric"><div class="big">~5% → ~50%</div><div class="cap"><span class="lx-en">market share in a year</span><span class="lx-ko">1년 만의 시장 점유율</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
-        <p class="lx-en"><span class="lab">The read</span>With no sales team, the prescribing rationale had to come from national policy and expert guidance, not detailing — so the market opened on three fronts.</p>
+        <p class="lx-en"><span class="lab">The read</span>With no sales team, the prescribing rationale had to come from national policy and expert guidance, not detailing, so the market opened on three fronts.</p>
         <p class="lx-en"><span class="lab">The moves</span>MFDS &amp; KDCA engagement for emergency-use authorization and government procurement; national infectious-disease advisors and top influencers to shape briefings and guidance; evidence-based high-risk targeting, incl. a long-term-care-hospital society lecture.</p>
-        <p class="lx-en"><span class="lab">What it shows</span>Execution more than the product itself — recognized with regional and affiliate awards. Presented on public evidence (KDCA guidance, expert-committee recommendations, RWE, media), not internal figures.</p>
+        <p class="lx-en"><span class="lab">What it shows</span>Execution more than the product itself, recognized with regional and affiliate awards. Presented on public evidence (KDCA guidance, expert-committee recommendations, RWE, media), not internal figures.</p>
         <p class="lx-ko"><span class="lab">통찰</span>영업이 없으면 처방 근거는 개별 영업이 아니라 국가 방역 정책과 전문가 지침에서 나온다. 그래서 세 방향으로 시장을 열었다.</p>
         <p class="lx-ko"><span class="lab">실행</span>긴급사용승인과 정부 직구매를 위해 식약처, 질병청을 직접 상대했다. 국가 감염병 자문위원과 핵심 전문가에게 과학적 근거를 전달하며 브리핑과 지침 메시지를 관리했다. 기존 근거로 고위험군을 겨냥했고 요양병원학회 강연도 진행했다.</p>
         <p class="lx-ko"><span class="lab">보여주는 것</span>제품보다 실행력을 보여주는 사례다. 리전과 지사 수상으로 인정받았다. 내부 수치 대신 질병청 지침과 전문가위원회 권고, RWE, 언론 보도 같은 공개 근거를 바탕으로 삼았다.</p>
+        <figure class="wr-photo" data-img="assets/img/lagevrio-convalescent-lecture-2023.jpg" data-cap-en="Invited lecture, Korean Convalescent Hospital Association (COVID-19), 2023" data-cap-ko="대한요양병원학회 춘계 학술세미나 초청 강연 (COVID-19), 2023" data-cursor="View"><img src="assets/img/lagevrio-convalescent-lecture-2023.jpg" alt=""><figcaption><span class="lx-en">Invited lecture, Korean Convalescent Hospital Association (COVID-19), 2023</span><span class="lx-ko">대한요양병원학회 춘계 학술세미나 초청 강연 (COVID-19), 2023</span></figcaption></figure>
         <div class="wr-press">
           <div class="wr-press-h"><span class="lx-en">In the press &amp; literature</span><span class="lx-ko">보도 · 문헌</span></div>
           <a href="https://www.medicaltimes.com/Mobile/News/NewsView.html?ID=1148658" target="_blank" rel="noopener" data-cursor="Open"><b>Medical Times</b><span class="lx-en">KDCA encourages Lagevrio when drug-interaction risk (2022.07)</span><span class="lx-ko">방역당국 라게브리오 처방 독려 (2022.07)</span><span class="arr">↗</span></a>
@@ -487,6 +523,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     </div>
     <!-- 02 ZERBAXA -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/zerbaxa-reimbursement.jpg" alt="">
       <div class="wr-num">02</div>
       <div class="wr-main">
         <div class="k">MSD · New-class antibiotic · 2022</div>
@@ -496,10 +533,10 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
       <div class="wr-metric"><div class="big"><span class="lx-en">Reimbursed</span><span class="lx-ko">급여 등재</span></div><div class="cap"><span class="lx-en">on clinical utility (first under the expanded exemption)</span><span class="lx-ko">임상적 유용성으로 (경평면제 확대 첫 수혜)</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
         <p class="lx-en"><span class="lab">The challenge</span>Approved in Korea in 2017, Zerbaxa was rejected for reimbursement in 2019 on unclear cost-effectiveness. With a non-inferiority basis, proving value over existing options (like colistin) is structurally hard.</p>
-        <p class="lx-en"><span class="lab">The approach</span>When Korea expanded its pharmacoeconomic-evaluation exemption to essential antibiotics (2020), he made the clinical and public-health case to HIRA — efficacy against multidrug-resistant gram-negatives, the nephrotoxicity of alternatives, the toll of AMR — with parliamentary and media advocacy. Zerbaxa became the first drug reimbursed under the expanded exemption, paired with a capped revenue-sharing agreement.</p>
-        <p class="lx-en"><span class="lab">The contrast</span>The antiviral case was about moving policy and opinion; this one about persuading a regulator on medical evidence — a different kind of access work.</p>
+        <p class="lx-en"><span class="lab">The approach</span>When Korea expanded its pharmacoeconomic-evaluation exemption to essential antibiotics (2020), I made the clinical and public-health case to HIRA, efficacy against multidrug-resistant gram-negatives, the nephrotoxicity of alternatives, the toll of AMR, with parliamentary and media advocacy. Zerbaxa became the first drug reimbursed under the expanded exemption, paired with a capped revenue-sharing agreement.</p>
+        <p class="lx-en"><span class="lab">The contrast</span>The antiviral case was about moving policy and opinion; this one about persuading a regulator on medical evidence, a different kind of access work.</p>
         <p class="lx-ko"><span class="lab">난제</span>2017년 국내 허가된 저박사는 2019년 비용효과성이 불분명하다는 이유로 급여가 부결됐다. 비열등성 근거로는 colistin 같은 기존 약 대비 가치를 입증하기가 구조적으로 어렵다.</p>
-        <p class="lx-ko"><span class="lab">접근</span>정부가 경제성평가 자료제출 생략제도를 필수 항생제까지 확대한 2020년, 그는 심평원에 임상·공중보건 근거를 제시했다. 다제내성 그람음성균에 대한 유효성, 대체제(colistin)의 신독성, 항생제 내성으로 인한 사망을 논거로 삼았고 국회·언론 대응도 도왔다. 저박사는 경평면제 확대의 첫 급여 사례가 됐고 총액제한형 RSA가 함께 적용됐다.</p>
+        <p class="lx-ko"><span class="lab">접근</span>정부가 경제성평가 자료제출 생략제도를 필수 항생제까지 확대한 2020년, 심평원에 임상·공중보건 근거를 제시했다. 다제내성 그람음성균에 대한 유효성, 대체제(colistin)의 신독성, 항생제 내성으로 인한 사망을 논거로 삼았고 국회·언론 대응도 도왔다. 저박사는 경평면제 확대의 첫 급여 사례가 됐고 총액제한형 RSA가 함께 적용됐다.</p>
         <p class="lx-ko"><span class="lab">대비</span>항바이러스제가 정책과 여론을 움직이는 일이었다면, 이 사례는 규제기관을 의학적 근거로 설득하는 일이다. 같은 market access라도 성격이 다르다.</p>
         <div class="wr-press">
           <div class="wr-press-h"><span class="lx-en">In the press</span><span class="lx-ko">보도</span></div>
@@ -510,96 +547,116 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     </div>
     <!-- 03 PREVYMIS -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/cmv-abm.jpg" alt="">
       <div class="wr-num">03</div>
       <div class="wr-main">
         <div class="k">MSD · HSCT CMV prophylaxis · 2022–2025</div>
         <div class="wr-title"><span class="lx-en">The strategic trade-off</span><span class="lx-ko">전략적 선택과 집중</span></div>
-        <div class="wr-sub"><span class="lx-en">Deciding what not to do — giving up an indication to protect price.</span><span class="lx-ko">무엇을 하지 않을지 고른 사례. 적응증을 포기해 약가를 지켰다.</span></div>
+        <div class="wr-sub"><span class="lx-en">Deciding what not to do, giving up an indication to protect price.</span><span class="lx-ko">무엇을 하지 않을지 고른 사례. 적응증을 포기해 약가를 지켰다.</span></div>
       </div>
       <div class="wr-metric"><div class="big">DOT 55% → 80%</div><div class="cap"><span class="lx-en">duration of therapy</span><span class="lx-ko">투약 기간 개선</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
-        <p class="lx-en"><span class="lab">Intervention</span>Prophylaxis was stopping too early in HSCT patients. A duration-of-therapy program moved a real clinical behavior — average DOT from 55% to 80%.</p>
-        <p class="lx-en"><span class="lab">The judgment</span>Analyzing indication expansion, he saw broadening indications would trigger price-cut risk. Against instinct, he deprioritized a low-value transplant indication and concentrated on the 200-day HSCT expansion.</p>
-        <p class="lx-en"><span class="lab">The payoff</span>Over two years the call paid off: indication expansion approved (2024) and reimbursement secured (2025) on a self-authored dossier — defending price and protecting profitability.</p>
-        <p class="lx-ko"><span class="lab">개입</span>조혈모세포이식 환자에서 예방요법이 일찍 중단되는 문제가 있었다. 투약 기간을 늘리는 프로젝트로 실제 처방 행태를 바꿔 평균 DOT를 55%에서 80%로 끌어올렸다.</p>
-        <p class="lx-ko"><span class="lab">판단</span>적응증을 넓히면 오히려 약가 인하 위험이 커진다고 봤다. 통념과 달리 시장성이 낮은 이식 적응증을 포기하고 200일 HSCT 확대에 집중했다.</p>
+        <p class="lx-en"><span class="lab">Intervention</span>Prophylaxis was stopping too early in HSCT patients, often from misconceptions or off-guideline, customary practice. Correcting that took a developed narrative and heavy HCP, marketing, and sales education, lifting average duration of therapy (DOT) on the 100-day indication from 55% to 80%.</p>
+        <p class="lx-en"><span class="lab">The judgment</span>The 200-day expansion is a separate lever, and the two compound. At 55% DOT, even a doubled course reaches only ~110 days (in practice, less), so the 200-day extension pays off only when the base DOT is high. Meanwhile, broadening indications risked a price cut, so a low-value transplant indication was deprioritized to concentrate on the 200-day HSCT case.</p>
+        <p class="lx-en"><span class="lab">The payoff</span>Over two years the call paid off: indication expansion approved (2024) and reimbursement secured (2025) on a self-authored dossier, defending price and protecting profitability.</p>
+        <p class="lx-ko"><span class="lab">개입</span>조혈모세포이식 환자에서 예방요법이 일찍 중단되는 경우가 많았다. 오해나 가이드라인과 어긋난 관행적 처치가 원인이었다. 이를 교정하기 위해 내러티브를 개발하고 의료진·마케팅·세일즈 교육을 극대화해, 100일 적응증의 평균 DOT를 55%에서 80%로 끌어올렸다.</p>
+        <p class="lx-ko"><span class="lab">판단</span>200일 확대는 별개의 레버이고, 둘은 맞물린다. DOT 55%면 두 배로 늘려도 실제 투여는 약 110일(실제론 더 낮음)에 그쳐, 기저 DOT가 높아야 200일 확대의 비즈니스 임팩트가 산다. 한편 적응증을 넓히면 약가 인하 위험이 커지므로, 시장성 낮은 이식 적응증을 포기하고 200일 HSCT에 집중했다.</p>
         <p class="lx-ko"><span class="lab">결실</span>판단은 2년 뒤 성과로 돌아왔다. 자체 보고서만으로 적응증 확대 승인(2024)과 급여 확대(2025)를 받아냈고 약가와 수익성을 지켰다.</p>
+        <figure class="wr-photo" data-img="assets/img/cmv-abm.jpg" data-cap-en="CMV prophylaxis advisory board" data-cap-ko="CMV 예방 ABM (자문 미팅)" data-cursor="View"><img src="assets/img/cmv-abm.jpg" alt=""><figcaption><span class="lx-en">CMV prophylaxis advisory board</span><span class="lx-ko">CMV 예방 ABM</span></figcaption></figure>
         <div class="wr-press">
           <div class="wr-press-h"><span class="lx-en">In the press</span><span class="lx-ko">보도</span></div>
-          <a href="http://www.docdocdoc.co.kr/news/articleView.html?idxno=3017030" target="_blank" rel="noopener" data-cursor="Open"><b>청년의사</b><span class="lx-en">Prevymis indication &amp; duration expansion — HSCT 100→200 days (2024.05)</span><span class="lx-ko">프레비미스 적응증 추가, HSCT 투약기간 100→200일 확대 (2024.05)</span><span class="arr">↗</span></a>
+          <a href="http://www.docdocdoc.co.kr/news/articleView.html?idxno=3017030" target="_blank" rel="noopener" data-cursor="Open"><b>청년의사</b><span class="lx-en">Prevymis indication &amp; duration expansion, HSCT 100→200 days (2024.05)</span><span class="lx-ko">프레비미스 적응증 추가, HSCT 투약기간 100→200일 확대 (2024.05)</span><span class="arr">↗</span></a>
           <a href="https://www.medipana.com/news/articleView.html?idxno=297600" target="_blank" rel="noopener" data-cursor="Open"><b>메디파나</b><span class="lx-en">HSCT criteria eased; CMV-prevention importance growing (2022.05)</span><span class="lx-ko">조혈모세포이식 급여기준 완화 4년, CMV 예방 중요성 (2022.05)</span><span class="arr">↗</span></a>
         </div>
       </div></div>
     </div>
     <!-- 04 ECOSYSTEM -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/philips-mou.jpg" alt="">
       <div class="wr-num">04</div>
       <div class="wr-main">
         <div class="k">Boehringer Ingelheim · Ecosystem · 2025–2026</div>
-        <div class="wr-title">See Obesity, Think Liver</div>
-        <div class="wr-sub"><span class="lx-en">Turning a global campaign into a working diagnosis ecosystem for undiagnosed MASH.</span><span class="lx-ko">글로벌 캠페인을 미진단 MASH를 찾아내는 진단 체계로 옮겼다.</span></div>
+        <div class="wr-title"><span class="lx-en">Cross-industry collaboration, built &amp; led</span><span class="lx-ko">크로스인더스트리 협업을 만들고 이끌다</span></div>
+        <div class="wr-sub"><span class="lx-en">A play-to-win, cross-industry ecosystem for undiagnosed MASH. The local build of "See Obesity, Think Liver."</span><span class="lx-ko">미진단 MASH를 겨냥한 play-to-win 크로스인더스트리 생태계. "See Obesity, Think Liver"의 한국 실행.</span></div>
       </div>
-      <div class="wr-metric"><div class="big"><span class="lx-en">3 MOUs</span><span class="lx-ko">MOU 3건</span></div><div class="cap"><span class="lx-en">awareness · screening · diagnosis</span><span class="lx-ko">인지 · 스크리닝 · 진단</span></div></div>
+      <div class="wr-metric"><div class="big"><span class="lx-en">3 MOUs + @</span><span class="lx-ko">MOU 3건 + @</span></div><div class="cap"><span class="lx-en">awareness · screening · diagnosis</span><span class="lx-ko">인지 · 스크리닝 · 진단</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
-        <p class="lx-en"><span class="lab">The problem</span>MASLD/MASH affects roughly a third of Korean adults yet mostly goes undiagnosed — not for lack of treatment, but for lack of a system connecting screening, diagnosis, and care.</p>
-        <p class="lx-en"><span class="lab">The design</span>He re-framed the patient journey for Korea and filled it with partnerships: a weight-management clinic network (awareness), a national health-screening network (screening), and a diagnostic-imaging manufacturer (point-of-care fibrosis diagnosis) — anchored on ultrasound-based 2D-SWE, the probe he leaned on for years in the NICU.</p>
-        <p class="lx-en"><span class="lab">Recognition</span>Signed MOUs across the journey and the SpUR Award for intersectoral strategic alignment. As his Head of Medicine put it, it won't evaporate as a one-off signing — it stays as a sustainable footprint in a new disease area.</p>
+        <p class="lx-en"><span class="lab">The problem</span>MASLD/MASH affects roughly a third of Korean adults yet mostly goes undiagnosed, not for lack of treatment, but for lack of a system connecting screening, diagnosis, and care.</p>
+        <p class="lx-en"><span class="lab">The design</span>Reframed the patient journey for Korea and filled each stage with a partner: awareness (a weight-management clinic network), national screening (a health-screening network), point-of-care diagnosis (a diagnostic-imaging manufacturer), anchored on ultrasound-based 2D-SWE, the probe leaned on for years in the NICU.</p>
+        <p class="lx-en"><span class="lab">Not just MOUs</span>None of these are declarative signings, each runs a functioning action item. Philips: hands-on ultrasound sessions and RWE research. KMI: a separate RWE study, health-screening reporting, EMR improvement, and referral-process activation. 365mc: content production. With the framework working, three more companies are now in selection to join.</p>
+        <p class="lx-en"><span class="lab">Recognition</span>MOUs signed across the journey, recognized with the SpUR Award for intersectoral strategic alignment. As the Head of Medicine put it, it won't evaporate as a one-off signing, it stays as a sustainable footprint in a new disease area.</p>
         <p class="lx-ko"><span class="lab">문제</span>MASLD/MASH는 한국 성인의 약 3분의 1이 앓지만 대부분 진단되지 않는다. 치료제가 없어서가 아니라 screening와 진단, 치료를 잇는 체계가 없어서다.</p>
-        <p class="lx-ko"><span class="lab">설계</span>환자 여정을 한국 상황에 맞게 다시 짜고 각 단계를 파트너십으로 채웠다. 비만 클리닉 네트워크가 인지를, 국가 건강검진 네트워크가 screening를, 진단장비 업체가 현장 fibrosis 진단을 맡았다. 중심에는 초음파 기반 2D-SWE가 있다. 그가 신생아 중환자실에서 오래 쓰던 도구다.</p>
+        <p class="lx-ko"><span class="lab">설계</span>환자 여정을 한국 상황에 맞게 다시 짜고 각 단계를 파트너로 채웠다. 인지는 비만 클리닉 네트워크, 국가 screening은 건강검진 네트워크, 현장 진단은 진단장비 업체. 중심에는 초음파 기반 2D-SWE가 있다. 신생아 중환자실에서 오래 쓰던 도구다.</p>
+        <p class="lx-ko"><span class="lab">선언적 MOU가 아니라</span>세 건 모두 실제로 기능하는 액션 아이템으로 돌아간다. Philips는 핸즈온 초음파 세션과 RWE 연구, KMI는 별도 RWE 연구·건진 리포트·EMR 개선·refer 프로세스 활성화, 365mc는 컨텐츠 제작. 프레임워크가 돌아가기 시작하자 참여를 원하는 기업 3곳이 더 나왔고 현재 선별 중이다.</p>
         <p class="lx-ko"><span class="lab">인정</span>여정 전반에 걸친 MOU와 섹터 간 전략 정렬로 SpUR Award를 받았다. 상사의 말처럼 이 협업은 일회성 서명으로 끝나지 않고 새 질환 영역에 남는 기반이 된다.</p>
-        <p class="lx-en"><span class="lab">The analysis</span>Behind the three MOUs is a systems analysis, not a hunch. Undiagnosed MASH maps as four reinforcing failure loops — public awareness, screening blindness, primary-care inertia, tertiary hepatology bias — each matched to a leverage point: 365mc (awareness), KMI (screening), Philips (diagnosis). It was written up as a strategic blueprint that doubled as his Johns Hopkins MPH practicum.</p>
+        <p class="lx-en"><span class="lab">The team</span>Owned end-to-end, idea, build, execution, leading a 10-person, 6-function team (marketing, market access, corporate affairs, policy, legal, MSL), on top of the direct MSL and AI/AX teams.</p>
+        <p class="lx-ko"><span class="lab">팀</span>아이디어 개발부터 구현, 실행까지 처음부터 끝까지 맡았다. 마케팅·market access·corporate affairs·정책·법무·MSL 6개 기능의 10인 크로스펑셔널 팀을 이끌었고, 직속 MSL·AI/AX 팀은 별도다.</p>
+        <figure class="wr-photo" data-img="assets/img/philips-mou.jpg" data-cap-en="Boehringer Ingelheim Korea × Philips Korea MOU, the diagnosis pillar (2D-SWE)" data-cap-ko="한국베링거인겔하임 × 필립스 코리아 MOU · 진단 축 (2D-SWE)" data-cursor="View">
+          <img src="assets/img/philips-mou.jpg" alt="Boehringer Ingelheim Korea and Philips Korea MOU signing">
+          <figcaption><span class="lx-en">Boehringer Ingelheim Korea × Philips Korea MOU &middot; the diagnosis pillar</span><span class="lx-ko">한국베링거인겔하임 × 필립스 코리아 MOU &middot; 진단 축</span></figcaption>
+        </figure>
+        <p class="lx-en"><span class="lab">The analysis</span>Behind the three MOUs is a systems analysis, not a hunch. Undiagnosed MASH maps as four reinforcing failure loops, public awareness, screening blindness, primary-care inertia, tertiary hepatology bias, each matched to a leverage point: 365mc (awareness), KMI (screening), Philips (diagnosis). It was written up as a strategic blueprint that doubled as a Johns Hopkins MPH practicum.</p>
         <p class="lx-ko"><span class="lab">분석</span>세 건의 MOU 뒤에는 감이 아니라 systems analysis가 있다. 미진단 MASH를 네 개의 강화 루프(대중 인지, screening 맹점, 1·2차 진료 관성, 3차 간학회 편향)로 매핑하고, 각 루프를 끊는 지렛점을 파트너십에 대응시켰다. 365mc는 인지, KMI는 screening, Philips는 진단을 맡는다. 이 분석은 전략 블루프린트로 정리됐고, 존스홉킨스 MPH 프랙티컴을 겸한다.</p>
-        <a class="wr-asset" href="assets/Korea-MASLD-Ecosystem-Blueprint.pptx" target="_blank" rel="noopener" data-cursor="Open"><span class="lx-en">View the strategic blueprint — 15-slide systems analysis</span><span class="lx-ko">전략 블루프린트 보기 — 15슬라이드 systems analysis</span> ↗</a>
+        <a class="wr-asset" href="assets/Korea-MASLD-Ecosystem-Blueprint.pptx" target="_blank" rel="noopener" data-cursor="Open"><span class="lx-en">View the strategic blueprint, 15-slide systems analysis</span><span class="lx-ko">전략 블루프린트 보기, 15슬라이드 systems analysis</span> ↗</a>
+        <figure class="wr-photo" data-img="assets/img/365mc-mou-stage-2025.jpg" data-cap-en="365mc MOU, the awareness pillar of the ecosystem, 2025" data-cap-ko="365mc MOU · 생태계의 인지 축, 2025" data-cursor="View"><img src="assets/img/365mc-mou-stage-2025.jpg" alt=""><figcaption><span class="lx-en">365mc MOU, the awareness pillar of the ecosystem, 2025</span><span class="lx-ko">365mc MOU · 생태계의 인지 축, 2025</span></figcaption></figure>
         <div class="wr-press">
           <div class="wr-press-h"><span class="lx-en">In the press &middot; the three MOUs</span><span class="lx-ko">보도 &middot; 세 건의 MOU</span></div>
-          <a href="https://www.hitnews.co.kr/news/articleView.html?idxno=73344" target="_blank" rel="noopener" data-cursor="Open"><b>Hit News</b><span class="lx-en">365mc MOU &mdash; awareness for obesity &amp; MASLD</span><span class="lx-ko">365mc MOU &mdash; 비만·대사이상 지방간 인식 제고</span><span class="arr">&#8599;</span></a>
-          <a href="https://www.medicopharma.co.kr/news/articleView.html?idxno=68475" target="_blank" rel="noopener" data-cursor="Open"><b>MedicoPharma</b><span class="lx-en">KMI MOU &mdash; national screening &amp; liver-health collaboration</span><span class="lx-ko">KMI MOU &mdash; 비만·대사질환 환자 간 건강 관리 협력</span><span class="arr">&#8599;</span></a>
-          <a href="https://www.medipana.com/news/articleView.html?idxno=411990" target="_blank" rel="noopener" data-cursor="Open"><b>MediPana</b><span class="lx-en">Philips MOU &mdash; point-of-care diagnosis (2D-SWE)</span><span class="lx-ko">Philips MOU &mdash; 간 건강 증진 진단 협력 (2D-SWE)</span><span class="arr">&#8599;</span></a>
+          <a href="https://www.hitnews.co.kr/news/articleView.html?idxno=73344" target="_blank" rel="noopener" data-cursor="Open"><b>Hit News</b><span class="lx-en">365mc MOU, awareness for obesity &amp; MASLD</span><span class="lx-ko">365mc MOU, 비만·대사이상 지방간 인식 제고</span><span class="arr">&#8599;</span></a>
+          <a href="https://www.medicopharma.co.kr/news/articleView.html?idxno=68475" target="_blank" rel="noopener" data-cursor="Open"><b>MedicoPharma</b><span class="lx-en">KMI MOU, national screening &amp; liver-health collaboration</span><span class="lx-ko">KMI MOU, 비만·대사질환 환자 간 건강 관리 협력</span><span class="arr">&#8599;</span></a>
+          <a href="https://www.medipana.com/news/articleView.html?idxno=411990" target="_blank" rel="noopener" data-cursor="Open"><b>MediPana</b><span class="lx-en">Philips MOU, point-of-care diagnosis (2D-SWE)</span><span class="lx-ko">Philips MOU, 간 건강 증진 진단 협력 (2D-SWE)</span><span class="arr">&#8599;</span></a>
         </div>
       </div></div>
     </div>
     <!-- 05 PLENARY -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/liverweek-plenary.jpg" alt="">
       <div class="wr-num">05</div>
       <div class="wr-main">
         <div class="k">Boehringer Ingelheim · Congress · 2026</div>
         <div class="wr-title"><span class="lx-en">100 hours to the plenary</span><span class="lx-ko">Plenary까지 100시간</span></div>
-        <div class="wr-sub"><span class="lx-en">The Liver Week 2026 — a low-cost, high-yield encore model replacing satellite symposia.</span><span class="lx-ko">The Liver Week 2026. satellite symposium을 대체하는 저비용 encore 발표 모델이다.</span></div>
+        <div class="wr-sub"><span class="lx-en">The Liver Week 2026, a low-cost, high-yield encore model replacing satellite symposia.</span><span class="lx-ko">The Liver Week 2026. satellite symposium을 대체하는 저비용 encore 발표 모델이다.</span></div>
       </div>
-      <div class="wr-metric"><div class="big"><span class="lx-en">~100 hrs</span><span class="lx-ko">약 100시간</span></div><div class="cap"><span class="lx-en">ADA debut → KR plenary</span><span class="lx-ko">ADA 발표에서 국내 Plenary까지</span></div></div>
+      <div class="wr-metric"><div class="big"><span class="lx-en">~100 hrs</span><span class="lx-ko">약 100시간</span></div><div class="cap"><span class="lx-en">original congress (ADA) → KR plenary</span><span class="lx-ko">original congress(ADA)에서 국내 Plenary까지</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
-        <p class="lx-en"><span class="lab">The moment</span>Early one Monday, BI's MASLD trial was presented at the ADA. Roughly 100 hours later he stood at a (non-sponsored) plenary of The Liver Week to deliver its encore — an abstract selected for plenary, the only session in that block.</p>
-        <p class="lx-en"><span class="lab">The strategy</span>Before approval you cannot market, so the work rests on the medical team. He turned that into a model: encore abstracts instead of costly satellite symposia — 8 presentations across 3 congresses this year, 4 orals, two delivered by MSLs he trained.</p>
-        <p class="lx-en"><span class="lab">The stance</span>"I believe I'm the person in Korea who knows this trial best right now." He even made the brochure by hand. Of the outside recognition, it's the one he's valued most.</p>
-        <p class="lx-ko"><span class="lab">순간</span>어느 월요일 이른 아침 BI의 MASLD 임상시험이 ADA에서 발표됐다. 약 100시간 뒤 그는 The Liver Week의 비후원 Plenary 세션에서 같은 결과를 encore로 발표했다. Plenary로 뽑힌 초록이었고 그 시간대의 유일한 세션이었다.</p>
-        <p class="lx-ko"><span class="lab">전략</span>허가 전에는 마케팅을 할 수 없어 발표는 의학부에 달려 있다. 그는 이를 하나의 방식으로 정리했다. 비싼 satellite symposium 대신 encore 초록을 쓴다. 올해 세 학회에서 여덟 건을 발표했고 그중 네 건이 구두 발표, 두 건은 그가 교육한 MSL이 맡았다.</p>
-        <p class="lx-ko"><span class="lab">태도</span>"지금 한국에서 이 임상시험을 가장 잘 아는 사람은 나라고 믿는다." 브로슈어도 직접 만들었다. 그가 받은 외부 인정 가운데 가장 의미를 두는 자리다.</p>
-        <figure class="wr-photo" data-img="assets/img/liverweek-plenary.jpg" data-cap-en="The Liver Week 2026 — plenary presentation" data-cap-ko="The Liver Week 2026 · Plenary 발표" data-cursor="View">
+        <p class="lx-en"><span class="lab">The moment</span>Early one Monday, Boehringer Ingelheim's MASLD data was presented at its original congress (ADA). Roughly 100 hours later came its encore, a (non-sponsored) plenary of The Liver Week, an abstract selected for plenary and the only session in that block.</p>
+        <p class="lx-en"><span class="lab">The strategy</span>Before approval there is no marketing, so pre-launch activity rests on the medical and scientific team. Reframed as a model: encore abstracts over costly satellite symposia, six congresses planned this year (KSSO, SOMS, The Liver Week in 1H; three Korea-based international congresses in 2H), all abstracts confirmed, with some orals delivered by trained MSLs.</p>
+        <p class="lx-en"><span class="lab">Why HQ collaboration mattered</span>This runs on close headquarters collaboration, not just forwarding data, but pre-coordinating with the academic society, and because HQ will not stage a presentation like this without a principal investigator. Here the study had no Korean PI, which is exactly what made this route possible; a PI would have made it harder, not easier.</p>
+        <p class="lx-en"><span class="lab">The stance</span>"I believe I'm the person in Korea who knows this trial best right now." Even the brochure, made by hand. Of all the outside recognition, the one valued most.</p>
+        <p class="lx-ko"><span class="lab">순간</span>어느 월요일 이른 아침, Boehringer Ingelheim의 MASLD 데이터가 original congress인 ADA에서 발표됐다. 약 100시간 뒤 The Liver Week의 비후원 Plenary에서 그 encore가 이어졌다. Plenary로 뽑힌 초록이었고 그 시간대의 유일한 세션이었다.</p>
+        <p class="lx-ko"><span class="lab">전략</span>허가 전에는 마케팅이 없으니 pre-launch 활동은 메디컬·과학팀에 달려 있다. 이를 하나의 모델로 정리했다. 비싼 satellite symposium 대신 encore 초록. 올해 여섯 학회를 계획했고(1H: KSSO·SOMS·The Liver Week / 2H: 한국 소재 국제학술대회 3개) 초록 투고는 모두 확정됐다. 일부 구두 발표는 교육한 MSL이 맡는다.</p>
+        <p class="lx-ko"><span class="lab">본사 협업이 관건인 이유</span>이 작업은 본사와의 긴밀한 협업으로 돌아간다. 자료만 전달하고 끝이 아니라 학회와 사전에 조율할 게 많고, 본사는 PI가 아니면 이런 발표를 세우지 않는다. 이 연구는 한국에 PI가 없었는데, 오히려 그 점이 이 방식을 가능하게 했다. PI가 있었다면 더 어려웠을 것이다.</p>
+        <p class="lx-ko"><span class="lab">태도</span>"지금 한국에서 이 임상시험을 가장 잘 아는 사람은 나라고 믿는다." 브로슈어도 직접 만들었다. 받은 외부 인정 가운데 가장 의미를 두는 자리다.</p>
+        <figure class="wr-photo" data-img="assets/img/liverweek-plenary.jpg" data-cap-en="The Liver Week 2026, plenary presentation" data-cap-ko="The Liver Week 2026 · Plenary 발표" data-cursor="View">
           <img src="assets/img/liverweek-plenary.jpg" alt="Plenary presentation at The Liver Week 2026">
           <figcaption><span class="lx-en">The Liver Week 2026 &middot; plenary presentation</span><span class="lx-ko">The Liver Week 2026 &middot; Plenary 발표</span></figcaption>
         </figure>
+        <figure class="wr-photo" data-img="assets/img/liverweek-plenary-raykim-2026.jpg" data-cap-en="After the plenary, with Prof. Ray Kim, The Liver Week 2026" data-cap-ko="Plenary 발표 후, Ray Kim 교수와 · The Liver Week 2026" data-cursor="View"><img src="assets/img/liverweek-plenary-raykim-2026.jpg" alt=""><figcaption><span class="lx-en">After the plenary, with Prof. Ray Kim, The Liver Week 2026</span><span class="lx-ko">Plenary 발표 후, Ray Kim 교수와 · The Liver Week 2026</span></figcaption></figure>
       </div></div>
     </div>
     <!-- 06 EVIDENCE -->
     <div class="work-row rv" data-work data-cursor="More">
+      <img class="wr-bg" src="assets/img/kakao-rwe-1.jpg" alt="">
       <div class="wr-num">06</div>
       <div class="wr-main">
         <div class="k">MSD → Boehringer Ingelheim · Evidence · 2024–</div>
         <div class="wr-title"><span class="lx-en">Generating the missing evidence</span><span class="lx-ko">없는 근거는 직접 만든다</span></div>
-        <div class="wr-sub"><span class="lx-en">From claims-data epidemiology to HEOR gap analysis — no outside vendor.</span><span class="lx-ko">청구데이터 역학부터 HEOR gap analysis까지, 외부 용역 없이.</span></div>
+        <div class="wr-sub"><span class="lx-en">From claims-data epidemiology to HEOR gap analysis, no outside vendor.</span><span class="lx-ko">청구데이터 역학부터 HEOR gap analysis까지, 외부 용역 없이.</span></div>
       </div>
       <div class="wr-metric"><div class="big"><span class="lx-en">Self-authored</span><span class="lx-ko">자체 생성</span></div><div class="cap"><span class="lx-en">epidemiology · HEOR</span><span class="lx-ko">역학 · HEOR</span></div></div>
       <div class="wr-toggle"><div class="wr-toggle-in">
-        <p class="lx-en"><span class="lab">The pattern</span>Faced with a missing Korean evidence base for an RSV prophylactic antibody, he generated national infant RSV epidemiology from claims data himself — designing the synopsis and protocol rather than waiting for data to appear.</p>
+        <p class="lx-en"><span class="lab">The pattern</span>Facing a missing Korean evidence base for an RSV prophylactic antibody, generated national infant RSV epidemiology from claims data, designing the synopsis and protocol rather than waiting for data to appear.</p>
         <p class="lx-en"><span class="lab">The range</span>Preemptive Phase 2/3 launch business cases for a MASH agent and pipeline assets across IBD, hematology, and HIV; a multidrug-resistance surveillance study; and full lifecycle work including exit management.</p>
-        <p class="lx-en"><span class="lab">At BI</span>A comprehensive Korean evidence-gap analysis and an ICER-report workshop aligning stakeholders on epidemiology and HEOR gaps — grounded in a Johns Hopkins MPH in health economics.</p>
+        <p class="lx-en"><span class="lab">The full-stack view</span>Generating evidence is the easy half; the point is use, how it moves clinical practice and the business. Inferring that means owning everything from the synopsis: cohort selection, process, not just the analysis. "Garbage in, garbage out," statisticians say, yet good analysis on good data still is not always useful. The payoff usually lands on one of three axes: approval, reimbursement, or clinical positioning. That full-stack instinct comes from a Johns Hopkins MPH, clinical practice, many pre-launch cycles, and a fiercely competitive pharma market.</p>
+        <p class="lx-en"><span class="lab">At Boehringer Ingelheim</span>A comprehensive Korean evidence-gap analysis and an ICER-report workshop aligning stakeholders on epidemiology and HEOR gaps.</p>
         <p class="lx-ko"><span class="lab">패턴</span>RSV 예방 항체의 국내 근거가 없자 청구데이터로 국내 영유아 RSV 역학을 직접 만들었다. 데이터가 나오길 기다리는 대신 시놉시스와 프로토콜을 직접 설계했다.</p>
         <p class="lx-ko"><span class="lab">폭</span>MASH 자산과 IBD·혈액·HIV 파이프라인의 선제적 Phase 2/3 런칭 비즈니스 케이스, 다제내성균 감시 연구, 철수 제품의 exit management까지 다뤘다.</p>
-        <p class="lx-ko"><span class="lab">BI에서</span>한국의 근거 격차를 폭넓게 분석하고 ICER 보고서 워크숍으로 역학·HEOR 공백을 두고 관계 부서의 인식을 맞췄다. 존스홉킨스 보건경제학 MPH가 바탕이 된 작업이다.</p>
-        <figure class="wr-photo" data-img="assets/img/kakao-rwe-1.jpg" data-cap-en="Kakao Healthcare New Generation RWE Summit — invited talk, 2026" data-cap-ko="카카오헬스케어 New Generation RWE Summit 초청 강연, 2026" data-cursor="View">
+        <p class="lx-ko"><span class="lab">풀스택 감각</span>근거를 만드는 건 절반일 뿐이다. 중요한 건 활용이다, 그 근거가 실제 임상과 비즈니스를 어떻게 움직이는가. 이를 잘 inference하려면 분석만이 아니라 시놉시스 단계부터 코호트 선정과 프로세스 전체를 아울러야 한다. 통계에 진심인 사람들은 garbage in, garbage out을 말하지만, 좋은 데이터의 좋은 분석이 언제나 유용하진 않다. 그 유용성은 대개 허가·급여·임상 포지셔닝이라는 세 축에서 판가름 난다. 이 풀스택 감각은 홉킨스 MPH, 임상의사 경험, 수많은 pre-launch 경험, 그리고 치열한 마켓 경쟁 속 제약 경험에서 온다.</p>
+        <p class="lx-ko"><span class="lab">Boehringer Ingelheim에서</span>한국의 근거 격차를 폭넓게 분석하고 ICER 보고서 워크숍으로 역학·HEOR 공백에 대해 관계 부서의 인식을 맞췄다.</p>
+        <figure class="wr-photo" data-img="assets/img/kakao-rwe-1.jpg" data-cap-en="Kakao Healthcare New Generation RWE Summit, invited talk, 2026" data-cap-ko="카카오헬스케어 New Generation RWE Summit 초청 강연, 2026" data-cursor="View">
           <img src="assets/img/kakao-rwe-1.jpg" alt="Kakao Healthcare RWE Summit invited talk">
           <figcaption><span class="lx-en">Kakao Healthcare New Generation RWE Summit &middot; invited talk, 2026</span><span class="lx-ko">카카오헬스케어 New Generation RWE Summit &middot; 초청 강연, 2026</span></figcaption>
         </figure>
+        <figure class="wr-photo" data-img="assets/img/msd-poster-2024.jpg" data-cap-en="Poster presentation at MSD, 2024" data-cap-ko="MSD 포스터 발표, 2024" data-cursor="View"><img src="assets/img/msd-poster-2024.jpg" alt=""><figcaption><span class="lx-en">Poster presentation at MSD, 2024</span><span class="lx-ko">MSD 포스터 발표, 2024</span></figcaption></figure>
       </div></div>
     </div>
   </div>
@@ -611,43 +668,56 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="sec-num rv">/ 02</div>
     <div>
       <h2 class="sec-title rv"><span class="lx-en">The path <span class="thin">so far</span></span><span class="lx-ko">지나온 <span class="thin">길</span></span></h2>
-      <p class="sec-lead rv"><span class="lx-en">Pediatrics residency, three years as a rural county's only pediatrician through the pandemic, then medical affairs at MSD and Boehringer Ingelheim.</span><span class="lx-ko">소아과 전공의, 팬데믹 동안 지역 유일의 소아 전문의로 보낸 3년, 그리고 MSD와 베링거인겔하임에서의 메디컬 어페어즈.</span></p>
+      <p class="sec-lead rv"><span class="lx-en">Pediatrics residency, three pandemic years running a rural county's emergency care and pediatric service, then medical affairs at MSD and Boehringer Ingelheim.</span><span class="lx-ko">소아과 전공의, 팬데믹 동안 지역의 응급의료와 소아 진료를 맡은 3년, 그리고 MSD와 베링거인겔하임에서의 메디컬 어페어즈.</span></p>
     </div>
   </div>
 
+  <div class="timeline">
+    <div class="tl-progress"></div>
   <div class="tl-item rv">
-    <div class="tl-when"><div class="ix">01 · 2014–2019</div><div class="yr">2014</div><div class="org">Kangbuk Samsung Hospital</div><div class="role"><span class="lx-en">Resident → Chief Resident, Pediatrics</span><span class="lx-ko">전공의 → 의국장</span></div></div>
+    <div class="tl-when"><div class="ix">01 · 2014–2019</div><div class="yr">2014</div><div class="org">Kangbuk Samsung Hospital</div><div class="role"><span class="lx-en">Resident → Chief Resident · Representative of Training Doctors</span><span class="lx-ko">전공의 → 의국장 · 전공의 대표</span></div></div>
     <div class="tl-body">
       <h3><span class="lx-en">Pediatrics residency, and a first system</span><span class="lx-ko">전공의, 그리고 첫 시스템</span></h3>
-      <p class="lead lx-en">In-hospital staff often weren't ready for pediatric emergencies. To address it, he built a training loop — scenarios he wrote, simulation drills, and a video-feedback system — so readiness didn't depend on any one person's experience.</p>
-      <p class="lx-en">The program won the hospital's Quality Improvement Award (2017). As chief resident he sat on the hospital board, led labor-management negotiation, and served on the Patient Safety and Medical Records committees. He was also selected into the National Future Medical Scientist Program (top 20 nationally), which sent him to MIT, MGH, and LabCentral in Boston.</p>
+      <p class="lead lx-en">In-hospital staff often weren't ready for pediatric emergencies. The fix was a training loop, authored scenarios, simulation drills, and a video-feedback system, so readiness didn't depend on any one person's experience.</p>
+      <p class="lx-en">The program won the hospital's Quality Improvement Award (2017). As chief resident and representative of the training doctors, sat on the hospital board, led labor-management negotiation, and served on the Patient Safety and Medical Records committees. Selected into the National Future Medical Scientist Program (top 20 nationally) and, <em>as the hospital's representative</em>, visited MIT, MGH, and LabCentral in Boston.</p>
       <p class="lead lx-ko">원내 인력이 소아 응급에 충분히 대비돼 있지 않았다. 직접 쓴 시나리오와 모의훈련, 비디오 피드백을 묶어 교육 과정을 만들었다. 대비 수준이 개인의 경험에 좌우되지 않게 하려는 것이었다.</p>
-      <p class="lx-ko">이 프로그램으로 병원 Quality Improvement Award(2017)를 받았다. 의국장으로서 병원 이사회에 참여하고 노사 협의를 주도했으며 환자안전·의무기록 위원회 위원으로 활동했다. 전국 20인의 National Future Medical Scientist Program에 선발되어 보스턴의 MIT·MGH·LabCentral을 견학했다.</p>
+      <p class="lx-ko">이 프로그램으로 병원 Quality Improvement Award(2017)를 받았다. 전공의 대표(의국장)로서 병원 이사회에 참여하고 노사 협의를 주도했으며 환자안전·의무기록 위원회 위원으로 활동했다. 전국 20인의 National Future Medical Scientist Program에 선발됐고, <em>병원을 대표해</em> 보스턴의 MIT·MGH·LabCentral을 방문했다.</p>
+      <div class="tl-photos">
+        <figure class="wr-photo" data-img="assets/img/boston-novartis.jpg" data-cap-en="Physician-Scientist Program, Novartis lab, Boston (2018), as the hospital's representative" data-cap-ko="의사과학자 연수, 노바티스 보스턴 랩 (2018), 병원 대표로" data-cursor="View"><img src="assets/img/boston-novartis.jpg" alt="Novartis lab, Boston"><figcaption><span class="lx-en">Novartis lab, Boston · 2018</span><span class="lx-ko">노바티스 보스턴 랩 · 2018</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/boston-pfizer-1.jpg" data-cap-en="Physician-Scientist Program, Pfizer lab, Boston (2018)" data-cap-ko="의사과학자 연수, 화이자 보스턴 랩 (2018)" data-cursor="View"><img src="assets/img/boston-pfizer-1.jpg" alt="Pfizer lab, Boston"><figcaption><span class="lx-en">Pfizer lab, Boston · 2018</span><span class="lx-ko">화이자 보스턴 랩 · 2018</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/residents-farewell.jpg" data-cap-en="A farewell from the residents I represented" data-cap-ko="전공의 대표로 함께한 후배들의 페어웰" data-cursor="View"><img src="assets/img/residents-farewell.jpg" alt=""><figcaption><span class="lx-en">Farewell from the training doctors</span><span class="lx-ko">전공의들의 페어웰</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/chief-resident-rep.jpg" data-cap-en="Chief resident and elected delegate, Korean Intern Resident Association" data-cap-ko="의국장(전공의 대표)이자 대한전공의협의회 대의원" data-cursor="View"><img src="assets/img/chief-resident-rep.jpg" alt=""><figcaption><span class="lx-en">Chief resident and elected delegate, Korean Intern Resident Association</span><span class="lx-ko">의국장(전공의 대표)이자 대한전공의협의회 대의원</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/r1-patient-yuna.jpg" data-cap-en="With a young patient during residency" data-cap-ko="레지던트 시절, 어린 환아와 함께" data-cursor="View"><img src="assets/img/r1-patient-yuna.jpg" alt=""><figcaption><span class="lx-en">With a young patient during residency</span><span class="lx-ko">레지던트 시절, 어린 환아와 함께</span></figcaption></figure>
+      </div>
       <div class="tl-tags"><span class="tag">Systems thinking</span><span class="tag">QI Award</span><span class="tag">Governance</span><span class="tag">Boston / MSIT</span></div>
     </div>
   </div>
 
   <div class="tl-item rv">
-    <div class="tl-when"><div class="ix">02 · 2019–2022</div><div class="yr">2019</div><div class="org">Hwacheon Public Health Center</div><div class="role"><span class="lx-en">Chief of Emergency &amp; Pediatric Medicine</span><span class="lx-ko">응급실장·소아청소년과장</span></div></div>
+    <div class="tl-when"><div class="ix">02 · 2019–2022</div><div class="yr">2019</div><div class="org">Hwacheon Public Health Center</div><div class="role"><span class="lx-en">Pediatric physician · ER &amp; emergency-care-system chief · pandemic-response lead</span><span class="lx-ko">소아과 주치의 · 응급실장·응급의료체계 담당 · 팬데믹 전략 담당</span></div></div>
     <div class="tl-body">
-      <h3><span class="lx-en">A rural county's only pediatrician</span><span class="lx-ko">지역 유일의 소아 전문의</span></h3>
-      <p class="lead lx-en">As the only pediatric specialist in a rural, medically-underserved county, he ran the emergency room and pediatric service. Through COVID-19 the ER stayed open without a single shutdown, and he advised on regional quarantine policy from the local COVID-19 control committee.</p>
-      <p class="lx-en">Watching the WHO, KDCA, and Johns Hopkins COVID dashboards daily, he saw how much macro-level data visualization shaped decisions — and wondered why nothing similar existed for metabolic disease. That question later became K-Health Pulse, and led him to a Johns Hopkins MPH.</p>
-      <p class="lead lx-ko">의료 취약지에서 유일한 소아 전문의로 응급실과 소아 진료를 맡았다. 팬데믹 내내 응급실은 한 번도 문을 닫지 않았다. 지역 코로나19 대응 자문위원으로 선별진료소 운영과 방역 정책 자문도 함께 했다.</p>
+      <h3><span class="lx-en">Care, the emergency system, and pandemic strategy</span><span class="lx-ko">진료, 응급체계, 그리고 팬데믹 전략</span></h3>
+      <p class="lead lx-en">In a rural, medically-underserved county: pediatric physician, chief of the emergency room and the emergency-care system, and the region's pandemic-response lead. Through COVID-19 the ER <em>never shut down once</em>; advised on regional quarantine policy from the local COVID-19 committee, and joined national KDCA meetings of public-health-center directors.</p>
+      <p class="lx-en">Watching the WHO, KDCA, and Johns Hopkins COVID dashboards daily showed how much macro-level data visualization shaped decisions, and raised the question of why nothing similar existed for metabolic disease. That question later became K-Health Pulse, and led to a Johns Hopkins MPH.</p>
+      <p class="lead lx-ko">의료 취약지에서 소아과 주치의로 진료하는 동시에 응급실과 지역 응급의료체계를 맡았고, 팬데믹 대응 전략을 이끌었다. 팬데믹 내내 응급실은 <em>한 번도 문을 닫지 않았다</em>. 지역 방역 정책에 자문했고, 질병청(KDCA)의 전국 보건소장·보건의료원장 회의에도 참여했다.</p>
       <p class="lx-ko">매일 WHO와 질병청, 존스홉킨스의 코로나 대시보드를 봤다. 거시 데이터를 시각화하는 일이 의사결정을 크게 좌우한다는 것을 실감했고, 대사질환에는 왜 비슷한 것이 없는지 의문을 품었다. 그 의문은 나중에 K-Health Pulse로, 또 존스홉킨스 MPH 진학으로 이어졌다.</p>
       <div class="tl-quote"><span class="lx-en">Through the whole pandemic, the emergency room never shut down once.</span><span class="lx-ko">팬데믹 내내 응급실은 한 번도 문을 닫지 않았다.</span></div>
-      <div class="tl-tags"><span class="tag">Sole specialist</span><span class="tag">Pandemic frontline</span><span class="tag">Policy advisory</span></div>
+      <div class="tl-tags"><span class="tag">Emergency-care system</span><span class="tag">Pandemic strategy</span><span class="tag">KDCA meetings</span><span class="tag">Data → K-Health Pulse</span></div>
     </div>
   </div>
 
   <div class="tl-item rv">
     <div class="tl-when"><div class="ix">03 · 2022–2025</div><div class="yr">2022</div><div class="org">MSD Korea</div><div class="role"><span class="lx-en">Medical Advisor / Associate Director · sole lead (IC)</span><span class="lx-ko">Medical Advisor / Associate Director · 단독 리드(IC)</span></div></div>
     <div class="tl-body">
-      <h3><span class="lx-en">MSD — medical affairs across specialty care</span><span class="lx-ko">MSD, 스페셜티 전반의 메디컬 어페어즈</span></h3>
-      <p class="lead lx-en">Across specialty infectious disease, hematology, and rare disease — as an individual contributor, with no MSL team — the work leaned on medical, access, and government-affairs strategy. For a COVID-19 oral antiviral with no sales force, market share went from single digits to roughly half within a year.</p>
-      <p class="lx-en">He won reimbursement for a new-class antibiotic by making the clinical and public-health case — the first drug reimbursed under Korea's expanded essential-antibiotic exemption. On an HSCT CMV prophylaxis, he made a deliberate trade-off to protect price and landed both the indication expansion and its reimbursement with self-authored dossiers. In 2024 he set up the affiliate's first structured AI effort as KR AI Tribe Lead.</p>
+      <h3><span class="lx-en">MSD, medical affairs across specialty care</span><span class="lx-ko">MSD, 스페셜티 전반의 메디컬 어페어즈</span></h3>
+      <p class="lead lx-en">Across specialty infectious disease, hematology, and rare disease, as an individual contributor, with no MSL team, the work leaned on medical, access, and government-affairs strategy. For a COVID-19 oral antiviral with no sales force, market share went <em>from single digits to roughly half</em> within a year.</p>
+      <p class="lx-en">Won reimbursement for a new-class antibiotic by making the clinical and public-health case, the first drug reimbursed under Korea's expanded essential-antibiotic exemption. On an HSCT CMV prophylaxis, made a deliberate trade-off to protect price and landed both the indication expansion and its reimbursement with self-authored dossiers. In 2024, set up the affiliate's first structured AI effort as KR AI Tribe Lead.</p>
       <p class="lead lx-ko">감염과 혈액, 희귀질환에 걸쳐 MSL 조직 없이 단독으로 일했다. 메디컬과 market access, 대관이 주된 수단이었다. 영업조직이 없던 COVID-19 경구 항바이러스제는 1년 만에 점유율이 한 자릿수에서 약 절반까지 올랐다.</p>
       <p class="lx-ko">신규 계열 항생제는 임상·공중보건 근거로 경평면제 확대의 첫 급여 사례가 됐다. 조혈모세포이식 CMV 예방요법에서는 약가를 지키는 쪽을 택해, 자체 보고서만으로 적응증 확대와 급여를 함께 달성했다. 2024년에는 KR AI Tribe Lead로 지사 최초의 구조화된 AI 작업을 시작했다.</p>
+      <div class="tl-photos">
+        <figure class="wr-photo" data-img="assets/img/msd-badge.jpg" data-cap-en="MSD employee ID" data-cap-ko="MSD 사원증" data-cursor="View"><img src="assets/img/msd-badge.jpg" alt=""><figcaption><span class="lx-en">MSD employee ID</span><span class="lx-ko">MSD 사원증</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/msd-annual-meeting-2023.jpg" data-cap-en="MSD annual meeting session, 2023" data-cap-ko="MSD 연례 미팅 세션, 2023" data-cursor="View"><img src="assets/img/msd-annual-meeting-2023.jpg" alt=""><figcaption><span class="lx-en">MSD annual meeting session, 2023</span><span class="lx-ko">MSD 연례 미팅 세션, 2023</span></figcaption></figure>
+      </div>
       <div class="tl-tags"><span class="tag">Sales-less growth</span><span class="tag">Reimbursement</span><span class="tag">Strategic trade-off</span><span class="tag">Evidence</span><span class="tag">AI Tribe Lead</span></div>
     </div>
   </div>
@@ -655,13 +725,18 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   <div class="tl-item rv">
     <div class="tl-when"><div class="ix">04 · 2025–<span class="lx-en">Present</span><span class="lx-ko">현재</span></div><div class="yr">2025</div><div class="org">Boehringer Ingelheim Korea</div><div class="role"><span class="lx-en">Medical Lead, Obesity &amp; MASH · People manager · AI champion</span><span class="lx-ko">Medical Lead, 비만·MASH · People Manager · AI Champion</span></div></div>
     <div class="tl-body">
-      <h3><span class="lx-en">Boehringer Ingelheim — obesity &amp; MASH</span><span class="lx-ko">베링거인겔하임, 비만·MASH</span></h3>
-      <p class="lead lx-en">He leads Korea's pre-launch medical strategy for survodutide (a glucagon/GLP-1 agonist for obesity and MASH). A large part of the work has been turning the global "See Obesity, Think Liver" campaign into something executable in Korea, and the part that mattered most was diagnosis: ultrasound-based fibrosis assessment, where the bottleneck really is.</p>
-      <p class="lx-en">Within four months of joining he earned a W!NN!NG Star Award; the ecosystem work later earned the SpUR Award. He delivered survodutide data across congresses — including a plenary encore ~100 hours after ADA — shifted congress strategy to encore formats, built the MSL function end-to-end, and leads the department's Medicine AX program, now expanding across the company.</p>
+      <h3><span class="lx-en">Boehringer Ingelheim, obesity &amp; MASH</span><span class="lx-ko">베링거인겔하임, 비만·MASH</span></h3>
+      <p class="lead lx-en">Leads Korea's pre-launch medical strategy for survodutide (a glucagon/GLP-1 agonist for obesity and MASH). A large part of the work has been turning the global "See Obesity, Think Liver" campaign into something executable in Korea, and the part that mattered most was diagnosis: ultrasound-based fibrosis assessment, <em>where the bottleneck really is</em>.</p>
+      <p class="lx-en">A W!NN!NG Star Award within four months of joining; the ecosystem work later earned the SpUR Award. Delivered survodutide data across congresses, including a plenary encore ~100 hours after ADA, shifted congress strategy to encore formats, built the MSL function end-to-end, and leads the department's Medicine AX program, now expanding across the company.</p>
       <p class="lead lx-ko">서보두타이드(비만·MASH의 글루카곤/GLP-1 이중작용제)의 한국 런칭 전 전략을 맡고 있다. 큰 축은 글로벌 캠페인 See Obesity, Think Liver를 한국에서 실행 가능하게 옮기는 일이었다. 가장 중요한 부분은 진단이었다. 병목이 거기 있어 초음파 기반 fibrosis 평가에 무게를 뒀다.</p>
       <p class="lx-ko">입사 4개월 만에 W!NN!NG Star Award를, 생태계 작업으로 SpUR Award를 받았다. 서보두타이드 데이터를 여러 학회에서 전파했다. ADA 약 100시간 뒤의 Plenary encore 발표도 그중 하나다. 학회 전략을 encore 중심으로 바꿨고, MSL 조직을 처음부터 갖췄으며, 전사로 확산되는 Medicine AX 프로그램을 이끈다.</p>
+      <div class="tl-photos">
+        <figure class="wr-photo" data-img="assets/img/bi-pipeline-forum-2025.jpg" data-cap-en="Boehringer Ingelheim pipeline forum, 2025" data-cap-ko="베링거인겔하임 파이프라인 포럼, 2025" data-cursor="View"><img src="assets/img/bi-pipeline-forum-2025.jpg" alt=""><figcaption><span class="lx-en">Boehringer Ingelheim pipeline forum, 2025</span><span class="lx-ko">베링거인겔하임 파이프라인 포럼, 2025</span></figcaption></figure>
+        <figure class="wr-photo" data-img="assets/img/ksso-oral-nonclinical-2025.jpg" data-cap-en="KSSO oral presentation, a non-clinical study, 2025" data-cap-ko="KSSO 구두발표 · 비임상 연구, 2025" data-cursor="View"><img src="assets/img/ksso-oral-nonclinical-2025.jpg" alt=""><figcaption><span class="lx-en">KSSO oral presentation, a non-clinical study, 2025</span><span class="lx-ko">KSSO 구두발표 · 비임상 연구, 2025</span></figcaption></figure>
+      </div>
       <div class="tl-tags"><span class="tag">Survodutide launch</span><span class="tag">See Obesity, Think Liver</span><span class="tag">Plenary</span><span class="tag">People leadership</span><span class="tag">Medicine AX</span></div>
     </div>
+  </div>
   </div>
 </div></section>
 
@@ -671,35 +746,68 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="sec-num rv">/ 03</div>
     <div>
       <h2 class="sec-title rv"><span class="lx-en">Tools I've <span class="thin">built</span></span><span class="lx-ko">내가 만든 <span class="thin">도구</span></span></h2>
-      <p class="sec-lead rv"><span class="lx-en">From the affiliate's first AI effort at MSD to leading Boehringer Ingelheim's Medicine AX program — a cross-functional team building tools that take routine load off the team so more time goes to the science.</span><span class="lx-ko">MSD 최초의 AI 작업에서 베링거인겔하임 Medicine AX 프로그램까지. 반복 업무를 덜어 과학에 쓸 시간을 늘리는 도구를 만드는 크로스펑셔널 팀이다.</span></p>
+      <p class="sec-lead rv"><span class="lx-en">From the affiliate's first AI effort at MSD to leading Boehringer Ingelheim's Medicine AX program, a cross-functional team building tools that take routine load off the team so more time goes to the science.</span><span class="lx-ko">MSD 최초의 AI 작업에서 베링거인겔하임 Medicine AX 프로그램까지. 반복 업무를 덜어 과학에 쓸 시간을 늘리는 도구를 만드는 크로스펑셔널 팀이다.</span></p>
     </div>
   </div>
 
+  <div class="ax-cap rv">
+    <p class="lx-en">This isn't prompt-tinkering. I work the full stack myself, database, backend, frontend, CI, and lead developers to ship tools that actually run. The same instinct serves as a personal builder and as the company's AX lead: find the real problem, then build the abstraction that solves it.</p>
+    <p class="lx-ko">프롬프트만 만지는 게 아니다. DB·백엔드·프론트엔드·CI까지 풀스택을 직접 다루고, 개발자들을 이끌어 실제로 돌아가는 도구를 만든다. 개인 개발자로서나 회사의 AX 리드로서나 같은 방식이다. 진짜 문제를 찾고, 그것을 푸는 추상화를 만든다.</p>
+  </div>
+  <figure class="ax-photo rv" data-img="assets/img/snu-ax-2026.jpg" data-cap-en="Medicine AX program with the SNU K-Digital Training developers, 2026" data-cap-ko="Medicine AX 프로그램, SNU K-Digital Training 개발자들과 함께, 2026" data-cursor="View">
+    <img src="assets/img/snu-ax-2026.jpg" alt="Medicine AX program with SNU developers">
+    <figcaption><span class="lx-en">Medicine AX program &middot; with SNU K-Digital Training developers &middot; 2026</span><span class="lx-ko">Medicine AX 프로그램 · SNU K-Digital Training 개발자들과 · 2026</span></figcaption>
+  </figure>
+
   <div class="throughline rv">
-    <div class="ts"><div class="yr">2024</div><div class="d"><b>KR AI Tribe Lead</b>, MSD — <span class="lx-en">affiliate's first structured AI capability; only AP member in MSD's internal-LLM beta.</span><span class="lx-ko">지사 최초 구조화 AI 역량; MSD 내부 LLM 베타 유일 AP 멤버.</span></div></div>
-    <div class="ts"><div class="yr">2024</div><div class="d"><b>Azure AI Fundamentals</b> — <span class="lx-en">certified; GenAI Tribe (12) &amp; a non-technical AI-literacy curriculum.</span><span class="lx-ko">취득; GenAI Tribe(12인)·비개발자 AI 리터러시 커리큘럼.</span></div></div>
-    <div class="ts"><div class="yr">2025</div><div class="d"><b>Medicine AX Lead</b>, BI — <span class="lx-en">cross-functional team; company-wide rollout &amp; regional sharing.</span><span class="lx-ko">크로스펑셔널 팀; 전사 확산·리전 공유.</span></div></div>
-    <div class="ts"><div class="yr">2025</div><div class="d"><b>MFDS AI Subcommittee</b> — <span class="lx-en">industry panelist, personalized toxicity evaluation.</span><span class="lx-ko">산업 패널, 개인화 독성평가.</span></div></div>
+    <div class="ts"><div class="yr">2024</div><div class="d"><b>KR AI Tribe Lead</b>, MSD, <span class="lx-en">affiliate's first structured AI capability; only AP member in MSD's internal-LLM beta.</span><span class="lx-ko">지사 최초 구조화 AI 역량; MSD 내부 LLM 베타 유일 AP 멤버.</span></div></div>
+    <div class="ts"><div class="yr">2024</div><div class="d"><b>Azure AI Fundamentals</b>, <span class="lx-en">certified; GenAI Tribe (12) &amp; a non-technical AI-literacy curriculum.</span><span class="lx-ko">취득; GenAI Tribe(12인)·비개발자 AI 리터러시 커리큘럼.</span></div></div>
+    <div class="ts"><div class="yr">2025</div><div class="d"><b>Medicine AX Lead</b>, Boehringer Ingelheim, <span class="lx-en">cross-functional team; company-wide rollout &amp; regional sharing.</span><span class="lx-ko">크로스펑셔널 팀; 전사 확산·리전 공유.</span></div></div>
+    <div class="ts"><div class="yr">2025</div><div class="d"><b>MFDS AI Subcommittee</b>, <span class="lx-en">industry panelist, personalized toxicity evaluation.</span><span class="lx-ko">산업 패널, 개인화 독성평가.</span></div></div>
   </div>
 
+  <div class="demos-label rv"><span class="lx-en">Personal builds · public demos, my own projects, free to try</span><span class="lx-ko">개인 빌드 · 공개 데모, 직접 만든 프로젝트, 바로 써볼 수 있음</span></div>
   <div class="tools rv">
     <div class="tool" data-tilt>
-      <span class="flag live"><span class="lx-en">Live · public</span><span class="lx-ko">공개 배포</span></span>
-      <h4>K-Health Pulse</h4><div class="role"><span class="lx-en">Flagship decision engine</span><span class="lx-ko">플래그십 decision engine</span></div>
-      <p class="lx-en">A clinical-grade, full-stack decision engine (frontend · backend · DB · CI) integrating fragmented national health data through 30+ automated pipelines into map, chart, and narrative views, with spatial and causal-inference analytics across 250 municipalities.</p>
-      <p class="lx-ko">흩어진 국가 보건데이터를 30여 개 자동 파이프라인으로 통합해 지도와 차트, 서술형 화면으로 보여주는 임상 등급 decision engine이다. 250개 시군구 단위로 공간 분석과 인과추론을 수행한다.</p>
+      <span class="flag live"><span class="lx-en">Demo · public</span><span class="lx-ko">데모 · 공개</span></span>
+      <h4>K-Health Pulse</h4><div class="role"><span class="lx-en">Clinical-grade decision engine · full-stack</span><span class="lx-ko">임상 등급 decision engine · 풀스택</span></div>
+      <p class="lx-en">Fragmented national health data unified through 30+ pipelines into map, chart, and narrative views, with spatial and causal-inference analytics across 250 municipalities.</p>
+      <p class="lx-ko">흩어진 국가 보건데이터를 30여 개 파이프라인으로 통합해 지도·차트·서술형으로. 250개 시군구 단위 공간·인과추론 분석.</p>
       <a class="live" href="https://drmoony.github.io/k-healthmap" target="_blank" rel="noopener" data-cursor="Open">drmoony.github.io/k-healthmap ↗</a>
     </div>
     <div class="tool" data-tilt>
+      <span class="flag live"><span class="lx-en">Demo · public</span><span class="lx-ko">데모 · 공개</span></span>
+      <h4>CT-Galaxy</h4><div class="role"><span class="lx-en">Clinical-trial landscape &amp; alerts</span><span class="lx-ko">임상시험 지형·알림</span></div>
+      <p class="lx-en">A clinical-trial landscape and alert tool, turning fragmented public trial data into decision-ready views.</p>
+      <p class="lx-ko">임상시험 지형·알림 도구. 흩어진 공개 임상 데이터를 바로 판단에 쓸 수 있게.</p>
+      <a class="live" href="https://drmoony.github.io/ct-galaxy" target="_blank" rel="noopener" data-cursor="Open">drmoony.github.io/ct-galaxy ↗</a>
+    </div>
+    <div class="tool" data-tilt>
+      <span class="flag live"><span class="lx-en">Demo · public</span><span class="lx-ko">데모 · 공개</span></span>
+      <h4>Congress-Orbit</h4><div class="role"><span class="lx-en">Congress intelligence</span><span class="lx-ko">학회 인텔리전스</span></div>
+      <p class="lx-en">A congress landscape and intelligence build, mapping meetings, sessions, and scientific activity.</p>
+      <p class="lx-ko">학회 지형·인텔리전스 빌드. 학회·세션·학술 활동을 지도처럼 본다.</p>
+      <a class="live" href="https://drmoony.github.io/congress-orbit" target="_blank" rel="noopener" data-cursor="Open">drmoony.github.io/congress-orbit ↗</a>
+    </div>
+    <div class="tool" data-tilt>
+      <span class="flag wip"><span class="lx-en">App · personal</span><span class="lx-ko">앱 · 개인</span></span>
+      <h4>Paper Pulsar</h4><div class="role"><span class="lx-en">Literature analysis app</span><span class="lx-ko">문헌 분석 앱</span></div>
+      <p class="lx-en">A personal paper-analysis app that reads and structures the literature at scale.</p>
+      <p class="lx-ko">문헌을 대규모로 읽고 구조화하는 개인 논문 분석 앱.</p>
+    </div>
+  </div>
+  <div class="demos-label demos-label-2 rv"><span class="lx-en">Medicine AX program tools (company)</span><span class="lx-ko">Medicine AX 프로그램 도구 (사내)</span></div>
+  <div class="tools rv">
+    <div class="tool" data-tilt>
       <span class="flag wip"><span class="lx-en">MVP built</span><span class="lx-ko">MVP 완성</span></span>
       <h4>KEE / KOL Atlas</h4><div class="role"><span class="lx-en">Network-mapping engine</span><span class="lx-ko">네트워크 매핑 엔진</span></div>
-      <p class="lx-en">Integrates four public data sources (PubMed, OpenAlex, MeSH, MFDS) into an influence-scored graph for evidence-based expert identification. Built on a 7,700+ paper Korean corpus, architected across eight therapeutic areas — collapsing expert mapping from hours to minutes.</p>
+      <p class="lx-en">Integrates four public data sources (PubMed, OpenAlex, MeSH, MFDS) into an influence-scored graph for evidence-based expert identification. Built on a 7,700+ paper Korean corpus, architected across eight therapeutic areas, collapsing expert mapping from hours to minutes.</p>
       <p class="lx-ko">4개 공개 데이터(PubMed, OpenAlex, MeSH, 식약처)를 영향력 점수 그래프로 묶어 전문가를 찾아낸다. 한국 논문 7,700여 편으로 구축했고 8개 치료영역으로 확장하도록 설계했다. 전문가 매핑에 걸리던 시간을 수 시간에서 수 분으로 줄인다.</p>
     </div>
     <div class="tool" data-tilt>
       <span class="flag live"><span class="lx-en">In live use</span><span class="lx-ko">실사용 중</span></span>
       <h4>PV &amp; Reg Automation</h4><div class="role"><span class="lx-en">Pharmacovigilance tooling</span><span class="lx-ko">약물감시 도구</span></div>
-      <p class="lx-en">A raw-data decoding tool shipped into live PV use, removing a single-point global dependency. Building literature-screening and product-license-renewal automation — improving both timeliness and accuracy.</p>
+      <p class="lx-en">A raw-data decoding tool shipped into live PV use, removing a single-point global dependency. Building literature-screening and product-license-renewal automation, improving both timeliness and accuracy.</p>
       <p class="lx-ko">글로벌 담당자 한 명에게 쏠려 있던 원시자료 디코딩을 자체 도구로 바꿔 실무에 배포했다. 문헌 선별과 품목허가 갱신 자동화도 개발하고 있다.</p>
     </div>
     <div class="tool" data-tilt>
@@ -711,15 +819,8 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="tool" data-tilt>
       <span class="flag wip"><span class="lx-en">Designing</span><span class="lx-ko">설계 중</span></span>
       <h4>Budget Intelligence</h4><div class="role"><span class="lx-en">The profitability arm</span><span class="lx-ko">수익성 축</span></div>
-      <p class="lx-en">The one AX tool aimed at profitability, not time-savings. It reconciles finance-reported spend against the Medical Affairs activity plan and re-forecasts — attaching a "why" to every number, so the decision becomes "cut the lowest-priority activity."</p>
+      <p class="lx-en">The one AX tool aimed at profitability, not time-savings. It reconciles finance-reported spend against the Medical Affairs activity plan and re-forecasts, attaching a "why" to every number, so the decision becomes "cut the lowest-priority activity."</p>
       <p class="lx-ko">시간 절감이 아니라 수익성을 겨냥한 유일한 AX 도구다. 재무 부서의 집행 내역을 의학부 활동 계획과 맞춰 예산을 다시 짠다. 숫자마다 쓰임을 붙여, 조금씩 줄이는 대신 우선순위가 낮은 활동을 하나 덜어내는 판단을 돕는다.</p>
-    </div>
-    <div class="tool" data-tilt>
-      <span class="flag live"><span class="lx-en">Live · public</span><span class="lx-ko">공개 배포</span></span>
-      <h4>CT-Galaxy</h4><div class="role"><span class="lx-en">Clinical-trial alert engine</span><span class="lx-ko">임상시험 알림 엔진</span></div>
-      <p class="lx-en">A companion public build — a clinical-trial landscape and alert tool — part of the same domain-driven approach to turning fragmented public data into decision-ready views.</p>
-      <p class="lx-ko">함께 공개한 임상시험 지형·알림 도구다. 흩어진 공개 데이터를 바로 판단에 쓸 수 있는 화면으로 바꾸는 같은 접근이다.</p>
-      <a class="live" href="https://drmoony.github.io/ct-galaxy" target="_blank" rel="noopener" data-cursor="Open">drmoony.github.io/ct-galaxy ↗</a>
     </div>
   </div>
 
@@ -732,24 +833,24 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="sec-num rv">/ 04</div>
     <div>
       <h2 class="sec-title rv"><span class="lx-en">How I think <span class="thin">about the work</span></span><span class="lx-ko">일을 대하는 <span class="thin">생각</span></span></h2>
-      <p class="sec-lead rv"><span class="lx-en">A few things I keep coming back to — mostly about tools, AI, and where domain knowledge still matters.</span><span class="lx-ko">그가 일하며 자주 되짚는 생각 몇 가지다. 대개 도구와 AI, 그리고 도메인 지식이 여전히 중요한 지점에 관한 것이다.</span></p>
+      <p class="sec-lead rv"><span class="lx-en">A few things I keep coming back to, mostly about tools, AI, and where domain knowledge still matters.</span><span class="lx-ko">일하며 자주 되짚는 생각 몇 가지. 대개 도구와 AI, 그리고 도메인 지식이 여전히 중요한 지점에 관한 것이다.</span></p>
     </div>
   </div>
   <div class="notes rv">
     <div class="note">
       <div class="q"><span class="lx-en">Build a <em>system</em>, not a fix.</span><span class="lx-ko">일회성 해결보다 <em>시스템</em>을.</span></div>
-      <p class="lx-en">Since that first pediatric-CPR training loop, I've tried to build repeatable structures rather than just flag problems — ones that keep working after I've left the room. I'd rather not be the indispensable one.</p>
-      <p class="lx-ko">소아 CPR 교육 과정을 만든 뒤로 그는 문제를 지적하기보다 반복해 쓸 수 있는 구조를 만드는 쪽을 택해 왔다. 담당자가 바뀌어도 돌아가는 구조다. 대체 불가능한 사람이 되기보다 그 반대를 지향한다.</p>
+      <p class="lx-en">Since that first pediatric-CPR training loop, I've tried to build repeatable structures rather than just flag problems, ones that keep working after I've left the room. I'd rather not be the indispensable one.</p>
+      <p class="lx-ko">소아 CPR 교육 과정을 만든 뒤로, 문제를 지적하기보다 반복해 쓸 수 있는 구조를 만드는 쪽을 택해 왔다. 담당자가 바뀌어도 돌아가는 구조다. 대체 불가능한 사람이 되기보다 그 반대이고 싶다.</p>
     </div>
     <div class="note">
       <div class="q"><span class="lx-en">Show the <em>deliverable</em>, not the prompt.</span><span class="lx-ko"><em>결과물</em>이 먼저, 프롬프트가 아니라.</span></div>
-      <p class="lx-en">I sometimes compare the AI conversation to alchemy — chasing gold, but the controlled failures along the way gave us semiconductors and the moon. The part that matters is designing the abstraction layer, and the depth of what you make still comes from clinical experience.</p>
-      <p class="lx-ko">그는 AI 논의를 종종 연금술에 견준다. 금을 좇았지만 그 과정의 실패가 반도체와 달 착륙으로 이어졌다는 것이다. 중요한 일은 추상화 계층을 설계하는 것이고, 결과물의 깊이는 결국 임상 경험에서 나온다.</p>
+      <p class="lx-en">I sometimes compare the AI conversation to alchemy, chasing gold, but the controlled failures along the way gave us semiconductors and the moon. The part that matters is designing the abstraction layer, and the depth of what you make still comes from clinical experience.</p>
+      <p class="lx-ko">AI 이야기를 종종 연금술에 빗댄다. 금을 좇다 실패했지만 그 과정이 반도체와 달 착륙으로 이어졌다. 중요한 건 추상화 계층을 설계하는 일이고, 만들어내는 것의 깊이는 임상 경험에서 나온다.</p>
     </div>
     <div class="note">
       <div class="q"><span class="lx-en">Writing needs some <em>body heat</em>.</span><span class="lx-ko">글에는 약간의 <em>체온</em>이 있어야 한다.</span></div>
       <p class="lx-en">LLMs support maybe a third of my output, but they don't replace the core of the work. Writing where you can't see the author's reasoning feels like getting a wood-fired oven and only baking frozen pizza. I keep checking that my own work doesn't become that.</p>
-      <p class="lx-ko">그는 자기 산출물의 3할쯤을 LLM에 기댄다고 말한다. 그래도 그것이 일의 본질을 대신하진 못한다고 본다. 글쓴이의 추론이 보이지 않는 글은 화덕을 두고 냉동피자만 굽는 것과 같다. 자신의 글이 그렇게 되지 않았는지 자주 점검한다.</p>
+      <p class="lx-ko">산출물의 3할쯤은 LLM에 기댄다. 그래도 일의 본질까지 대신해주진 않는다. 글쓴이의 추론이 보이지 않는 글은 화덕을 두고 냉동피자만 굽는 격이다. 내 글이 그렇게 되지 않았는지 자주 들여다본다.</p>
     </div>
     <div class="note">
       <div class="q"><span class="lx-en">A Porsche is for <em>Friday night</em>.</span><span class="lx-ko">포르쉐는 <em>금요일 밤</em>에 쓸모 있다.</span></div>
@@ -766,11 +867,11 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div><h2 class="sec-title rv"><span class="lx-en">Awards <span class="thin">&amp; honors</span></span><span class="lx-ko">수상 <span class="thin">이력</span></span></h2></div>
   </div>
   <div class="rv">
-    <div class="aw"><div class="yr">2026</div><div><div class="nm">SpUR Award</div><div class="why"><span class="lx-en">Intersectoral strategic alignment — the disease ecosystem</span><span class="lx-ko">섹터 간 전략 정렬 — 질환 생태계</span></div></div><div class="by">Boehringer Ingelheim</div></div>
+    <div class="aw"><div class="yr">2026</div><div><div class="nm">SpUR Award</div><div class="why"><span class="lx-en">Intersectoral strategic alignment, the disease ecosystem</span><span class="lx-ko">섹터 간 전략 정렬, 질환 생태계</span></div></div><div class="by">Boehringer Ingelheim</div></div>
     <div class="aw"><div class="yr">2025.11</div><div><div class="nm">Best Oral Presentation Award</div><div class="why"><span class="lx-en">Encore oral presentation of trial data</span><span class="lx-ko">임상시험 결과 encore 구두발표</span></div></div><div class="by">SICOM 2025</div></div>
     <div class="aw"><div class="yr">2025.09</div><div><div class="nm">One-Star W!NN!NG Star Award</div><div class="why"><span class="lx-en">Within 4 months of joining</span><span class="lx-ko">입사 4개월</span></div></div><div class="by">Boehringer Ingelheim</div></div>
-    <div class="aw"><div class="yr">2024</div><div><div class="nm">AP One Team Award — Digital Project</div><div class="why"><span class="lx-en">AI Tribe digital innovation</span><span class="lx-ko">AI Tribe 디지털 프로젝트</span></div></div><div class="by">MSD</div></div>
-    <div class="aw"><div class="yr">2023</div><div><div class="nm">AP GMSA Impact Award — Regional</div><div class="why"><span class="lx-en">COVID-19 antiviral</span><span class="lx-ko">COVID-19 항바이러스제</span></div></div><div class="by">MSD</div></div>
+    <div class="aw"><div class="yr">2024</div><div><div class="nm">AP One Team Award, Digital Project</div><div class="why"><span class="lx-en">AI Tribe digital innovation</span><span class="lx-ko">AI Tribe 디지털 프로젝트</span></div></div><div class="by">MSD</div></div>
+    <div class="aw"><div class="yr">2023</div><div><div class="nm">AP GMSA Impact Award, Regional</div><div class="why"><span class="lx-en">COVID-19 antiviral</span><span class="lx-ko">COVID-19 항바이러스제</span></div></div><div class="by">MSD</div></div>
     <div class="aw"><div class="yr">2023</div><div><div class="nm">One Team Award</div><div class="why"><span class="lx-en">RSV launch lead</span><span class="lx-ko">RSV 런칭 리드</span></div></div><div class="by">MSD Korea</div></div>
     <div class="aw"><div class="yr">2022</div><div><div class="nm">One Team Award</div><div class="why"><span class="lx-en">Anti-infective reimbursement</span><span class="lx-ko">항감염제 급여</span></div></div><div class="by">MSD Korea</div></div>
     <div class="aw"><div class="yr">2022</div><div><div class="nm">Asia-Pacific Field Medical Award</div><div class="why"><span class="lx-en">COVID-19 antiviral</span><span class="lx-ko">COVID-19 항바이러스제</span></div></div><div class="by">MSD</div></div>
@@ -788,13 +889,13 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="bg-col">
       <h3><span class="lx-en">Education &amp; Certification</span><span class="lx-ko">학위 · 자격</span></h3>
       <div class="bg-item"><div class="h"><span class="lx-en">MPH, Health Policy &amp; Management (+ Public Health Economics)</span><span class="lx-ko">MPH, 보건정책관리 (+ 공중보건경제학)</span></div><div class="m"><span class="lx-en">Johns Hopkins Bloomberg School of Public Health · 2024–2026 · Capstone: cost-utility analysis of Korea's herbal-medicine pilot</span><span class="lx-ko">존스홉킨스 블룸버그 공중보건대학원 · 2024–2026 · 졸업논문: 한국 첩약 급여화 시범사업 비용효용분석</span></div></div>
-      <div class="bg-item"><div class="h"><span class="lx-en">MPH Practicum — Korea MASLD/MASH Ecosystem Blueprint</span><span class="lx-ko">MPH 프랙티컴 — Korea MASLD/MASH Ecosystem Blueprint</span></div><div class="m"><span class="lx-en">Johns Hopkins BSPH · systems analysis (stakeholder network + causal-loop modeling) &amp; strategic framework · 2026</span><span class="lx-ko">존스홉킨스 BSPH · systems analysis(이해관계자 네트워크 + 인과루프 모델링)·전략 프레임워크 · 2026</span></div></div>
+      <div class="bg-item"><div class="h"><span class="lx-en">MPH Practicum, Korea MASLD/MASH Ecosystem Blueprint</span><span class="lx-ko">MPH 프랙티컴, Korea MASLD/MASH Ecosystem Blueprint</span></div><div class="m"><span class="lx-en">Johns Hopkins BSPH · systems analysis (stakeholder network + causal-loop modeling) &amp; strategic framework · 2026</span><span class="lx-ko">존스홉킨스 BSPH · systems analysis(이해관계자 네트워크 + 인과루프 모델링)·전략 프레임워크 · 2026</span></div></div>
       <div class="bg-item"><div class="h">M.D.</div><div class="m"><span class="lx-en">Dankook University College of Medicine · 2008–2014</span><span class="lx-ko">단국대학교 의과대학 · 2008–2014</span></div></div>
-      <div class="bg-item"><div class="h"><span class="lx-en">Board — Pediatrics; subspecialty Pediatric Emergency Medicine</span><span class="lx-ko">전문의 — 소아청소년과; 세부전문의 소아응급의학</span></div><div class="m"><span class="lx-en">Korean Academy of Medical Sciences · PALS, KALS, NRP</span><span class="lx-ko">대한의학회 · PALS, KALS, NRP</span></div></div>
+      <div class="bg-item"><div class="h"><span class="lx-en">Board, Pediatrics; subspecialty Pediatric Emergency Medicine</span><span class="lx-ko">전문의, 소아청소년과; 세부전문의 소아응급의학</span></div><div class="m"><span class="lx-en">Korean Academy of Medical Sciences · PALS, KALS, NRP</span><span class="lx-ko">대한의학회 · PALS, KALS, NRP</span></div></div>
       <div class="bg-item"><div class="h">Microsoft Certified: Azure AI Fundamentals</div><div class="m">Microsoft · 2024</div></div>
       <div class="bg-item"><div class="h"><span class="lx-en">Educational Course in Medical Genetics &amp; Genomics</span><span class="lx-ko">의학유전상담 자격 교육과정 (Medical Genetics &amp; Genomics)</span></div><div class="m"><span class="lx-en">Korean Society of Medical Genetics and Genomics · 2024</span><span class="lx-ko">대한의학유전학회 · 2024</span></div></div>
-      <div class="bg-item"><div class="h"><span class="lx-en">National Future Medical Scientist Program — selected (top 20)</span><span class="lx-ko">National Future Medical Scientist Program — 선발 (전국 20인)</span></div><div class="m"><span class="lx-en">MSIT · MIT / MGH / LabCentral, Boston</span><span class="lx-ko">과기부 · MIT / MGH / LabCentral, 보스턴</span></div></div>
-      <div class="bg-item"><div class="h"><span class="lx-en">Industry Panelist — MFDS AI Subcommittee</span><span class="lx-ko">산업 패널 — 식약처 AI 소위원회</span></div><div class="m"><span class="lx-en">Personalized Toxicity Evaluation Research Group · 2025–present</span><span class="lx-ko">개인화 독성평가 연구그룹 · 2025–현재</span></div></div>
+      <div class="bg-item"><div class="h"><span class="lx-en">National Future Medical Scientist Program, selected (top 20)</span><span class="lx-ko">National Future Medical Scientist Program, 선발 (전국 20인)</span></div><div class="m"><span class="lx-en">MSIT · MIT / MGH / LabCentral, Boston</span><span class="lx-ko">과기부 · MIT / MGH / LabCentral, 보스턴</span></div></div>
+      <div class="bg-item"><div class="h"><span class="lx-en">Industry Panelist, MFDS AI Subcommittee</span><span class="lx-ko">산업 패널, 식약처 AI 소위원회</span></div><div class="m"><span class="lx-en">Personalized Toxicity Evaluation Research Group · 2025–present</span><span class="lx-ko">개인화 독성평가 연구그룹 · 2025–현재</span></div></div>
     </div>
     <div class="bg-col">
       <h3><span class="lx-en">Selected Publications</span><span class="lx-ko">주요 논문</span></h3>
@@ -818,21 +919,50 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <p class="sec-lead rv"><span class="lx-en">Congresses, MOU signings, a graduation. Click any image.</span><span class="lx-ko">학회, MOU 서명식, 졸업식. 이미지를 누르면 확대된다.</span></p></div>
   </div>
   <div class="gal rv">
-    <div class="gitem w5 tall" data-img="assets/img/liverweek-plenary.jpg" data-cap-en="The Liver Week 2026 — first plenary presentation, ~100 hours after ADA" data-cap-ko="The Liver Week 2026. 첫 Plenary 발표, ADA 약 100시간 뒤" data-cursor="View"><span class="gtag">Plenary</span><img src="assets/img/liverweek-plenary.jpg" alt=""><div class="gt">The Liver Week 2026 · Plenary</div></div>
-    <div class="gitem w7" data-img="assets/img/philips-mou.jpg" data-cap-en="Boehringer Ingelheim Korea × Philips Korea MOU — B-mode ultrasound to 2D-SWE kPa quantification" data-cap-ko="한국베링거인겔하임과 필립스 코리아 MOU. B-mode 초음파를 2D-SWE kPa 정량화로 잇는 협약" data-cursor="View"><span class="gtag">Philips MOU</span><img src="assets/img/philips-mou.jpg" alt=""><div class="gt">Philips Korea MOU · diagnosis</div></div>
-    <div class="gitem w4" data-img="assets/img/sicom2025-award.jpg" data-cap-en="Best Oral Presentation Award — SICOM 2025, Seoul" data-cap-ko="최우수 구두발표상. SICOM 2025, 서울" data-cursor="View"><span class="gtag">Award</span><img src="assets/img/sicom2025-award.jpg" alt=""><div class="gt">SICOM 2025 · Best Oral</div></div>
-    <div class="gitem w4" data-img="assets/img/hopkins-graduation.jpg" data-cap-en="Johns Hopkins MPH — Health Policy &amp; Management, Baltimore 2026" data-cap-ko="존스홉킨스 MPH. 보건정책관리, 볼티모어 2026" data-cursor="View"><span class="gtag">JHU MPH</span><img src="assets/img/hopkins-graduation.jpg" alt=""><div class="gt">Johns Hopkins MPH</div></div>
-    <div class="gitem w4" data-img="assets/img/365mc-mou.jpg" data-cap-en="365mc MOU — the awareness axis of the Obesity–Liver ecosystem" data-cap-ko="365mc MOU. 비만·간 건강 생태계의 인지 단계" data-cursor="View"><span class="gtag">365mc MOU</span><img src="assets/img/365mc-mou.jpg" alt=""><div class="gt">365mc MOU · awareness</div></div>
-    <div class="gitem w4" data-img="assets/img/kakao-rwe-1.jpg" data-cap-en="Kakao Healthcare New Generation RWE Summit — invited talk, 2026" data-cap-ko="카카오헬스케어 New Generation RWE Summit 초청 강연, 2026" data-cursor="View"><span class="gtag">RWE Summit</span><img src="assets/img/kakao-rwe-1.jpg" alt=""><div class="gt">Kakao Healthcare · RWE talk</div></div>
-    <div class="gitem" data-img="assets/img/kakao-rwe-2.jpg" data-cap-en="Kakao Healthcare New Generation RWE Summit, 2026" data-cap-ko="카카오헬스케어 New Generation RWE Summit, 2026" data-cursor="View"><span class="gtag">RWE Summit</span><img src="assets/img/kakao-rwe-2.jpg" alt=""><div class="gt">Kakao Healthcare · RWE</div></div>
-    <div class="gitem w4" data-img="assets/img/icomes2025.jpg" data-cap-en="ICOMES 2025 — post-hoc analysis presentation" data-cap-ko="ICOMES 2025 사후 분석 발표" data-cursor="View"><span class="gtag">ICOMES</span><img src="assets/img/icomes2025.jpg" alt=""><div class="gt">ICOMES 2025</div></div>
-    <div class="gitem w4" data-img="assets/img/ksso2026.jpg" data-cap-en="KSSO 2026 Spring — 4 abstracts including a preclinical model" data-cap-ko="KSSO 2026 춘계. 비임상 모델 포함 초록 4건" data-cursor="View"><span class="gtag">KSSO</span><img src="assets/img/ksso2026.jpg" alt=""><div class="gt">KSSO 2026 Spring</div></div>
-    <div class="gitem w4" data-img="assets/img/liverweek-booth.jpg" data-cap-en="The Liver Week — medical booth with the clinical trial team" data-cap-ko="The Liver Week. 임상시험팀과 함께한 메디컬 부스" data-cursor="View"><span class="gtag">Medical booth</span><img src="assets/img/liverweek-booth.jpg" alt=""><div class="gt">The Liver Week · booth</div></div>
-    <div class="gitem" data-img="assets/img/liverweek-cft.jpg" data-cap-en="The Liver Week — with the Boehringer Ingelheim cross-functional team" data-cap-ko="The Liver Week. 베링거인겔하임 CFT와 함께" data-cursor="View"><span class="gtag">The Liver Week</span><img src="assets/img/liverweek-cft.jpg" alt=""><div class="gt">Boehringer Ingelheim CFT</div></div>
-    <div class="gitem w4" data-img="assets/img/boston-novartis.jpg" data-cap-en="Physician-Scientist Program — Novartis lab, Boston (2018)" data-cap-ko="의사과학자 연수. 노바티스 보스턴 랩 (2018)" data-cursor="View"><span class="gtag">Boston 2018</span><img src="assets/img/boston-novartis.jpg" alt=""><div class="gt">Novartis lab, Boston</div></div>
-    <div class="gitem w4" data-img="assets/img/boston-pfizer-1.jpg" data-cap-en="Physician-Scientist Program — Pfizer lab, Boston (2018)" data-cap-ko="의사과학자 연수. 화이자 보스턴 랩 (2018)" data-cursor="View"><span class="gtag">Boston 2018</span><img src="assets/img/boston-pfizer-1.jpg" alt=""><div class="gt">Pfizer lab, Boston</div></div>
-    <div class="gitem w4" data-img="assets/img/boston-pfizer-2.jpg" data-cap-en="Physician-Scientist Program — Pfizer lab, Boston (2018)" data-cap-ko="의사과학자 연수. 화이자 보스턴 랩 (2018)" data-cursor="View"><span class="gtag">Boston 2018</span><img src="assets/img/boston-pfizer-2.jpg" alt=""><div class="gt">Pfizer lab, Boston</div></div>
-    <div class="gitem w4" data-img="assets/img/wset-level3.jpg" data-cap-en="Off the clock — WSET Level 3. Context over tools, in another field." data-cap-ko="일 밖에서. WSET Level 3. 도구보다 맥락이 먼저라는 생각은 다른 분야에서도 통한다." data-cursor="View"><span class="gtag">Off the clock</span><img src="assets/img/wset-level3.jpg" alt=""><div class="gt">WSET Level 3</div></div>
+    <div class="gitem w4" data-img="assets/img/sicom2025-award.jpg" data-cap-en="Best Oral Presentation Award, SICOM 2025, Seoul" data-cap-ko="최우수 구두발표상. SICOM 2025, 서울" data-cursor="View"><span class="gtag">Award</span><img src="assets/img/sicom2025-award.jpg" alt=""><div class="gt">SICOM 2025 · Best Oral</div></div>
+    <div class="gitem w4" data-img="assets/img/hopkins-graduation.jpg" data-cap-en="Johns Hopkins MPH, Health Policy &amp; Management, Baltimore 2026" data-cap-ko="존스홉킨스 MPH. 보건정책관리, 볼티모어 2026" data-cursor="View"><span class="gtag">JHU MPH</span><img src="assets/img/hopkins-graduation.jpg" alt=""><div class="gt">Johns Hopkins MPH</div></div>
+    <div class="gitem w4" data-img="assets/img/365mc-mou.jpg" data-cap-en="365mc MOU, the awareness axis of the Obesity–Liver ecosystem" data-cap-ko="365mc MOU. 비만·간 건강 생태계의 인지 단계" data-cursor="View"><span class="gtag">365mc MOU</span><img src="assets/img/365mc-mou.jpg" alt=""><div class="gt">365mc MOU · awareness</div></div>
+    <div class="gitem w4" data-img="assets/img/icomes2025.jpg" data-cap-en="ICOMES 2025, post-hoc analysis presentation" data-cap-ko="ICOMES 2025 사후 분석 발표" data-cursor="View"><span class="gtag">ICOMES</span><img src="assets/img/icomes2025.jpg" alt=""><div class="gt">ICOMES 2025</div></div>
+    <div class="gitem w4" data-img="assets/img/ksso2026.jpg" data-cap-en="KSSO 2026 Spring, 4 abstracts including a preclinical model" data-cap-ko="KSSO 2026 춘계. 비임상 모델 포함 초록 4건" data-cursor="View"><span class="gtag">KSSO</span><img src="assets/img/ksso2026.jpg" alt=""><div class="gt">KSSO 2026 Spring</div></div>
+    <div class="gitem w4" data-img="assets/img/liverweek-booth.jpg" data-cap-en="The Liver Week, medical booth with the clinical trial team" data-cap-ko="The Liver Week. 임상시험팀과 함께한 메디컬 부스" data-cursor="View"><span class="gtag">Medical booth</span><img src="assets/img/liverweek-booth.jpg" alt=""><div class="gt">The Liver Week · booth</div></div>
+    <div class="gitem w4" data-img="assets/img/boston-novartis.jpg" data-cap-en="Physician-Scientist Program, Novartis lab, Boston (2018)" data-cap-ko="의사과학자 연수. 노바티스 보스턴 랩 (2018)" data-cursor="View"><span class="gtag">Boston 2018</span><img src="assets/img/boston-novartis.jpg" alt=""><div class="gt">Novartis lab, Boston</div></div>
+    <div class="gitem w4" data-img="assets/img/boston-pfizer-1.jpg" data-cap-en="Physician-Scientist Program, Pfizer lab, Boston (2018)" data-cap-ko="의사과학자 연수. 화이자 보스턴 랩 (2018)" data-cursor="View"><span class="gtag">Boston 2018</span><img src="assets/img/boston-pfizer-1.jpg" alt=""><div class="gt">Pfizer lab, Boston</div></div>
+    <div class="gitem w4" data-img="assets/img/msd-oneteam-award-2022.jpg" data-cap-en="MSD One Team Award, 2022" data-cap-ko="MSD One Team Award, 2022" data-cursor="View"><span class="gtag">Award</span><img src="assets/img/msd-oneteam-award-2022.jpg" alt=""><div class="gt">MSD · One Team Award</div></div>
+    <div class="gitem w4" data-img="assets/img/msd-rsv-award-2024.jpg" data-cap-en="MSD award, RSV launch lead, 2024" data-cap-ko="MSD RSV 런칭 리드 수상, 2024" data-cursor="View"><span class="gtag">Award</span><img src="assets/img/msd-rsv-award-2024.jpg" alt=""><div class="gt">MSD · RSV award</div></div>
+    <div class="gitem w4" data-img="assets/img/sicom-oral-2025.jpg" data-cap-en="SICOM 2025, best oral presentation" data-cap-ko="SICOM 2025 · 최우수 구두발표" data-cursor="View"><span class="gtag">SICOM</span><img src="assets/img/sicom-oral-2025.jpg" alt=""><div class="gt">SICOM 2025 · oral</div></div>
+    <div class="gitem w4" data-img="assets/img/icomes-oral-2025.jpg" data-cap-en="ICOMES 2025, oral presentation" data-cap-ko="ICOMES 2025 · 구두발표" data-cursor="View"><span class="gtag">ICOMES</span><img src="assets/img/icomes-oral-2025.jpg" alt=""><div class="gt">ICOMES 2025</div></div>
+    <div class="gitem w4" data-img="assets/img/hopkins-grad-main-2026.jpg" data-cap-en="Johns Hopkins Bloomberg School of Public Health, MPH graduation, 2026" data-cap-ko="존스홉킨스 블룸버그 공중보건대학원 MPH 졸업, 2026" data-cursor="View"><span class="gtag">JHU MPH</span><img src="assets/img/hopkins-grad-main-2026.jpg" alt=""><div class="gt">Johns Hopkins MPH</div></div>
+    <div class="gitem w4" data-img="assets/img/msd-annual-meeting-2023.jpg" data-cap-en="MSD annual meeting session, 2023" data-cap-ko="MSD 연례 미팅, 2023" data-cursor="View"><span class="gtag">MSD</span><img src="assets/img/msd-annual-meeting-2023.jpg" alt=""><div class="gt">MSD · annual meeting</div></div>
+    <div class="gitem w4" data-img="assets/img/msd-townhall-2023.jpg" data-cap-en="MSD 2H townhall, 2023" data-cap-ko="MSD 2H 타운홀, 2023" data-cursor="View"><span class="gtag">MSD</span><img src="assets/img/msd-townhall-2023.jpg" alt=""><div class="gt">MSD · townhall</div></div>
+    <div class="gitem w4" data-img="assets/img/lagevrio-presscon-2025.jpg" data-cap-en="COVID-19 Lagevrio press conference, 2025" data-cap-ko="COVID-19 라게브리오 기자간담회, 2025" data-cursor="View"><span class="gtag">COVID-19</span><img src="assets/img/lagevrio-presscon-2025.jpg" alt=""><div class="gt">Lagevrio · press</div></div>
+    <div class="gitem w4" data-img="assets/img/rsv-award.jpg" data-cap-en="MSD award, RSV launch, 2024" data-cap-ko="MSD RSV 런칭 수상, 2024" data-cursor="View"><span class="gtag">Award</span><img src="assets/img/rsv-award.jpg" alt=""><div class="gt">MSD · RSV</div></div>
+    <div class="gitem w4" data-img="assets/img/dankook-band-live.jpg" data-cap-en="Bassist, Dankook College of Medicine band, on stage" data-cap-ko="단국대 의대 밴드 베이시스트, 무대에서" data-cursor="View"><span class="gtag">Off the clock</span><img src="assets/img/dankook-band-live.jpg" alt=""><div class="gt">Med-school band &middot; bass</div></div>
+    <div class="gitem w4" data-img="assets/img/dankook-graduation-group.jpg" data-cap-en="Dankook University College of Medicine, graduation, 2014" data-cap-ko="단국대학교 의과대학 졸업, 2014" data-cursor="View"><span class="gtag">M.D. 2014</span><img src="assets/img/dankook-graduation-group.jpg" alt=""><div class="gt">Dankook M.D. &middot; class of 2014</div></div>
+    <div class="gitem w4" data-img="assets/img/first-pk-day.jpg" data-cap-en="First day on the wards as a student" data-cap-ko="학생 임상실습 첫날 (PK)" data-cursor="View"><span class="gtag">First PK</span><img src="assets/img/first-pk-day.jpg" alt=""><div class="gt">First day on the wards</div></div>
+    <div class="gitem w4" data-img="assets/img/debate-2nd-place.jpg" data-cap-en="2nd place, university-wide campus debate championship" data-cap-ko="전체 캠퍼스 토론대회 2등" data-cursor="View"><span class="gtag">Debate</span><img src="assets/img/debate-2nd-place.jpg" alt=""><div class="gt">Campus debate &middot; 2nd</div></div>
+    <div class="gitem w4" data-img="assets/img/intern-rollingpaper.jpg" data-cap-en="A rolling-paper farewell from the pulmonology ward nurses, internship" data-cap-ko="인턴 시절, 호흡기내과 병동 간호사들의 롤링페이퍼" data-cursor="View"><span class="gtag">Intern</span><img src="assets/img/intern-rollingpaper.jpg" alt=""><div class="gt">Ward farewell &middot; rolling paper</div></div>
+    <div class="gitem w4" data-img="assets/img/r1-gift.jpg" data-cap-en="Gifts kept from the residency years" data-cap-ko="레지던트 시절 받은 선물" data-cursor="View"><span class="gtag">Residency</span><img src="assets/img/r1-gift.jpg" alt=""><div class="gt">Gifts, kept &middot; residency</div></div>
+    <div class="gitem w4" data-img="assets/img/wset-level3.jpg" data-cap-en="Off the clock, WSET Level 3. Context over tools, in another field." data-cap-ko="일 밖에서. WSET Level 3. 도구보다 맥락이 먼저라는 생각은 다른 분야에서도 통한다." data-cursor="View"><span class="gtag">Off the clock</span><img src="assets/img/wset-level3.jpg" alt=""><div class="gt">WSET Level 3</div></div>
+  </div>
+</div></section>
+
+<!-- ============ ORIGIN ============ -->
+<section class="block origin" id="origin"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-num rv">/ 08</div>
+    <div><h2 class="sec-title rv"><span class="lx-en">Where this <span class="thin">started</span></span><span class="lx-ko">시작한 <span class="thin">곳</span></span></h2></div>
+  </div>
+  <div class="origin-grid rv">
+    <figure class="origin-photo" data-img="assets/img/chuncheon-neighborhood.jpg" data-cap-en="Chuncheon, the neighborhood I lived in until high school (2014 Naver roadview)" data-cap-ko="춘천, 고등학생 때까지 살던 동네 (2014 네이버 로드뷰)" data-cursor="View">
+      <img src="assets/img/chuncheon-neighborhood.jpg" alt="Chuncheon neighborhood, 2014 roadview">
+      <figcaption><span class="lx-en">Chuncheon &middot; lived here until high school &middot; 2014 roadview</span><span class="lx-ko">춘천 &middot; 고등학생 때까지 살던 동네 &middot; 2014 로드뷰</span></figcaption>
+    </figure>
+    <div class="origin-text">
+      <p class="lx-en">I grew up in a small hillside walk-up in Chuncheon: six buildings, forty-odd households. Escape, for me, was never horizontal (Seoul or not) but vertical. Not where I was, but what I would become. That is also why I distrust "impact" as self-congratulatory sentiment. Impact is measurable. The hope is simple: a kid who used to trudge home through this alley now sometimes saves a life, declares a death, or keeps a needed drug within reach, and turns that into a small foundation for something real.</p>
+      <p class="lx-ko">학창시절과 대학시절까지 가장 익숙했던 풍경. 6개동, 마흔 가구 남짓의 작은 빌라. 내게 탈출은 수평선상이 아니라 수직선상에 있었다. 인서울이냐 아니냐가 아니라, 내가 어떤 가치를 갖는 사람이냐가 중요했다. 이 골목을 지나던 아이가 이제 누군가를 살리거나, 세상이 외면한 사람들에게 필요한 약을 지켜내는 일이 자그마한 시금석이 되리라 믿는다.</p>
+      <p class="origin-quote lx-en">"Impact isn't self-congratulatory sentiment. It's measurable."</p>
+      <p class="origin-quote lx-ko">"임팩트는 오글거리는 자화자찬이 아니라, 계량 가능한 지표다."</p>
+    </div>
   </div>
 </div></section>
 
@@ -881,7 +1011,7 @@ else{
     if(k<1) requestAnimationFrame(step); else setTimeout(finish,180); }
   requestAnimationFrame(step);
 }
-/* hard fallbacks — never leave content hidden if rAF is throttled (bg tab) */
+/* hard fallbacks, never leave content hidden if rAF is throttled (bg tab) */
 setTimeout(finish,2600);
 window.addEventListener('load',function(){ setTimeout(finish,400); });
 
@@ -901,6 +1031,10 @@ document.querySelectorAll('[data-scroll]').forEach(function(a){
 });
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') body.classList.remove('menu-open'); });
 
+/* ---------- last pointer pos (shared) ---------- */
+var lastMX=window.innerWidth/2, lastMY=window.innerHeight/2;
+window.addEventListener('mousemove',function(e){ lastMX=e.clientX; lastMY=e.clientY; },{passive:true});
+
 /* ---------- header solid + progress ---------- */
 var header=document.querySelector('header'), progress=document.querySelector('.progress');
 function onScroll(){
@@ -908,6 +1042,9 @@ function onScroll(){
   header.classList.toggle('solid', y>window.innerHeight*0.9);
   progress.style.transform='scaleX('+(h>0?y/h:0)+')';
   parallax();
+  var tl=document.querySelector(".timeline");
+  if(tl){var tr=tl.getBoundingClientRect();var prog=Math.max(0,Math.min(window.innerHeight*0.55-tr.top,tr.height));var tp=document.querySelector(".tl-progress");if(tp)tp.style.height=prog+"px";}
+  syncMag(); syncCur();
 }
 window.addEventListener('scroll',onScroll,{passive:true});
 
@@ -956,12 +1093,26 @@ if(!touch){
   });
 }
 
-/* ---------- magnetic buttons ---------- */
-if(!touch&&!reduce){ document.querySelectorAll('[data-magnetic]').forEach(function(el){
-  el.addEventListener('mousemove',function(e){ var r=el.getBoundingClientRect(); var x=e.clientX-r.left-r.width/2, y=e.clientY-r.top-r.height/2;
-    el.style.transform='translate('+x*.3+'px,'+y*.4+'px)'; });
-  el.addEventListener('mouseleave',function(){ el.style.transform=''; });
-}); }
+/* ---------- keep custom cursor hover-state in sync on scroll ---------- */
+function syncCur(){ if(touch||typeof cur==='undefined'||!cur)return;
+  var t=document.elementFromPoint(lastMX,lastMY);
+  var hit=(t&&t.closest)?t.closest('[data-cursor],a,button,[data-work],.gitem'):null;
+  if(hit){ cur.classList.add('hovering'); body.classList.add('cursor-hover'); clabel.textContent=hit.getAttribute('data-cursor')||''; }
+  else{ cur.classList.remove('hovering'); body.classList.remove('cursor-hover'); if(clabel)clabel.textContent=''; } }
+
+/* ---------- magnetic buttons (mouse + keyboard/programmatic scroll) ---------- */
+var magEls=[];
+function magApply(el,px,py){ var r=el.getBoundingClientRect();
+  var x=px-(r.left+r.width/2), y=py-(r.top+r.height/2);
+  if(Math.abs(x)<r.width/2+48 && Math.abs(y)<r.height/2+48){ el.style.transform='translate('+(x*.45).toFixed(1)+'px,'+(y*.6).toFixed(1)+'px)'; }
+  else if(el.style.transform){ el.style.transform=''; } }
+function syncMag(){ for(var i=0;i<magEls.length;i++) magApply(magEls[i],lastMX,lastMY); }
+if(!touch&&!reduce){ magEls=[].slice.call(document.querySelectorAll('[data-magnetic]'));
+  magEls.forEach(function(el){
+    el.addEventListener('mousemove',function(e){ magApply(el,e.clientX,e.clientY); });
+    el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+  });
+}
 
 /* ---------- tilt cards ---------- */
 if(!touch&&!reduce){ document.querySelectorAll('[data-tilt]').forEach(function(el){
@@ -972,7 +1123,7 @@ if(!touch&&!reduce){ document.querySelectorAll('[data-tilt]').forEach(function(e
 
 /* ---------- lightbox ---------- */
 var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('.cap');
-var items=[].slice.call(document.querySelectorAll('.gitem, .wr-photo')), idx=0;
+var items=[].slice.call(document.querySelectorAll('.gitem, .wr-photo, .origin-photo, .ax-photo')), idx=0;
 function show(i){ idx=(i+items.length)%items.length; var it=items[idx]; lbImg.src=it.getAttribute('data-img');
   lbCap.textContent=it.getAttribute(body.classList.contains('lang-ko')?'data-cap-ko':'data-cap-en'); lb.classList.add('on'); }
 items.forEach(function(it,i){ it.addEventListener('click',function(e){ e.stopPropagation(); show(i); }); });
