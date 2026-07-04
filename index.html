@@ -122,6 +122,14 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .js .rv-line>*{display:inline-block;transform:translateY(115%);transition:transform 1.1s var(--ease);}
 .js .rv-line.in>*{transform:none;}
 @media (prefers-reduced-motion:reduce){.js .rv,.js .rv-line>*{opacity:1 !important;transform:none !important;}}
+/* Touch equivalent of the mouse-follow magnetic pull (which needs a
+   persistent pointer position touch devices don't have): [data-magnetic]
+   elements pop/settle into place as they scroll into view, reusing the
+   same reveal IntersectionObserver (`io`, see script) — see `.mag-settle`. */
+.js .mag-settle{transform:scale(.86) translateY(10px);opacity:.55;
+  transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .4s var(--ease);}
+.js .mag-settle.in{transform:none;opacity:1;}
+@media (prefers-reduced-motion:reduce){.js .mag-settle{opacity:1 !important;transform:none !important;}}
 
 /* ============ HERO ============ */
 .hero{min-height:100vh;display:flex;align-items:flex-end;padding-bottom:clamp(40px,7vh,90px);padding-top:140px;overflow:hidden;}
@@ -1127,6 +1135,13 @@ if(!touch&&!reduce){ magEls=[].slice.call(document.querySelectorAll('[data-magne
   magEls.forEach(function(el){
     el.addEventListener('mousemove',function(e){ magApply(el,e.clientX,e.clientY); });
     el.addEventListener('mouseleave',function(){ el.style.transform=''; });
+  });
+} else if(touch){
+  // No persistent pointer on touch — swap the cursor-follow pull for a
+  // scroll-into-view settle (`.mag-settle`, `io` observer defined above).
+  document.querySelectorAll('[data-magnetic]').forEach(function(el){
+    el.classList.add('mag-settle');
+    io.observe(el);
   });
 }
 
