@@ -377,6 +377,22 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   .tools{grid-template-columns:1fr;}.throughline{grid-template-columns:1fr 1fr;}
   .stats{grid-template-columns:1fr;}
   .aw{grid-template-columns:64px 1fr;}.aw .by{display:none;}
+  /* Mobile readability: the desktop clamp() floors (15px) read small at
+     phone viewing distance — fix the three body-copy classes below 16px. */
+  .hero-sub .r,.sec-lead,.ax-cap p{font-size:17px;}
+}
+/* Mobile: neutralize :hover-only visual states. Touch browsers apply :hover
+   styles on tap with no matching mouseleave, so buttons/links get visually
+   "stuck" (background/border/padding changes that never revert) until the
+   user taps elsewhere. `all:revert` at equal specificity, declared after the
+   base rules, cancels just those hover-only property changes on touch —
+   the magnetic pull effect itself is already touch-guarded in JS below. */
+@media (hover:none){
+  .ov-nav a:hover,.ov-side a.oc:hover,.btn-fill:hover,.btn-ghost:hover,.work-row:hover,
+  .tool:hover,.ax-photo img:hover,.aw:hover,#lb .nav:hover,.tl-photos img:hover,
+  .wr-asset:hover,.wr-photo img:hover,.wr-press a:hover,.origin-photo img:hover,.foot a:hover{
+    all:revert;
+  }
 }
 </style>
 </head>
