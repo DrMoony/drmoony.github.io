@@ -393,6 +393,10 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .contact h2{font-size:clamp(44px,9vw,140px);font-weight:600;letter-spacing:-.035em;line-height:.92;}
 .contact h2 em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--gold);}
 .contact .links{margin-top:44px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.contact-plain{margin-top:24px;font-size:13px;color:var(--faint);display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.contact-plain a{color:var(--faint);transition:color .3s;}
+.contact-plain a:hover{color:var(--gold);}
+.contact-plain .sep{color:var(--line-2);}
 .foot{margin-top:clamp(60px,10vh,120px);border-top:1px solid var(--line);padding-top:30px;
   display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--faint);font-weight:300;}
 .foot a:hover{color:var(--gold);}
@@ -1087,11 +1091,12 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   <span class="eyebrow k rv"><span class="lx-en">Get in touch</span><span class="lx-ko">연락</span></span>
   <h2 class="rv-line"><span class="lx-en">Let's <em>talk</em>.</span><span class="lx-ko">함께 <em>이야기</em>.</span></h2>
   <div class="links rv">
-    <a class="btn btn-fill" href="#" data-contact="email" data-magnetic data-cursor>Email ↗</a>
-    <a class="btn btn-ghost" href="#" data-contact="linkedin" data-magnetic data-cursor>LinkedIn ↗</a>
+    <a class="btn btn-fill" href="mailto:mftsky@gmail.com" data-magnetic data-cursor>Email ↗</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/moonkim118" target="_blank" rel="noopener" data-magnetic data-cursor>LinkedIn ↗</a>
     <a class="btn btn-ghost" href="https://drmoony.github.io/k-healthmap" target="_blank" rel="noopener" data-magnetic data-cursor>K-Health Pulse ↗</a>
     <a class="btn btn-ghost" href="https://orcid.org/0000-0002-4867-1984" target="_blank" rel="noopener" data-magnetic data-cursor>ORCID ↗</a>
   </div>
+  <div class="contact-plain rv"><a href="mailto:mftsky@gmail.com">mftsky@gmail.com</a><span class="sep">·</span><a href="https://www.linkedin.com/in/moonkim118" target="_blank" rel="noopener">linkedin.com/in/moonkim118</a></div>
   <div class="foot">
     <div><span class="lx-en">© 2026 Kyungmoon Kim, M.D., MPH · Public-facing edition</span><span class="lx-ko">© 2026 Kyungmoon Kim, M.D., MPH · 공개용</span></div>
     <div><a href="#top" data-scroll data-cursor><span class="lx-en">Back to top ↑</span><span class="lx-ko">맨 위로 ↑</span></a></div>
@@ -1256,13 +1261,6 @@ lb.querySelector('.prev').addEventListener('click',function(e){e.stopPropagation
 lb.addEventListener('click',function(e){ if(e.target===lb) lb.classList.remove('on'); });
 document.addEventListener('keydown',function(e){ if(!lb.classList.contains('on'))return;
   if(e.key==='Escape')lb.classList.remove('on'); if(e.key==='ArrowRight')show(idx+1); if(e.key==='ArrowLeft')show(idx-1); });
-
-/* ---------- contact placeholders ---------- */
-var CONTACT={linkedin:'https://www.linkedin.com/in/moonkim118',email:'mftsky@gmail.com'};
-document.querySelectorAll('[data-contact]').forEach(function(a){ var k=a.getAttribute('data-contact');
-  a.addEventListener('click',function(e){ var v=CONTACT[k]; if(!v){ e.preventDefault();
-    alert(body.classList.contains('lang-ko')?'index.html 하단 CONTACT 값에 링크를 넣어주세요.':'Add your link in the CONTACT object in index.html.'); return; }
-    a.href=(k==='email')?'mailto:'+v:v; }); });
 
 onScroll();
 })();
