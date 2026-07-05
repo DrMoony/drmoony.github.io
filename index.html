@@ -126,8 +126,8 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
    persistent pointer position touch devices don't have): [data-magnetic]
    elements pop/settle into place as they scroll into view, reusing the
    same reveal IntersectionObserver (`io`, see script) — see `.mag-settle`. */
-.js .mag-settle{transform:scale(.86) translateY(10px);opacity:.55;
-  transition:transform .55s cubic-bezier(.34,1.56,.64,1),opacity .4s var(--ease);}
+.js .mag-settle{transform:scale(.62) translateY(38px);opacity:.3;
+  transition:transform .5s cubic-bezier(.34,2.2,.64,1),opacity .35s var(--ease);}
 .js .mag-settle.in{transform:none;opacity:1;}
 @media (prefers-reduced-motion:reduce){.js .mag-settle{opacity:1 !important;transform:none !important;}}
 
@@ -449,6 +449,22 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     all:revert;
   }
 }
+
+/* ============ Mobile paging (scroll-snap "flip" between sections) ============ */
+@media(max-width:900px){
+  html{scroll-snap-type:y mandatory;}
+  .hero,.intro,.block,.contact{scroll-snap-align:start;scroll-snap-stop:always;}
+}
+.pager{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:60;
+  display:none;flex-direction:column;gap:9px;}
+.pager a{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25);
+  transition:background .35s,transform .35s;flex-shrink:0;}
+.pager a.active{background:var(--gold);transform:scale(1.7);}
+@media(max-width:900px){.pager{display:flex;}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-snap-type:none!important;}
+  .pager a{transition:none;}
+}
 </style>
 </head>
 <body class="lang-en">
@@ -494,7 +510,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 
 <!-- ============ HERO ============ -->
 <span id="top"></span>
-<section class="hero">
+<section class="hero" id="hero">
   <img class="hero-bg" src="assets/img/kyungmoon-headshot.jpg" alt="Kyungmoon Kim">
   <div class="wrap">
     <div class="hero-grid">
@@ -520,7 +536,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 </section>
 
 <!-- intro / positioning -->
-<section class="intro"><div class="wrap">
+<section class="intro" id="intro"><div class="wrap">
   <p class="intro-lead rv">
     <span class="lx-en">Pre-launch medical affairs is usually a quiet phase, a booth, a poster, a long wait for approval. This role covers <em>a lot more ground</em>: market access and reimbursement, government affairs, a disease-detection ecosystem, evidence generation and HEOR, congress science, clinical-trial execution, MSL leadership, and an AI-transformation program, rooted in clinical medicine, health policy, and clinical genetics. The through-line: build, in Korea, the kind of Medical Affairs usually reserved for global headquarters.</span>
     <span class="lx-ko">허가 전 Medical Affairs는 대개 조용한 국면이다. 작은 부스, 포스터 한 장, 그리고 허가를 기다리는 시간. 이 역할이 다루는 범위는 <em>훨씬 넓다</em>. Market access와 급여, 대관, 질환 발견 생태계, 근거 생성과 HEOR, 학회 과학, 임상시험 실행, MSL 조직 운영, 그리고 AI transformation 프로그램. 임상·보건정책·clinical genetics에 뿌리를 둔다. 관통하는 목표는 하나다. 글로벌 HQ에서나 보던 수준의 Medical Affairs를 한국에서 만드는 것.</span>
@@ -538,7 +554,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 </div>
 
 <!-- ============ STATS ============ -->
-<section class="block"><div class="wrap">
+<section class="block" id="stats"><div class="wrap">
   <div class="stats rv">
     <div class="stat"><div class="n" data-count="12">0<u>+</u></div><div class="l"><span class="lx-en">Years across clinical medicine, public health &amp; pharma (since 2014)</span><span class="lx-ko">2014년부터 임상·공중보건·제약을 아우른 경력</span></div></div>
     <div class="stat"><div class="n" data-count="8">0<u>+</u></div><div class="l"><span class="lx-en">Therapeutic areas, infectious, AMR, HSCT/CMV, rare/PAH, obesity/MASH, IBD, HIV, vaccines</span><span class="lx-ko">치료영역, 감염, 다제내성균, HSCT/CMV, 희귀/PAH, 비만/MASH, IBD, HIV, 백신</span></div></div>
@@ -1106,6 +1122,23 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 <!-- lightbox -->
 <div id="lb"><button class="x" aria-label="close">×</button><button class="nav prev" aria-label="prev">‹</button><img src="" alt=""><button class="nav next" aria-label="next">›</button><div class="cap"></div></div>
 
+<!-- floating page indicator (mobile paging) -->
+<nav class="pager" aria-label="Section pages">
+  <a href="#hero" aria-label="Home"></a>
+  <a href="#intro" aria-label="Intro"></a>
+  <a href="#stats" aria-label="Stats"></a>
+  <a href="#model" aria-label="Competency map"></a>
+  <a href="#work" aria-label="Selected work"></a>
+  <a href="#career" aria-label="Career"></a>
+  <a href="#ax" aria-label="AI and AX"></a>
+  <a href="#notes" aria-label="Notes"></a>
+  <a href="#awards" aria-label="Awards"></a>
+  <a href="#background" aria-label="Education and background"></a>
+  <a href="#gallery" aria-label="Gallery"></a>
+  <a href="#origin" aria-label="Origin"></a>
+  <a href="#contact" aria-label="Contact"></a>
+</nav>
+
 <script>
 (function(){
 "use strict";
@@ -1173,6 +1206,17 @@ window.addEventListener('scroll',onScroll,{passive:true});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);} });},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 function triggerInitial(){ document.querySelectorAll('.rv,.rv-line').forEach(function(el){io.observe(el);}); }
 if(reduce) triggerInitial();
+
+/* ---------- floating pager active-dot tracking ---------- */
+var pagerLinks=[].slice.call(document.querySelectorAll('.pager a'));
+if(pagerLinks.length){
+  var pagerPairs=pagerLinks.map(function(a){ return {a:a, el:document.querySelector(a.getAttribute('href'))}; }).filter(function(p){return p.el;});
+  var pagerIO=new IntersectionObserver(function(es){ es.forEach(function(e){
+    var pair=pagerPairs.find(function(p){ return p.el===e.target; });
+    if(pair && e.isIntersecting){ pagerLinks.forEach(function(a){a.classList.remove('active');}); pair.a.classList.add('active'); }
+  }); },{rootMargin:'-45% 0px -45% 0px',threshold:0});
+  pagerPairs.forEach(function(p){ pagerIO.observe(p.el); });
+}
 
 /* ---------- stat counters ---------- */
 var sc=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ var n=e.target; var target=+n.getAttribute('data-count');
