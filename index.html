@@ -266,18 +266,18 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
 .ax-cap p{font-size:clamp(15px,1.6vw,19px);line-height:1.7;color:#C6CECB;font-weight:300;}
 .ax-cap p .no{color:var(--gold-2);}
 .ax-photo{margin:0 0 44px;}
-.ax-photo img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);filter:grayscale(18%) brightness(.92);cursor:pointer;transition:filter .5s;}
+.ax-photo img{width:100%;height:auto;max-height:360px;object-fit:cover;object-position:center 35%;display:block;border-radius:8px;border:1px solid var(--line);filter:grayscale(18%) brightness(.92);cursor:pointer;transition:filter .5s;}
 @media(hover:hover){.ax-photo img:hover{filter:grayscale(0%) brightness(1);}}
 .ax-photo figcaption{margin-top:9px;font-size:11.5px;color:var(--faint);}
 .throughline{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:40px;}
 /* ============ Competency wheel ============ */
-.cwheel{position:relative;width:min(560px,86vw);aspect-ratio:1;margin:20px auto 0;}
+.cwheel{position:relative;width:min(700px,92vw);aspect-ratio:1;margin:24px auto 0;}
 .cw-hub{position:absolute;top:50%;left:50%;width:29%;aspect-ratio:1;transform:translate(-50%,-50%);
   clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);
   background:linear-gradient(150deg,rgba(230,177,94,.16),rgba(230,177,94,.04));border:1px solid var(--line-2);
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px;pointer-events:none;}
-.cw-hub .h-n{font-size:clamp(22px,3vw,34px);font-weight:200;color:var(--gold);line-height:1;}
-.cw-hub .h-l{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);}
+.cw-hub .h-n{font-size:clamp(30px,4vw,46px);font-weight:200;color:var(--gold);line-height:1;}
+.cw-hub .h-l{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);}
 .cw-node{position:absolute;top:50%;left:50%;width:31%;aspect-ratio:1;margin:-15.5% 0 0 -15.5%;
   clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);
   background:var(--panel);border:0;cursor:pointer;color:var(--ink);padding:0;
@@ -285,8 +285,8 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
   transition:filter .35s,transform .35s;display:flex;align-items:center;justify-content:center;}
 .cw-node::before{content:"";position:absolute;inset:0;clip-path:inherit;background:linear-gradient(150deg,rgba(230,177,94,.10),transparent);opacity:0;transition:opacity .35s;}
 .cw-node .cn-in{position:relative;text-align:center;padding:6% 12%;}
-.cw-node .cn-num{font-size:11px;color:var(--gold);font-weight:600;letter-spacing:.05em;display:block;margin-bottom:4px;}
-.cw-node .cn-t{font-size:clamp(10px,1.15vw,13px);font-weight:500;line-height:1.15;letter-spacing:-.01em;}
+.cw-node .cn-num{font-size:13px;color:var(--gold);font-weight:600;letter-spacing:.05em;display:block;margin-bottom:5px;}
+.cw-node .cn-t{font-size:clamp(12.5px,1.55vw,16.5px);font-weight:500;line-height:1.18;letter-spacing:-.01em;}
 @media(hover:hover){.cw-node:hover{filter:brightness(1.35);}.cw-node:hover::before{opacity:1;}}
 .cw-node.active{filter:brightness(1.5);}.cw-node.active::before{opacity:1;}
 .cw-hint{text-align:center;margin-top:22px;font-size:12px;color:var(--faint);letter-spacing:.03em;}
@@ -575,7 +575,7 @@ body.menu-open .ov-nav a:nth-child(7){transition-delay:.54s}
     <div class="stat"><div class="n" data-count="8">0<u>+</u></div><div class="kw"><span class="lx-en">Therapeutic areas</span><span class="lx-ko">치료영역</span></div><div class="l"><span class="lx-en">Therapeutic areas, infectious, AMR, HSCT/CMV, rare/PAH, obesity/MASH, IBD, HIV, vaccines</span><span class="lx-ko">치료영역, 감염, 다제내성균, HSCT/CMV, 희귀/PAH, 비만/MASH, IBD, HIV, 백신</span></div></div>
     <div class="stat"><div class="n" data-count="9">0</div><div class="kw"><span class="lx-en">Awards</span><span class="lx-ko">수상</span></div><div class="l"><span class="lx-en">Awards, one in every year of pharma (2022–2026)</span><span class="lx-ko">제약 재직 매해 수상 (2022–2026)</span></div></div>
     <div class="stat"><div class="n" data-count="20">0<u>+</u></div><div class="kw"><span class="lx-en">People led</span><span class="lx-ko">리드 인원</span></div><div class="l"><span class="lx-en">People led in pharma, ecosystem cross-functional TFT and the Medicine AX Project; line manager of the MSL team (2 MSLs). More in the hospital years.</span><span class="lx-ko">제약에서 이끄는 인원, 생태계 크로스펑셔널 TFT·Medicine AX 프로젝트, MSL 팀 라인매니저(MSL 2명). 병원 시절엔 더 많았다.</span></div></div>
-    <div class="stat"><div class="n" data-count="6">0</div><div class="kw"><span class="lx-en">AI tools</span><span class="lx-ko">AI 도구</span></div><div class="l"><span class="lx-en">Self-built, full-stack AI tools</span><span class="lx-ko">자체 제작 풀스택 AI 도구</span></div></div>
+    <div class="stat"><div class="n" data-count="8">0</div><div class="kw"><span class="lx-en">AI tools</span><span class="lx-ko">AI 도구</span></div><div class="l"><span class="lx-en">Built or directed as lead across the AX Project; several solo, full-stack, end to end</span><span class="lx-ko">AX Project에서 직접 만들거나 리드로 디렉팅한 도구, 그중 여럿은 풀스택 단독 개발</span></div></div>
     <div class="stat"><div class="n" data-count="3">0</div><div class="kw"><span class="lx-en">Years AX lead</span><span class="lx-ko">AX 연속 리드</span></div><div class="l"><span class="lx-en">Consecutive years leading enterprise AX transformation (2024–2026, MSD → Boehringer Ingelheim)</span><span class="lx-ko">전사 AX 전환 연속 리드 (2024–2026, MSD → 베링거인겔하임)</span></div></div>
   </div>
 </div></section>
@@ -1250,29 +1250,29 @@ window.addEventListener('resize',recalcOpen);
 /* ---------- competency wheel + overlay ---------- */
 var COMP=[
   {t_en:'Integrated Medical Strategy & Launch',t_ko:'통합 메디컬 전략·런칭',
-   d_en:'Launch strategy across the full lifecycle, from preemptive pipeline business cases through exit management for withdrawn products.',
-   d_ko:'선제적 파이프라인 비즈니스 케이스부터 철수 제품의 exit management까지, 라이프사이클 전 구간의 런칭 전략.',
-   links:[['#case-lagevrio','Opening a market with no sales force','영업 없이 시장 열기'],['#case-ecosystem','Building the diagnosis ecosystem','진단 생태계 구축']]},
+   d_en:'Launch strategy across the full lifecycle: opening a market with no sales force, preemptive pipeline business cases, a play-to-win diagnosis ecosystem, and exit management for withdrawn products.',
+   d_ko:'영업 없이 시장을 여는 것부터 선제적 파이프라인 비즈니스 케이스, play-to-win 진단 생태계, 철수 제품의 exit management까지 라이프사이클 전 구간의 런칭 전략.',
+   links:[['#case-lagevrio','Opening a market with no sales force','영업 없이 시장 열기'],['#case-ecosystem','Building the diagnosis ecosystem','진단 생태계 구축'],['#case-cmv','Lifecycle & strategic trade-offs','라이프사이클·전략적 선택']]},
   {t_en:'Market Access & Value',t_ko:'Market Access·Value',
-   d_en:'Reimbursement strategy under constrained evidence, and building the partnership ecosystem a diagnosis pathway needs.',
-   d_ko:'근거가 제한적인 상황에서의 급여 전략, 그리고 진단 경로에 필요한 파트너십 생태계 구축.',
-   links:[['#case-zerbaxa','Reimbursement under a non-inferiority study','비열등성 근거로 급여 돌파'],['#case-cmv','The strategic trade-off','전략적 선택과 집중']]},
+   d_en:'Reimbursement strategy under constrained evidence, the partnership ecosystem a diagnosis pathway needs, and HEOR grounded in a Johns Hopkins MPH in health economics, from a first reimbursement under the expanded exemption to an ICER-report advisory before launch.',
+   d_ko:'근거가 제한적인 상황에서의 급여 전략, 진단 경로에 필요한 파트너십 생태계, 그리고 존스홉킨스 MPH(보건경제)에 뿌리를 둔 HEOR. 확대 경평면제 첫 급여부터 런칭 전 ICER 리포트 자문까지.',
+   links:[['#case-zerbaxa','Reimbursement under a non-inferiority study','비열등성 근거로 급여 돌파'],['#case-cmv','Strategic trade-off + ICER advisory','전략적 선택 + ICER 자문'],['#background','Health-economics training (JHU MPH)','보건경제 훈련 (홉킨스 MPH)']]},
   {t_en:'Evidence Generation',t_ko:'근거 생성',
-   d_en:'Self-authored, impact-driven RWE and HEOR evidence where none existed, no outside vendor.',
-   d_ko:'외부 용역 없이 직접 만든 impact-driven RWE·HEOR 근거.',
-   links:[['#case-evidence','Generating the missing evidence','없는 근거는 직접 만든다']]},
+   d_en:'Self-authored, impact-driven RWE and HEOR where none existed, no outside vendor, fusing epidemiology, health economics, policy, clinical science, and real practice, the full scope it takes to make evidence that moves value.',
+   d_ko:'외부 용역 없이 직접 만든 impact-driven RWE·HEOR. 역학·보건경제·정책·임상과학·실제 진료를 아우르는, value를 움직이는 근거를 만드는 데 필요한 전체 스콥.',
+   links:[['#case-evidence','Generating the missing evidence','없는 근거는 직접 만든다'],['#background','Public-health & economics scope (JHU MPH)','공중보건·경제 스콥 (홉킨스 MPH)']]},
   {t_en:'Clinical Trial Execution',t_ko:'임상시험 실행',
-   d_en:"Field-based management across a multi-program clinical portfolio, including a global Phase 3 trial's top-5 worldwide enrollment.",
-   d_ko:'복수 프로그램에 걸친 field 기반 임상시험 관리, 글로벌 Phase 3 시험의 전세계 톱5 등록 포함.',
-   links:[['#case-plenary','An encore, as a scientific peer','과학적 동료로서 선 Plenary']]},
+   d_en:"Field-based management across a multi-program clinical portfolio (obesity, MASH, DMD, ALD), co-coordinating local investigator meetings, and co-driving a global Phase 3 trial to top-5 worldwide enrollment ahead of schedule.",
+   d_ko:'복수 프로그램(비만·MASH·DMD·ALD)에 걸친 field 기반 임상시험 관리, local investigator meeting 공동 조율, 그리고 글로벌 Phase 3 시험을 예정보다 앞서 전세계 톱5 등록으로 이끈 공동 실행.',
+   links:[['#case-plenary','Owning the trial as a scientific peer','임상시험을 과학적 동료로서 소유'],['#career','Multi-program field trial lead (BI)','복수 프로그램 field 임상 리드 (BI)']]},
   {t_en:'People & Launch Leadership',t_ko:'People·런칭 리더십',
-   d_en:'Built the MSL function end to end, and lead cross-functional teams as launch lead and as head of the Medicine AX Project.',
-   d_ko:'MSL 조직을 처음부터 구축했고, 런칭 리드·Medicine AX 프로젝트 리드로서 크로스펑셔널 팀을 이끈다.',
-   links:[['#ax','The Medicine AX Project','Medicine AX 프로젝트'],['#case-ecosystem','Cross-functional ecosystem TFT','생태계 크로스펑셔널 TFT']]},
+   d_en:'Leadership that runs back to being an elected chief-resident representative in the hospital years: building the MSL function end to end, line-managing it, and leading cross-functional teams as launch lead and as head of the Medicine AX Project.',
+   d_ko:'병원 시절 선출직 전공의 대표(의국장)로 거슬러 올라가는 리더십. MSL 조직을 처음부터 구축·라인관리하고, 런칭 리드이자 Medicine AX Project 리드로서 크로스펑셔널 팀을 이끈다.',
+   links:[['#career','Elected chief-resident representative','선출직 전공의 대표(의국장)'],['#ax','Leading the Medicine AX Project','Medicine AX Project 리드'],['#case-ecosystem','Cross-functional ecosystem TFT','생태계 크로스펑셔널 TFT']]},
   {t_en:'AI / Digital Transformation',t_ko:'AI·디지털 전환',
-   d_en:"Founded the affiliate's first structured AI capability and have led enterprise AX for three consecutive years (2024–2026, MSD then Boehringer Ingelheim).",
-   d_ko:'지사 최초의 구조화된 AI 조직을 만들고, 2024–2026 3년 연속으로 전사 AX 전환을 이끌어 왔다 (MSD → 베링거인겔하임).',
-   links:[['#ax','Tools built and in use','만들어 쓰는 도구들']]}
+   d_en:"Founded the affiliate's first structured AI capability at MSD and led enterprise AX three years running (2024–2026, MSD then Boehringer Ingelheim); the Medicine AX Project lives here as much as under leadership, tools built or directed, several solo end to end.",
+   d_ko:"MSD에서 지사 최초의 구조화된 AI 조직을 만들고 2024–2026 3년 연속 전사 AX를 이끌었다. Medicine AX Project는 리더십만큼이나 이 영역에 속한다. 직접 만들거나 리드로 디렉팅한 도구들, 그중 여럿은 풀스택 단독 개발.",
+   links:[['#ax','Tools built and in use','만들어 쓰는 도구들'],['#career','First structured AI effort (MSD)','최초의 구조화된 AI 작업 (MSD)']]}
 ];
 (function(){
   var ov=document.getElementById('compOverlay'); if(!ov)return;
