@@ -1236,11 +1236,13 @@ function syncCur(){ if(touch||typeof cur==='undefined'||!cur)return;
 
 /* ---------- magnetic buttons (mouse + keyboard/programmatic scroll) ---------- */
 var magEls=[];
-function magApply(el,px,py){ var r=el.getBoundingClientRect();
+function magApply(el,px,py,instant){ var r=el.getBoundingClientRect();
   var x=px-(r.left+r.width/2), y=py-(r.top+r.height/2);
-  if(Math.abs(x)<r.width/2+48 && Math.abs(y)<r.height/2+48){ el.style.transform='translate('+(x*.45).toFixed(1)+'px,'+(y*.6).toFixed(1)+'px)'; }
-  else if(el.style.transform){ el.style.transform=''; } }
-function syncMag(){ for(var i=0;i<magEls.length;i++) magApply(magEls[i],lastMX,lastMY); }
+  if(Math.abs(x)<r.width/2+95 && Math.abs(y)<r.height/2+95){
+    el.style.transition = instant ? 'transform .09s linear' : '';
+    el.style.transform='translate('+(x*.5).toFixed(1)+'px,'+(y*.65).toFixed(1)+'px)'; }
+  else if(el.style.transform){ el.style.transition=''; el.style.transform=''; } }
+function syncMag(){ for(var i=0;i<magEls.length;i++) magApply(magEls[i],lastMX,lastMY,true); }
 if(!touch&&!reduce){ magEls=[].slice.call(document.querySelectorAll('[data-magnetic]'));
   magEls.forEach(function(el){
     el.addEventListener('mousemove',function(e){ magApply(el,e.clientX,e.clientY); });
