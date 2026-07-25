@@ -1,0 +1,846 @@
+{
+  "categories": [
+    {
+      "id": "career",
+      "name": "경력 (Career)",
+      "order": 0
+    },
+    {
+      "id": "work",
+      "name": "주요 사례 (Selected Work)",
+      "order": 1
+    },
+    {
+      "id": "competency",
+      "name": "역량 (Competencies)",
+      "order": 2
+    },
+    {
+      "id": "tools",
+      "name": "AX 도구 (Tools)",
+      "order": 3
+    },
+    {
+      "id": "awards",
+      "name": "수상 (Awards)",
+      "order": 4
+    },
+    {
+      "id": "education",
+      "name": "학력·자격 (Education)",
+      "order": 5
+    },
+    {
+      "id": "pub",
+      "name": "논문·강연 (Publications)",
+      "order": 6
+    },
+    {
+      "id": "notes",
+      "name": "철학·노트 (Notes)",
+      "order": 7
+    },
+    {
+      "id": "intro",
+      "name": "소개 (Intro)",
+      "order": 8
+    }
+  ],
+  "items": [
+    {
+      "id": "career-01",
+      "category": "career",
+      "order": 0,
+      "title": "전공의, 그리고 첫 시스템",
+      "title_en": "Pediatrics residency, and a first system",
+      "body": "이 프로그램으로 병원 Quality Improvement Award(2017)를 받았다. 전공의 대표(의국장)로서 병원 이사회에 참여하고 노사 협의를 주도했으며 환자안전·의무기록 위원회 위원으로 활동했다. 전국 20인의 National Future Medical Scientist Program에 선발됐고, 병원을 대표해 보스턴의 MIT·MGH·LabCentral을 방문했다.",
+      "body_en": "The program won the hospital's Quality Improvement Award (2017). As chief resident and representative of the training doctors, sat on the hospital board, led labor-management negotiation, and served on the Patient Safety and Medical Records committees. Selected into the National Future Medical Scientist Program (top 20 nationally) and, as the hospital's representative, visited MIT, MGH, and LabCentral in Boston.",
+      "tags": [
+        "Systems thinking",
+        "QI Award",
+        "Governance",
+        "Boston / MSIT"
+      ],
+      "meta": {
+        "period": "01 · 2014–2019",
+        "year": "2014",
+        "org": "Kangbuk Samsung Hospital",
+        "role": "전공의 → 의국장 · 전공의 대표",
+        "role_en": "Resident → Chief Resident · Representative of Training Doctors"
+      },
+      "updated": ""
+    },
+    {
+      "id": "career-02",
+      "category": "career",
+      "order": 1,
+      "title": "진료, 응급체계, 그리고 팬데믹 전략",
+      "title_en": "Care, the emergency system, and pandemic strategy",
+      "body": "매일 WHO와 질병청, 존스홉킨스의 코로나 대시보드를 봤다. 거시 데이터를 시각화하는 일이 의사결정을 크게 좌우한다는 것을 실감했고, 대사질환에는 왜 비슷한 것이 없는지 의문을 품었다. 그 의문은 나중에 K-Health Pulse로, 또 존스홉킨스 MPH 진학으로 이어졌다.",
+      "body_en": "Watching the WHO, KDCA, and Johns Hopkins COVID dashboards daily showed how much macro-level data visualization shaped decisions, and raised the question of why nothing similar existed for metabolic disease. That question later became K-Health Pulse, and led to a Johns Hopkins MPH.",
+      "tags": [
+        "Emergency-care system",
+        "Pandemic strategy",
+        "KDCA meetings",
+        "Data → K-Health Pulse"
+      ],
+      "meta": {
+        "period": "02 · 2019–2022",
+        "year": "2019",
+        "org": "Hwacheon Public Health Center",
+        "role": "소아과 주치의 · 응급실장·응급의료체계 담당 · 팬데믹 전략 담당",
+        "role_en": "Pediatric physician · ER & emergency-care-system chief · pandemic-response lead",
+        "quote": "팬데믹 내내 응급실은 한 번도 문을 닫지 않았다.",
+        "quote_en": "Through the whole pandemic, the emergency room never shut down once."
+      },
+      "updated": ""
+    },
+    {
+      "id": "career-03",
+      "category": "career",
+      "order": 2,
+      "title": "MSD, 스페셜티 전반의 메디컬 어페어즈",
+      "title_en": "MSD, medical affairs across specialty care",
+      "body": "신규 계열 항생제는 임상·공중보건 근거로 경평면제 확대의 첫 급여 사례가 됐다. 조혈모세포이식 CMV 예방요법에서는 약가를 지키는 쪽을 택해, 자체 보고서만으로 적응증 확대와 급여를 함께 달성했다. 2024년에는 KR AI Tribe Lead로 지사 최초의 구조화된 AI 작업을 시작했다.",
+      "body_en": "Won reimbursement for a new-class antibiotic by making the clinical and public-health case, the first drug reimbursed under Korea's expanded essential-antibiotic exemption. On an HSCT CMV prophylaxis, made a deliberate trade-off to protect price and landed both the indication expansion and its reimbursement with self-authored dossiers. In 2024, set up the affiliate's first structured AI effort as KR AI Tribe Lead.",
+      "tags": [
+        "Sales-less growth",
+        "Reimbursement",
+        "Strategic trade-off",
+        "Evidence",
+        "AI Tribe Lead"
+      ],
+      "meta": {
+        "period": "03 · 2022–2025",
+        "year": "2022",
+        "org": "MSD Korea",
+        "role": "Medical Advisor / Associate Director · 단독 리드(IC)",
+        "role_en": "Medical Advisor / Associate Director · sole lead (IC)"
+      },
+      "updated": ""
+    },
+    {
+      "id": "career-04",
+      "category": "career",
+      "order": 3,
+      "title": "베링거인겔하임, 비만·MASH",
+      "title_en": "Boehringer Ingelheim, obesity & MASH",
+      "body": "입사 4개월 만에 W!NN!NG Star Award를, 생태계 작업으로 SpUR Award를 받았다. 서보두타이드 데이터를 여러 학회에서 전파했다. ADA 약 100시간 뒤의 Plenary encore 발표도 그중 하나다. 학회 전략을 encore 중심으로 바꿨고, MSL 조직을 처음부터 갖췄으며, 전사로 확산되는 Medicine AX 프로젝트를 이끈다.",
+      "body_en": "A W!NN!NG Star Award within four months of joining; the ecosystem work later earned the SpUR Award. Delivered survodutide data across congresses, including a plenary encore ~100 hours after ADA, shifted congress strategy to encore formats, built the MSL function end-to-end, and leads the department's Medicine AX Project, now expanding across the company.",
+      "tags": [
+        "Survodutide launch",
+        "See Obesity, Think Liver",
+        "Plenary",
+        "People leadership",
+        "Medicine AX"
+      ],
+      "meta": {
+        "period": "04 · 2025–Present현재",
+        "year": "2025",
+        "org": "Boehringer Ingelheim Korea",
+        "role": "Medical Lead, 비만·MASH · People Manager · AI Champion",
+        "role_en": "Medical Lead, Obesity & MASH · People manager · AI champion"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-01",
+      "category": "work",
+      "order": 0,
+      "title": "영업조직 없는 런칭",
+      "title_en": "A launch with no sales force",
+      "body": "메디컬과 market access, 대관만으로 키운 COVID-19 경구 항바이러스제.\n\n통찰: 영업조직이 없으면 처방 근거는 개별 디테일링이 아니라 국가 방역 정책과 전문가 지침에서 나온다. 그래서 세 방향으로 시장을 열었다.\n\n실행: 긴급사용승인과 정부 직구매를 위해 식약처, 질병청을 직접 상대했다. 국가 감염병 자문위원과 핵심 전문가에게 과학적 근거를 전달하며 브리핑과 지침 메시지를 관리했다. 기존 근거로 고위험군을 겨냥했고 요양병원학회 강연도 진행했다.\n\n보여주는 것: 제품보다 실행력을 보여주는 사례다. 리전과 지사 수상으로 인정받았다. 내부 수치 대신 질병청 지침과 전문가위원회 권고, RWE, 언론 보도 같은 공개 근거를 바탕으로 삼았다.",
+      "body_en": "COVID-19 oral antiviral, grown through medical, access & government affairs alone.\n\nThe read: With no sales team, the prescribing rationale had to come from national policy and expert guidance, not detailing, so the market opened on three fronts.\n\nThe moves: MFDS & KDCA engagement for emergency-use authorization and government procurement; national infectious-disease advisors and top influencers to shape briefings and guidance; evidence-based high-risk targeting, incl. a Korean Convalescent Hospital Association lecture.\n\nWhat it shows: Execution more than the product itself, recognized with regional and affiliate awards. Presented on public evidence (KDCA guidance, expert-committee recommendations, RWE, media), not internal figures.",
+      "tags": [],
+      "meta": {
+        "context": "MSD · Anti-viral · 2022–2023",
+        "metric": "~5% → ~50%",
+        "metric_note": "1년 만의 시장 점유율",
+        "anchor": "#case-lagevrio"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-02",
+      "category": "work",
+      "order": 1,
+      "title": "신규 계열 항생제 급여",
+      "title_en": "Reimbursing a new-class antibiotic",
+      "body": "15년 만의 신규 계열 항생제, 임상적 유용성으로 급여 등재.\n\n난제: 2017년 국내 허가된 저박사는 2019년 비용효과성이 불분명하다는 이유로 급여가 부결됐다. 비열등성 근거로는 colistin 같은 기존 약 대비 가치를 입증하기가 구조적으로 어렵다.\n\n접근: 정부가 경제성평가 자료제출 생략제도를 필수 항생제까지 확대한 2020년, 심평원에 임상·공중보건 근거를 제시했다. 다제내성 그람음성균에 대한 유효성, 대체제(colistin)의 신독성, 항생제 내성으로 인한 사망을 논거로 삼았고 국회·언론 대응도 도왔다. 저박사는 경평면제 확대의 첫 급여 사례가 됐고 총액제한형 RSA가 함께 적용됐다.\n\n대비: 항바이러스제가 정책과 여론을 움직이는 일이었다면, 이 사례는 규제기관을 의학적 근거로 설득하는 일이다. 같은 market access라도 성격이 다르다.",
+      "body_en": "First new-class antibiotic in 15 years, reimbursed on the clinical-utility case.\n\nThe challenge: Approved in Korea in 2017, Zerbaxa was rejected for reimbursement in 2019 on unclear cost-effectiveness. With a non-inferiority basis, proving value over existing options (like colistin) is structurally hard.\n\nThe approach: When Korea expanded its pharmacoeconomic-evaluation exemption to essential antibiotics (2020), I made the clinical and public-health case to HIRA, efficacy against multidrug-resistant gram-negatives, the nephrotoxicity of alternatives, the toll of AMR, with parliamentary and media advocacy. Zerbaxa became the first drug reimbursed under the expanded exemption, paired with a capped revenue-sharing agreement.\n\nThe contrast: The antiviral case was about moving policy and opinion; this one about persuading a regulator on medical evidence, a different kind of access work.",
+      "tags": [],
+      "meta": {
+        "context": "MSD · New-class antibiotic · 2022",
+        "metric": "Reimbursed급여 등재",
+        "metric_note": "임상적 유용성으로 (경평면제 확대 첫 수혜)",
+        "anchor": "#case-zerbaxa"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-03",
+      "category": "work",
+      "order": 2,
+      "title": "전략적 선택과 집중",
+      "title_en": "The strategic trade-off",
+      "body": "무엇을 하지 않을지 고른 사례. 적응증을 포기해 약가를 지켰다.\n\n개입: 조혈모세포이식 환자에서 예방요법이 일찍 중단되는 경우가 많았다. 오해나 가이드라인과 어긋난 관행적 처치가 원인이었다. 이를 교정하기 위해 내러티브를 개발하고 의료진·마케팅·세일즈 교육을 극대화해, 100일 적응증의 평균 DOT를 55%에서 80%로 끌어올렸다.\n\n판단: 200일 확대는 별개의 레버이고, 둘은 맞물린다. DOT 55%면 두 배로 늘려도 실제 투여는 약 110일(실제론 더 낮음)에 그쳐, 기저 DOT가 높아야 200일 확대의 비즈니스 임팩트가 산다. 한편 적응증을 넓히면 약가 인하 위험이 커진다. 시나리오를 시뮬레이션하고 이식·혈액내과 현장에서 필드 인사이트를 받아, 시장성 낮은 신장이식(KT) 적응증을 전략적으로 포기했다. 약가를 지키고 모든 자원을 200일 HSCT 확대에 집중하기 위한, \"무엇을 하지 않을 것인가\"의 결정이었다.\n\n결실: 판단은 2년 뒤 성과로 돌아왔다. 자체 보고서만으로 적응증 확대 승인(2024)과 급여 확대(2025)를 받아냈고 약가와 수익성을 지켰다.\n\n같은 필러, BI에서: 같은 value·access 감각이 MASLD/MASH에서 이어진다. evidence-gap analysis를 ICER 리포트 기반 ABM(2025.12)으로 연결해 한국의 역학·HEOR 근거 공백에 대해 stakeholder를 정렬하고, 런칭 전에 급여 가치 서사를 세웠다. 이번에는 적응증을 맞바꾸는 대신 근거를 쌓아 올리는 방식이었다.",
+      "body_en": "Deciding what not to do, giving up an indication to protect price.\n\nIntervention: Prophylaxis was stopping too early in HSCT patients, often from misconceptions or off-guideline, customary practice. Correcting that took a developed narrative and heavy HCP, marketing, and sales education, lifting average duration of therapy (DOT) on the 100-day indication from 55% to 80%.\n\nThe judgment: The 200-day expansion is a separate lever, and the two compound. At 55% DOT, even a doubled course reaches only ~110 days (in practice, less), so the 200-day extension pays off only when the base DOT is high. Meanwhile, broadening indications risked a price cut. Modeling the scenarios and pulling field insight from the transplant and hematology sites, the low-value kidney-transplant indication was deliberately dropped to protect price and concentrate every resource on the 200-day HSCT expansion, a decision about what not to pursue.\n\nThe payoff: Over two years the call paid off: indication expansion approved (2024) and reimbursement secured (2025) on a self-authored dossier, defending price and protecting profitability.\n\nThe same pillar, at BI: The value-and-access instinct recurs on MASLD/MASH: an evidence-gap analysis feeding an ICER-report advisory board (Dec 2025) that aligned stakeholders on Korea's epidemiology and HEOR gaps, setting the reimbursement value story before launch, this time by building the case, not trading indications.",
+      "tags": [],
+      "meta": {
+        "context": "MSD · HSCT CMV prophylaxis · 2022–2025",
+        "metric": "DOT 55% → 80%",
+        "metric_note": "투약 기간 개선",
+        "anchor": "#case-cmv"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-04",
+      "category": "work",
+      "order": 3,
+      "title": "크로스인더스트리 협업을 만들고 이끌다",
+      "title_en": "Cross-industry collaboration, built & led",
+      "body": "미진단 MASH를 겨냥한 play-to-win 크로스인더스트리 생태계. \"See Obesity, Think Liver\"의 한국 실행.\n\n문제: MASLD/MASH는 한국 성인의 약 3분의 1이 앓지만 대부분 진단되지 않는다. 치료제가 없어서가 아니라 screening과 진단, 치료를 잇는 체계가 없어서다.\n\n설계: 환자 여정을 한국 상황에 맞게 다시 짜고 각 단계를 파트너로 채웠다. 인지는 비만 클리닉 네트워크, 국가 screening은 건강검진 네트워크, 현장 진단은 진단장비 업체. 중심에는 초음파 기반 2D-SWE가 있다. 신생아 중환자실에서 오래 쓰던 도구다.\n\n선언적 MOU가 아니라: 세 건 모두 실제로 기능하는 액션 아이템으로 돌아간다. Philips는 핸즈온 초음파 세션과 RWE 연구, KMI는 별도 RWE 연구·건진 리포트·EMR 개선·의뢰(리퍼럴) 프로세스 활성화, 365mc는 콘텐츠 제작. 프레임워크가 돌아가기 시작하자 참여를 원하는 기업 3곳이 더 나왔고 현재 선별 중이다.\n\n인정: 여정 전반에 걸친 MOU와 섹터 간 전략 정렬로 SpUR Award를 받았다. 상사의 말처럼 이 협업은 일회성 서명으로 끝나지 않고 새 질환 영역에 남는 기반이 된다.\n\n팀: 아이디어 개발부터 구현, 실행까지 처음부터 끝까지 맡았다. 마케팅·market access·corporate affairs·정책·법무·MSL 6개 기능의 10인 크로스펑셔널 팀을 이끌었고, 직속 MSL·AI/AX 팀은 별도다.\n\n분석: 세 건의 MOU 뒤에는 감이 아니라 systems analysis가 있다. 미진단 MASH를 네 개의 강화 루프(대중 인지, screening 맹점, 1·2차 진료 관성, 3차 간학회 편향)로 매핑하고, 각 루프를 끊는 지렛점을 파트너십에 대응시켰다. 365mc는 인지, KMI는 screening, Philips는 진단을 맡는다. 이 분석은 전략 블루프린트로 정리됐고, 존스홉킨스 MPH 프랙티컴을 겸한다.",
+      "body_en": "A play-to-win, cross-industry ecosystem for undiagnosed MASH. The local build of \"See Obesity, Think Liver.\"\n\nThe problem: MASLD/MASH affects roughly a third of Korean adults yet mostly goes undiagnosed, not for lack of treatment, but for lack of a system connecting screening, diagnosis, and care.\n\nThe design: Reframed the patient journey for Korea and filled each stage with a partner: awareness (a weight-management clinic network), national screening (a health-screening network), point-of-care diagnosis (a diagnostic-imaging manufacturer), anchored on ultrasound-based 2D-SWE, the probe leaned on for years in the NICU.\n\nNot just MOUs: None of these are declarative signings, each runs a functioning action item. Philips: hands-on ultrasound sessions and RWE research. KMI: a separate RWE study, health-screening reporting, EMR improvement, and referral-process activation. 365mc: content production. With the framework working, three more companies are now in selection to join.\n\nRecognition: MOUs signed across the journey, recognized with the SpUR Award for intersectoral strategic alignment. As the Head of Medicine put it, it won't evaporate as a one-off signing, it stays as a sustainable footprint in a new disease area.\n\nThe team: Owned end-to-end, idea, build, execution, leading a 10-person, 6-function team (marketing, market access, corporate affairs, policy, legal, MSL), on top of the direct MSL and AI/AX teams.\n\nThe analysis: Behind the three MOUs is a systems analysis, not a hunch. Undiagnosed MASH maps as four reinforcing failure loops, public awareness, screening blindness, primary-care inertia, tertiary hepatology bias, each matched to a leverage point: 365mc (awareness), KMI (screening), Philips (diagnosis). It was written up as a strategic blueprint that doubled as a Johns Hopkins MPH practicum.",
+      "tags": [],
+      "meta": {
+        "context": "Boehringer Ingelheim · Ecosystem · 2025–2026",
+        "metric": "3 MOUs + @MOU 3건 + @",
+        "metric_note": "인지 · 스크리닝 · 진단",
+        "anchor": "#case-ecosystem"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-05",
+      "category": "work",
+      "order": 4,
+      "title": "과학적 동료로서 선 Plenary",
+      "title_en": "An encore, as a scientific peer",
+      "body": "The Liver Week 2026. 자료를 전달하는 역할이 아니라, 임상연구자들과 어깨를 나란히 하는 scientific peer로서 Plenary 무대에 섰다.\n\n순간: 어느 월요일 이른 아침, Boehringer Ingelheim의 MASLD 데이터가 original congress인 ADA에서 발표됐다. 약 100시간 뒤 The Liver Week의 비후원 Plenary에서 그 encore가 이어졌다. Plenary로 뽑힌 초록이었고 그 시간대의 유일한 세션이었다.\n\n전략: 허가 전에는 마케팅이 없으니 pre-launch 활동은 메디컬·과학팀에 달려 있다. 이를 하나의 모델로 정리했다. 비싼 satellite symposium 대신 encore 초록. 올해 여섯 학회를 계획했고(1H: KSSO·SOMS·The Liver Week / 2H: 한국 소재 국제학술대회 3개) 초록 투고는 모두 확정됐다. 일부 구두 발표는 교육한 MSL이 맡는다.\n\n본사 협업이 관건인 이유: 이 작업은 본사와의 긴밀한 협업으로 돌아간다. 자료만 전달하고 끝이 아니라 학회와 사전에 조율할 게 많고, 본사는 PI가 아니면 이런 발표를 세우지 않는다. 이 연구는 한국에 PI가 없었는데, 오히려 그 점이 이 방식을 가능하게 했다. PI가 있었다면 더 어려웠을 것이다.\n\n관행을 넘어: 핵심은 속도가 아니다. 한국의 메디컬 어페어즈는 대체로 pre-authorized topic을 다루며 자료를 전달하는 역할에 머물러 왔다. 임상연구자들과 어깨를 나란히 하는 scientific peer로서 Plenary 무대에 서서, 자료를 전달하는 게 아니라 과학 자체를 소유하고 encore를 그렇게 실행하는 것, 그 관행에서 벗어나는 지점이다.\n\n태도: \"지금 한국에서 이 임상시험을 가장 잘 아는 사람은 나라고 믿는다.\" 브로슈어도 직접 만들었다. 받은 외부 인정 가운데 가장 의미를 두는 자리다.",
+      "body_en": "The Liver Week 2026, standing on the plenary stage as a peer to the clinical investigators, not a data-forwarder.\n\nThe moment: Early one Monday, Boehringer Ingelheim's MASLD data was presented at its original congress (ADA). Roughly 100 hours later came its encore, a (non-sponsored) plenary of The Liver Week, an abstract selected for plenary and the only session in that block.\n\nThe strategy: Before approval there is no marketing, so pre-launch activity rests on the medical and scientific team. Reframed as a model: encore abstracts over costly satellite symposia, six congresses planned this year (KSSO, SOMS, The Liver Week in 1H; three Korea-based international congresses in 2H), all abstracts confirmed, with some orals delivered by trained MSLs.\n\nWhy HQ collaboration mattered: This runs on close headquarters collaboration, not just forwarding data, but pre-coordinating with the academic society, and because HQ will not stage a presentation like this without a principal investigator. Here the study had no Korean PI, which is exactly what made this route possible; a PI would have made it harder, not easier.\n\nThe departure: The point isn't speed. Korean Medical Affairs has largely stayed a data-forwarding function, working pre-authorized topics; standing on a plenary stage as a scientific peer to the clinical investigators, owning the science rather than relaying it, and executing the encore that way, is the break from that norm.\n\nThe stance: \"I believe I'm the person in Korea who knows this trial best right now.\" Even the brochure, made by hand. Of all the outside recognition, the one valued most.",
+      "tags": [],
+      "meta": {
+        "context": "Boehringer Ingelheim · Congress · 2026",
+        "metric": "~100 hrs약 100시간",
+        "metric_note": "original congress(ADA)에서 국내 Plenary까지",
+        "anchor": "#case-plenary"
+      },
+      "updated": ""
+    },
+    {
+      "id": "work-06",
+      "category": "work",
+      "order": 5,
+      "title": "없는 근거는 직접 만든다",
+      "title_en": "Generating the missing evidence",
+      "body": "value를 실제로 움직이는 impact-driven RWE의 설계. 청구데이터 역학부터 HEOR gap analysis까지, 외부 용역 없이.\n\n패턴: RSV 예방 항체의 국내 근거가 없자 데이터가 나오길 기다리는 대신 역학 프로토콜과 예측 모델링 참조 설계를 직접 작성했다. 별개로, 원래 경쟁 제품에만 적용될 예정이던 real-world outcome study를 질병청과 함께 항-COVID-19 경구제까지 확장했다.\n\n폭: MASH 자산과 IBD·혈액·HIV 파이프라인의 선제적 Phase 2/3 런칭 비즈니스 케이스, 다제내성균 감시 연구, 철수 제품의 exit management까지 다뤘다.\n\n풀스택 감각: 근거를 만드는 건 절반일 뿐이다. 중요한 건 활용이다. 그 근거가 실제 임상과 비즈니스를 어떻게 움직이느냐다. 이를 제대로 추론하려면 분석만이 아니라 시놉시스 단계부터 코호트 선정과 프로세스 전체를 아울러야 한다. 통계에 진심인 사람들은 garbage in, garbage out을 말하지만, 좋은 데이터의 좋은 분석이 언제나 유용하진 않다. 그 유용성은 대개 허가·급여·임상 포지셔닝이라는 세 축에서 판가름 나며, 어느 축인지 읽어내려면 전체 스코프를 이해해야 한다. 통계만 안다고, 혹은 임상만 안다고 되는 게 아니다. value를 실제로 가져오는 RWE 설계에는 공중보건·보건경제·정책·임상과학·실제 진료·역학이 모두 녹아 있어야 한다. 여기에 홉킨스 MPH, 수많은 pre-launch 경험, 치열한 마켓 경쟁 속 제약 경험이 더해진다.\n\nBoehringer Ingelheim에서: 한국의 근거 격차를 폭넓게 분석하고 ICER 보고서 워크숍으로 역학·HEOR 공백에 대해 관계 부서의 인식을 맞췄다.",
+      "body_en": "Designing impact-driven RWE, evidence built to move value, from claims-data epidemiology to HEOR gap analysis, no outside vendor.\n\nThe pattern: Facing a missing Korean evidence base for an RSV prophylactic antibody, authored the epidemiology protocol and a predictive-modeling reference design rather than waiting for data to appear. Separately, partnered with Korea's disease control agency (KDCA) to extend a real-world outcomes study, originally scoped to a competitor's product only, to include an anti-COVID-19 agent.\n\nThe range: Preemptive Phase 2/3 launch business cases for a MASH agent and pipeline assets across IBD, hematology, and HIV; a multidrug-resistance surveillance study; and full lifecycle work including exit management.\n\nThe full-stack view: Generating evidence is the easy half; the point is use, how it moves clinical practice and the business. Inferring that means owning everything from the synopsis: cohort selection, process, not just the analysis. \"Garbage in, garbage out,\" statisticians say, yet good analysis on good data still is not always useful. The payoff usually lands on one of three axes: approval, reimbursement, or clinical positioning, and reading which one takes the full scope. It isn't statistics alone, nor clinical training alone; designing RWE that actually delivers value fuses public health, health economics, policy, clinical science, real clinical practice, and epidemiology, sharpened by a Johns Hopkins MPH, many pre-launch cycles, and a fiercely competitive pharma market.\n\nAt Boehringer Ingelheim: A comprehensive Korean evidence-gap analysis and an ICER-report workshop aligning stakeholders on epidemiology and HEOR gaps.",
+      "tags": [],
+      "meta": {
+        "context": "MSD → Boehringer Ingelheim · Evidence · 2024–",
+        "metric": "Self-authored자체 생성",
+        "metric_note": "impact-driven RWE",
+        "anchor": "#case-evidence"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-01",
+      "category": "competency",
+      "order": 0,
+      "title": "통합 메디컬 전략·런칭",
+      "title_en": "Integrated Medical Strategy & Launch",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "01"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-02",
+      "category": "competency",
+      "order": 1,
+      "title": "Market Access·Value",
+      "title_en": "Market Access & Value",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "02"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-03",
+      "category": "competency",
+      "order": 2,
+      "title": "근거 생성",
+      "title_en": "Evidence Generation",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "03"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-04",
+      "category": "competency",
+      "order": 3,
+      "title": "임상시험 실행",
+      "title_en": "Clinical Trial Execution",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "04"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-05",
+      "category": "competency",
+      "order": 4,
+      "title": "People·런칭 리더십",
+      "title_en": "People & Launch Leadership",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "05"
+      },
+      "updated": ""
+    },
+    {
+      "id": "competency-06",
+      "category": "competency",
+      "order": 5,
+      "title": "AI·디지털 전환",
+      "title_en": "AI / Digital Transformation",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "num": "06"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-01",
+      "category": "tools",
+      "order": 0,
+      "title": "K-Health Pulse",
+      "title_en": "K-Health Pulse",
+      "body": "흩어진 국가 보건데이터를 30여 개 파이프라인으로 통합해 지도·차트·서술형으로. 250개 시군구 단위 공간·인과추론 분석.",
+      "body_en": "Fragmented national health data unified through 30+ pipelines into map, chart, and narrative views, with spatial and causal-inference analytics across 250 municipalities.",
+      "tags": [],
+      "meta": {
+        "role": "공중보건 decision engine · 풀스택",
+        "status": "",
+        "group": "personal",
+        "link": "https://drmoony.github.io/k-healthmap"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-02",
+      "category": "tools",
+      "order": 1,
+      "title": "CT-Galaxy",
+      "title_en": "CT-Galaxy",
+      "body": "임상시험 지형·알림 도구. 흩어진 공개 임상 데이터를 바로 판단에 쓸 수 있게.",
+      "body_en": "A clinical-trial landscape and alert tool, turning fragmented public trial data into decision-ready views.",
+      "tags": [],
+      "meta": {
+        "role": "임상시험 지형·알림",
+        "status": "",
+        "group": "personal",
+        "link": "https://drmoony.github.io/ct-galaxy"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-03",
+      "category": "tools",
+      "order": 2,
+      "title": "Congress-Orbit",
+      "title_en": "Congress-Orbit",
+      "body": "학회 지형·인텔리전스 빌드. 학회·세션·학술 활동을 지도처럼 본다.",
+      "body_en": "A congress landscape and intelligence build, mapping meetings, sessions, and scientific activity.",
+      "tags": [],
+      "meta": {
+        "role": "학회 인텔리전스",
+        "status": "",
+        "group": "personal",
+        "link": "https://drmoony.github.io/congress-orbit"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-04",
+      "category": "tools",
+      "order": 3,
+      "title": "Paper Pulsar",
+      "title_en": "Paper Pulsar",
+      "body": "문헌을 대규모로 읽고 구조화하는 개인 논문 분석 앱.",
+      "body_en": "A personal paper-analysis app that reads and structures the literature at scale.",
+      "tags": [],
+      "meta": {
+        "role": "문헌 분석 앱",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-05",
+      "category": "tools",
+      "order": 4,
+      "title": "K-HealthMap Dashboard",
+      "title_en": "K-HealthMap Dashboard",
+      "body": "프로그램의 메인 프로젝트. 흩어진 국가 심뇌혈관·대사질환 공공데이터를 8개 질환에 걸쳐 하나의 대시보드(지도·차트·데이터 스토리)로 통합했다. 프론트엔드·백엔드·DB·ETL·CI를 갖춘 정식 소프트웨어 프로젝트이며 협업으로 운영한다. 공개 데모는 K-Health Pulse로 배포.",
+      "body_en": "The program's main project: fragmented national cardio-metabolic public data across eight diseases, unified into one dashboard with map, chart, and data-story views. A full software project (frontend, backend, DB, ETL, CI) run as a collaboration; the public demo ships as K-Health Pulse.",
+      "tags": [],
+      "meta": {
+        "role": "국가 보건데이터 플랫폼 · 풀스택, 협업",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-06",
+      "category": "tools",
+      "order": 5,
+      "title": "KEE / KOL Atlas",
+      "title_en": "KEE / KOL Atlas",
+      "body": "4개 공개 데이터(PubMed, OpenAlex, MeSH, 식약처)를 영향력 점수 그래프로 묶어 전문가를 찾아낸다. 한국 논문 7,700여 편으로 구축했고 8개 치료영역으로 확장하도록 설계했다. 전문가 매핑에 걸리던 시간을 수 시간에서 수 분으로 줄인다.",
+      "body_en": "Integrates four public data sources (PubMed, OpenAlex, MeSH, MFDS) into an influence-scored graph for evidence-based expert identification. Built on a 7,700+ paper Korean corpus, architected across eight therapeutic areas, collapsing expert mapping from hours to minutes.",
+      "tags": [],
+      "meta": {
+        "role": "네트워크 매핑 엔진",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-07",
+      "category": "tools",
+      "order": 6,
+      "title": "PV & Reg Automation",
+      "title_en": "PV & Reg Automation",
+      "body": "글로벌 담당자 한 명에게 쏠려 있던 원시자료 디코딩을 자체 도구로 바꿔 실무에 배포했다. 문헌 선별과 품목허가 갱신 자동화도 개발 중이며, 적시성과 정확성을 함께 높이고 있다.",
+      "body_en": "A raw-data decoding tool shipped into live PV use, removing a single-point global dependency. Building literature-screening and product-license-renewal automation, improving both timeliness and accuracy.",
+      "tags": [],
+      "meta": {
+        "role": "약물감시 도구",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-08",
+      "category": "tools",
+      "order": 7,
+      "title": "Publication Summarizer",
+      "title_en": "Publication Summarizer",
+      "body": "문헌을 검색해 요약하고 자료 초안까지 만든다. 다만 hallucination과 figure 추출 실패, 컴플라이언스는 반드시 사람이 검토하도록 설계했다. 검증 없이 자동 승인하는 도구가 아니다.",
+      "body_en": "Searches, summarizes, and drafts materials from the literature, with a human-in-the-loop layer that names hallucination, figure-extraction failure, and compliance limits as required review gates. An efficiency tool, never an unverified auto-approver.",
+      "tags": [],
+      "meta": {
+        "role": "생성형 AI 근거 검토",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "tools-09",
+      "category": "tools",
+      "order": 8,
+      "title": "Budget Intelligence",
+      "title_en": "Budget Intelligence",
+      "body": "시간 절감이 아니라 수익성을 겨냥한 유일한 AX 도구다. 재무 부서의 집행 내역을 의학부 활동 계획과 맞춰 예산을 다시 짠다. 숫자마다 쓰임을 붙여, 조금씩 줄이는 대신 우선순위가 낮은 활동을 하나 덜어내는 판단을 돕는다.",
+      "body_en": "The one AX tool aimed at profitability, not time-savings. It reconciles finance-reported spend against the Medical Affairs activity plan and re-forecasts, attaching a \"why\" to every number, so the decision becomes \"cut the lowest-priority activity.\"",
+      "tags": [],
+      "meta": {
+        "role": "수익성 축",
+        "status": "",
+        "group": "personal"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-01",
+      "category": "awards",
+      "order": 0,
+      "title": "SpUR Award",
+      "title_en": "SpUR Award",
+      "body": "섹터 간 전략 정렬, 질환 생태계",
+      "body_en": "Intersectoral strategic alignment, the disease ecosystem",
+      "tags": [],
+      "meta": {
+        "year": "2026",
+        "by": "Boehringer Ingelheim",
+        "anchor": "#case-ecosystem"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-02",
+      "category": "awards",
+      "order": 1,
+      "title": "Best Oral Presentation Award",
+      "title_en": "Best Oral Presentation Award",
+      "body": "임상시험 결과 encore 구두발표",
+      "body_en": "Encore oral presentation of trial data",
+      "tags": [],
+      "meta": {
+        "year": "2025",
+        "by": "SICOM 2025",
+        "anchor": "#case-plenary"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-03",
+      "category": "awards",
+      "order": 2,
+      "title": "One-Star W!NN!NG Star Award",
+      "title_en": "One-Star W!NN!NG Star Award",
+      "body": "입사 4개월",
+      "body_en": "Within 4 months of joining",
+      "tags": [],
+      "meta": {
+        "year": "2025",
+        "by": "Boehringer Ingelheim"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-04",
+      "category": "awards",
+      "order": 3,
+      "title": "AP One Team Award, Digital Project",
+      "title_en": "AP One Team Award, Digital Project",
+      "body": "AI Tribe 디지털 프로젝트",
+      "body_en": "AI Tribe digital innovation",
+      "tags": [],
+      "meta": {
+        "year": "2024",
+        "by": "MSD",
+        "anchor": "#ax"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-05",
+      "category": "awards",
+      "order": 4,
+      "title": "One Team Award",
+      "title_en": "One Team Award",
+      "body": "RSV 런칭 리드",
+      "body_en": "RSV launch lead",
+      "tags": [],
+      "meta": {
+        "year": "2024",
+        "by": "MSD Korea",
+        "anchor": "#case-evidence"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-06",
+      "category": "awards",
+      "order": 5,
+      "title": "AP GMSA Impact Award, Regional",
+      "title_en": "AP GMSA Impact Award, Regional",
+      "body": "COVID-19 항바이러스제",
+      "body_en": "COVID-19 antiviral",
+      "tags": [],
+      "meta": {
+        "year": "2023",
+        "by": "MSD",
+        "anchor": "#case-lagevrio"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-07",
+      "category": "awards",
+      "order": 6,
+      "title": "One Team Award",
+      "title_en": "One Team Award",
+      "body": "항감염제 급여",
+      "body_en": "Anti-infective reimbursement",
+      "tags": [],
+      "meta": {
+        "year": "2022",
+        "by": "MSD Korea",
+        "anchor": "#case-zerbaxa"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-08",
+      "category": "awards",
+      "order": 7,
+      "title": "Asia-Pacific Field Medical Award",
+      "title_en": "Asia-Pacific Field Medical Award",
+      "body": "COVID-19 항바이러스제",
+      "body_en": "COVID-19 antiviral",
+      "tags": [],
+      "meta": {
+        "year": "2022",
+        "by": "MSD",
+        "anchor": "#case-lagevrio"
+      },
+      "updated": ""
+    },
+    {
+      "id": "awards-09",
+      "category": "awards",
+      "order": 8,
+      "title": "Quality Improvement (QI) Award",
+      "title_en": "Quality Improvement (QI) Award",
+      "body": "소아 심폐소생술 교육 프로그램",
+      "body_en": "Pediatric resuscitation training program",
+      "tags": [],
+      "meta": {
+        "year": "2017.05",
+        "by": "Kangbuk Samsung",
+        "anchor": "#career"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-01",
+      "category": "education",
+      "order": 0,
+      "title": "MPH, 보건정책관리 (+ 공중보건경제학)",
+      "title_en": "MPH, Health Policy & Management (+ Public Health Economics)",
+      "body": "존스홉킨스 블룸버그 공중보건대학원 · 2024–2026 · 졸업논문: 한국 첩약 급여화 시범사업 비용효용분석",
+      "body_en": "Johns Hopkins Bloomberg School of Public Health · 2024–2026 · Capstone: cost-utility analysis of Korea's herbal-medicine pilot",
+      "tags": [],
+      "meta": {
+        "group": "학위"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-02",
+      "category": "education",
+      "order": 1,
+      "title": "M.D.",
+      "title_en": "",
+      "body": "단국대학교 의과대학 · 2008–2014",
+      "body_en": "Dankook University College of Medicine · 2008–2014",
+      "tags": [],
+      "meta": {
+        "group": "학위"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-03",
+      "category": "education",
+      "order": 2,
+      "title": "전문의, 소아청소년과; 세부전문의 소아응급의학",
+      "title_en": "Board, Pediatrics; subspecialty Pediatric Emergency Medicine",
+      "body": "대한의학회 · PALS, KALS, NRP",
+      "body_en": "Korean Academy of Medical Sciences · PALS, KALS, NRP",
+      "tags": [],
+      "meta": {
+        "group": "전문의 · 자격"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-04",
+      "category": "education",
+      "order": 3,
+      "title": "Microsoft Certified: Azure AI Fundamentals",
+      "title_en": "",
+      "body": "Microsoft · 2024",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "group": "전문의 · 자격"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-05",
+      "category": "education",
+      "order": 4,
+      "title": "의학유전상담 자격 교육과정 (Medical Genetics & Genomics)",
+      "title_en": "Educational Course in Medical Genetics & Genomics",
+      "body": "대한의학유전학회 · 2024",
+      "body_en": "Korean Society of Medical Genetics and Genomics · 2024",
+      "tags": [],
+      "meta": {
+        "group": "전문의 · 자격"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-06",
+      "category": "education",
+      "order": 5,
+      "title": "National Future Medical Scientist Program, 선발 (전국 20인)",
+      "title_en": "National Future Medical Scientist Program, selected (top 20 nationally)",
+      "body": "과기부 · MIT / MGH / LabCentral, 보스턴",
+      "body_en": "MSIT · MIT / MGH / LabCentral, Boston",
+      "tags": [],
+      "meta": {
+        "group": "활동 · 인정"
+      },
+      "updated": ""
+    },
+    {
+      "id": "education-07",
+      "category": "education",
+      "order": 6,
+      "title": "산업 패널, 식약처 AI 소위원회",
+      "title_en": "Industry Panelist, MFDS AI Subcommittee",
+      "body": "개인화 독성평가 연구그룹 · 2025–현재",
+      "body_en": "Personalized Toxicity Evaluation Research Group · 2025–present",
+      "tags": [],
+      "meta": {
+        "group": "활동 · 인정"
+      },
+      "updated": ""
+    },
+    {
+      "id": "pub-01",
+      "category": "pub",
+      "order": 0,
+      "title": "Propranolol as a First-line Treatment for Pediatric Hemangioma (제1저자)",
+      "title_en": "Propranolol as a First-line Treatment for Pediatric Hemangioma (first author)",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "venue": "Clinical Pediatric Hematology-Oncology · 2016",
+        "type": "paper"
+      },
+      "updated": ""
+    },
+    {
+      "id": "pub-02",
+      "category": "pub",
+      "order": 1,
+      "title": "Recurrent wheeze and its relationship with lung function and airway inflammation in preschool children",
+      "title_en": "",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "venue": "BMJ Open · 2017",
+        "type": "paper"
+      },
+      "updated": ""
+    },
+    {
+      "id": "pub-03",
+      "category": "pub",
+      "order": 2,
+      "title": "Acute Gastritis and Splenic Infarction Caused by Epstein-Barr Virus",
+      "title_en": "",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "venue": "Pediatric Gastroenterology, Hepatology & Nutrition · 2018",
+        "type": "paper"
+      },
+      "updated": ""
+    },
+    {
+      "id": "pub-04",
+      "category": "pub",
+      "order": 3,
+      "title": "Relationship between Breastfeeding, Birth History, and Acute Pyelonephritis in Infants",
+      "title_en": "",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "venue": "Journal of Korean Medical Science · 2020",
+        "type": "paper"
+      },
+      "updated": ""
+    },
+    {
+      "id": "pub-05",
+      "category": "pub",
+      "order": 4,
+      "title": "\"Multinational Biopharma in Korea RWE\"",
+      "title_en": "\"Multinational Biopharma in Korea RWE\"",
+      "body": "",
+      "body_en": "",
+      "tags": [],
+      "meta": {
+        "venue": "카카오헬스케어 · New Generation RWE Summit · 2026",
+        "type": "talk"
+      },
+      "updated": ""
+    },
+    {
+      "id": "notes-01",
+      "category": "notes",
+      "order": 0,
+      "title": "개인이 아니라 시스템을 바꾼다.",
+      "title_en": "Change the system, not the person.",
+      "body": "무언가 무너졌을 때 개인을 탓하는 건 대개 잘못된 독법이다. 바꿔야 할 것은 그 아래, 시스템에 있다. 그리고 관리자에게는 그에 대한 책임이 있다. 팀을 탓하는 대신, 시스템이 요구하는 수준까지 팀이 '준비'되도록 교육하는 관리의 책임이다. 누가 당직이든 돌아가야 했던 소아 CPR 교육 과정에서 시작된 생각이다.",
+      "body_en": "When something breaks, blaming a person is usually the wrong read; what needs to change sits underneath, in the system. And a manager carries the responsibility for it, preparing the team to the level the system asks for, training people rather than faulting them. That started with a pediatric-CPR loop that had to work no matter who was on shift.",
+      "tags": [],
+      "meta": {},
+      "updated": ""
+    },
+    {
+      "id": "notes-02",
+      "category": "notes",
+      "order": 1,
+      "title": "말이 아니라 결과물로.",
+      "title_en": "Show the deliverable, not the talk.",
+      "body": "말은 쉽다. 관성적으로 일하면서 대단한 걸 하는 척, 남의 성과나 당연히 해내야 할 성과를 말로 자기 공으로 돌리고, 의미 없는 결과를 성과로 포장하는 것. 그건 일이 아니다. 실제로 나온 결과물을 보여주면 된다.",
+      "body_en": "Talk is cheap. Working on inertia while narrating it as something grand, taking verbal credit for others' results or for outcomes you were simply supposed to deliver, dressing a meaningless output as an achievement, none of that is the work. Show what actually shipped.",
+      "tags": [],
+      "meta": {},
+      "updated": ""
+    },
+    {
+      "id": "notes-03",
+      "category": "notes",
+      "order": 2,
+      "title": "AX를 보는 관점",
+      "title_en": "How I see AX",
+      "body": "내가 보는 AX는 이렇다. 정량적으로 측정 가능해야 하고, 한 번에 모든 걸 바꾸는 게 아니다. AI native한 도메인 전문가와, 실제로 개발할 수 있는 데이터 전문가가 함께 워크플로우를 해체하고 정말 필요한 지점에만 AX를 이식한다. 큰 재건축이 아니라 섬세한 수술에 가깝다. 그럴듯해 보이는 걸 딸깍 만들어 \"뭐라도 만들었다\"는 데 도취되는 것이 함정이고, 진짜 기준은 그것이 생산성을 움직였는가다.",
+      "body_en": "How I see AX: it has to be measurable, and it isn't about changing everything at once. An AI-native domain expert and a data specialist who can actually build take a workflow apart together and graft AX only onto the parts that need it, closer to careful surgery than a big rebuild. The trap is clicking something plausible together and getting high on having made \"something\"; the real test is whether it moves productivity.",
+      "tags": [],
+      "meta": {
+        "source": "AX section"
+      },
+      "updated": ""
+    },
+    {
+      "id": "intro-01",
+      "category": "intro",
+      "order": 0,
+      "title": "히어로 소개문",
+      "title_en": "Hero intro",
+      "body": "소아과 전문의로 출발해 제약 메디컬 어페어즈에서 일한다. 대사질환 치료제의 런칭 전 전략을 맡고, 런칭에 필요한 파트너십·근거·AI 도구를 만든다.",
+      "body_en": "Pediatrician by training, now in pharma medical affairs, leading pre-launch strategy for a metabolic-disease therapy, and building the partnerships, evidence, and AI tools a launch needs.",
+      "tags": [],
+      "meta": {},
+      "updated": ""
+    }
+  ]
+}

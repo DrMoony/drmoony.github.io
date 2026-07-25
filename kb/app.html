@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Base · drmoony</title>
+<style>
+:root{
+  --bg:#0A0E0F; --panel:#12191C; --panel2:#161F22; --line:rgba(232,240,238,.10);
+  --line2:rgba(232,240,238,.18); --ink:#ECEFEC; --muted:#93A09D; --faint:#5D6A67;
+  --gold:#E6B15E; --gold2:#F2C982; --teal:#57B7C1; --danger:#E0736B;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.55 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",sans-serif;height:100vh;overflow:hidden;}
+button{font:inherit;cursor:pointer;color:inherit;background:none;border:0;}
+input,textarea{font:inherit;color:var(--ink);background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:9px 11px;width:100%;}
+input:focus,textarea:focus{outline:0;border-color:var(--gold);}
+textarea{resize:vertical;line-height:1.6;}
+.app{display:grid;grid-template-columns:280px 1fr;height:100vh;}
+
+/* sidebar */
+.side{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;}
+.side-head{padding:22px 20px 16px;border-bottom:1px solid var(--line);}
+.brand{font-size:19px;font-weight:700;letter-spacing:-.01em;}
+.brand b{color:var(--gold);}
+.brand-sub{font-size:11.5px;color:var(--faint);margin-top:3px;letter-spacing:.02em;}
+.cats{flex:1;overflow-y:auto;padding:10px;}
+.cat{display:flex;align-items:center;gap:8px;padding:9px 11px;border-radius:8px;cursor:pointer;transition:background .15s;}
+.cat:hover{background:var(--panel2);}
+.cat.on{background:rgba(230,177,94,.10);}
+.cat .nm{flex:1;font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cat.on .nm{color:var(--gold2);}
+.cat .ct{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;}
+.cat .ops{display:none;gap:2px;}
+.cat:hover .ops{display:flex;}
+.cat .ops button{font-size:12px;color:var(--faint);padding:2px 4px;border-radius:5px;}
+.cat .ops button:hover{color:var(--gold);background:rgba(230,177,94,.08);}
+.cat .ops button.del:hover{color:var(--danger);background:rgba(224,115,107,.08);}
+.addcat{width:100%;text-align:left;padding:9px 11px;margin-top:4px;font-size:13px;color:var(--muted);border-radius:8px;border:1px dashed var(--line2);}
+.addcat:hover{color:var(--gold);border-color:var(--gold);}
+.side-foot{padding:12px 20px;border-top:1px solid var(--line);font-size:11px;color:var(--faint);}
+
+/* main */
+.main{display:flex;flex-direction:column;min-height:0;}
+.top{display:flex;align-items:center;gap:14px;padding:18px 26px;border-bottom:1px solid var(--line);}
+.top h1{font-size:20px;font-weight:600;letter-spacing:-.01em;flex:1;}
+.top h1 span{color:var(--faint);font-weight:400;font-size:14px;margin-left:8px;}
+.search{max-width:260px;position:relative;}
+.search input{padding-left:32px;background:var(--panel);}
+.search::before{content:"⌕";position:absolute;left:11px;top:7px;color:var(--faint);font-size:16px;}
+.btn-add{background:var(--gold);color:#12100A;font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:100px;white-space:nowrap;}
+.btn-add:hover{background:var(--gold2);}
+.list{flex:1;overflow-y:auto;padding:20px 26px 60px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 15px;cursor:pointer;transition:border-color .2s,transform .1s;position:relative;}
+.card:hover{border-color:var(--line2);}
+.card:active{transform:scale(.995);}
+.card .ttl{font-size:15.5px;font-weight:600;letter-spacing:-.01em;line-height:1.3;}
+.card .ttl-en{font-size:12.5px;color:var(--faint);margin-top:2px;}
+.card .snip{font-size:13px;color:var(--muted);margin-top:9px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap;}
+.card .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.chip{font-size:10.5px;color:var(--muted);border:1px solid var(--line2);border-radius:100px;padding:3px 9px;}
+.chip.meta{color:var(--teal);border-color:rgba(87,183,193,.3);}
+.chip.tag{color:var(--gold);border-color:rgba(230,177,94,.28);}
+.card .ord{position:absolute;top:12px;right:12px;display:none;gap:2px;}
+.card:hover .ord{display:flex;}
+.card .ord button{font-size:12px;color:var(--faint);padding:2px 5px;border-radius:5px;}
+.card .ord button:hover{color:var(--gold);background:rgba(230,177,94,.08);}
+.empty{color:var(--faint);font-size:14px;padding:40px 4px;text-align:center;}
+
+/* editor modal */
+.ov{position:fixed;inset:0;background:rgba(6,9,10,.7);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;padding:5vh 20px;z-index:50;overflow-y:auto;}
+.ov.on{display:flex;}
+.editor{background:var(--panel);border:1px solid var(--line2);border-radius:16px;width:100%;max-width:680px;padding:26px 28px 24px;}
+.editor h2{font-size:16px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.editor h2 .cat-badge{font-size:11px;color:var(--gold);border:1px solid rgba(230,177,94,.3);border-radius:100px;padding:2px 10px;font-weight:500;}
+.fld{margin-bottom:14px;}
+.fld label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;font-weight:600;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.metarow{display:grid;grid-template-columns:150px 1fr auto;gap:8px;margin-bottom:7px;}
+.metarow button{color:var(--faint);font-size:16px;padding:0 6px;}
+.metarow button:hover{color:var(--danger);}
+.addmeta{font-size:12px;color:var(--muted);margin-top:2px;}
+.addmeta:hover{color:var(--gold);}
+.editor-foot{display:flex;align-items:center;gap:10px;margin-top:22px;}
+.editor-foot .spacer{flex:1;}
+.btn-save{background:var(--gold);color:#12100A;font-weight:600;padding:10px 22px;border-radius:100px;}
+.btn-save:hover{background:var(--gold2);}
+.btn-cancel{color:var(--muted);padding:10px 16px;}
+.btn-cancel:hover{color:var(--ink);}
+.btn-del{color:var(--danger);font-size:13px;padding:10px 14px;border:1px solid rgba(224,115,107,.3);border-radius:100px;}
+.btn-del:hover{background:rgba(224,115,107,.1);}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line2);color:var(--ink);padding:10px 20px;border-radius:100px;font-size:13px;opacity:0;transition:opacity .3s;z-index:99;pointer-events:none;}
+.toast.on{opacity:1;}
+@media(max-width:760px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr;height:100vh;}
+  .side{border-right:0;border-bottom:1px solid var(--line);min-height:0;}
+  .side-head{padding:14px 16px 10px;}
+  .cats{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;padding:10px 12px;gap:7px;flex:0 0 auto;}
+  .cat{flex:0 0 auto;padding:8px 13px;border:1px solid var(--line2);border-radius:100px;}
+  .cat.on{border-color:var(--gold);}
+  .cat .ops{display:none!important;}
+  .addcat{width:auto;flex:0 0 auto;white-space:nowrap;margin-top:0;padding:8px 14px;}
+  .side-foot{display:none;}
+  .top{flex-wrap:wrap;padding:14px 16px;}
+  .top h1{flex:1 0 100%;font-size:17px;margin-bottom:4px;}
+  .list{padding:16px;}
+  .grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="side-head">
+      <div class="brand">Knowledge <b>Base</b></div>
+      <div class="brand-sub">drmoony · 지식 보관소</div>
+    </div>
+    <div class="cats" id="cats"></div>
+    <div class="side-foot" id="foot">—</div>
+  </aside>
+  <main class="main">
+    <div class="top">
+      <h1 id="title">전체 <span id="subcount"></span></h1>
+      <div class="search"><input id="q" placeholder="검색 (제목·본문·태그)" autocomplete="off"></div>
+      <button class="btn-add" id="addItem">+ 항목 추가</button>
+    </div>
+    <div class="list"><div class="grid" id="grid"></div><div class="empty" id="empty" style="display:none"></div></div>
+  </main>
+</div>
+
+<div class="ov" id="ov">
+  <div class="editor">
+    <h2><span id="edTitle">항목</span><span class="cat-badge" id="edCat"></span></h2>
+    <div class="two">
+      <div class="fld"><label>제목 (KO)</label><input id="f_title"></div>
+      <div class="fld"><label>Title (EN)</label><input id="f_title_en"></div>
+    </div>
+    <div class="fld"><label>본문 (KO)</label><textarea id="f_body" rows="5"></textarea></div>
+    <div class="fld"><label>Body (EN)</label><textarea id="f_body_en" rows="4"></textarea></div>
+    <div class="fld"><label>태그 (쉼표로 구분)</label><input id="f_tags"></div>
+    <div class="fld"><label>메타 (key / value)</label><div id="metaRows"></div>
+      <button class="addmeta" id="addMeta">+ 메타 추가</button></div>
+    <div class="editor-foot">
+      <button class="btn-del" id="edDelete" style="display:none">삭제</button>
+      <div class="spacer"></div>
+      <button class="btn-cancel" id="edCancel">취소</button>
+      <button class="btn-save" id="edSave">저장</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+let S={categories:[],items:[]}, sel=null, editing=null, query="";
+const $=s=>document.querySelector(s), el=(t,c)=>{const e=document.createElement(t);if(c)e.className=c;return e;};
+
+async function api(action,body){
+  const r=await fetch("/api/"+action,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body||{})});
+  const d=await r.json();
+  if(!r.ok){toast(d.error||"오류");throw new Error(d.error);}
+  S=d;render();return d;
+}
+async function loadState(){S=await(await fetch("/api/state")).json();if(!sel&&S.categories[0])sel=S.categories[0].id;render();}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),1600);}
+function catName(id){const c=S.categories.find(c=>c.id===id);return c?c.name:"—";}
+function itemsOf(id){return S.items.filter(i=>i.category===id).sort((a,b)=>(a.order||0)-(b.order||0));}
+
+function render(){
+  // sidebar
+  const cats=$("#cats");cats.innerHTML="";
+  const all=el("div","cat"+(sel==="__all"?" on":""));
+  all.innerHTML=`<span class="nm">전체</span><span class="ct">${S.items.length}</span>`;
+  all.onclick=()=>{sel="__all";render();};cats.appendChild(all);
+  S.categories.sort((a,b)=>(a.order||0)-(b.order||0)).forEach((c,idx)=>{
+    const d=el("div","cat"+(sel===c.id?" on":""));
+    d.innerHTML=`<span class="nm">${esc(c.name)}</span><span class="ct">${itemsOf(c.id).length}</span>
+      <span class="ops"><button title="위로" data-u>↑</button><button title="이름변경" data-r>✎</button><button class="del" title="삭제" data-x>✕</button></span>`;
+    d.onclick=e=>{if(e.target.closest("button"))return;sel=c.id;query="";$("#q").value="";render();};
+    d.querySelector("[data-u]").onclick=()=>moveCat(c.id,-1);
+    d.querySelector("[data-r]").onclick=()=>renameCat(c);
+    d.querySelector("[data-x]").onclick=()=>delCat(c);
+    cats.appendChild(d);
+  });
+  const add=el("button","addcat");add.textContent="+ 카테고리";add.onclick=addCat;cats.appendChild(add);
+  $("#foot").textContent=`${S.categories.length} 카테고리 · ${S.items.length} 항목`;
+
+  // main
+  const isAll=sel==="__all"||query;
+  $("#title").innerHTML=(query?`검색: "${esc(query)}"`:(sel==="__all"?"전체":esc(catName(sel))))+` <span id="subcount"></span>`;
+  let list = query
+    ? S.items.filter(i=>match(i,query))
+    : (sel==="__all"?S.items.slice():itemsOf(sel));
+  if(!query) list.sort((a,b)=>(a.order||0)-(b.order||0));
+  $("#subcount").textContent=list.length+"개";
+  const grid=$("#grid"),empty=$("#empty");grid.innerHTML="";
+  if(!list.length){empty.style.display="block";empty.textContent=query?"검색 결과 없음":"항목이 없습니다. + 항목 추가로 시작하세요.";}
+  else empty.style.display="none";
+  list.forEach(i=>grid.appendChild(cardOf(i,!query&&sel!=="__all")));
+}
+function cardOf(i,ordControls){
+  const c=el("div","card");
+  const meta=Object.entries(i.meta||{}).filter(([k,v])=>v).slice(0,4)
+    .map(([k,v])=>`<span class="chip meta">${esc(k)}: ${esc(String(v)).slice(0,30)}</span>`).join("");
+  const tags=(i.tags||[]).map(t=>`<span class="chip tag">${esc(t)}</span>`).join("");
+  c.innerHTML=`<div class="ttl">${esc(i.title)||"<em style='color:var(--faint)'>제목 없음</em>"}</div>
+    ${i.title_en?`<div class="ttl-en">${esc(i.title_en)}</div>`:""}
+    ${i.body?`<div class="snip">${esc(i.body)}</div>`:""}
+    ${(meta||tags)?`<div class="chips">${tags}${meta}</div>`:""}
+    ${sel==="__all"||query?`<div class="chips"><span class="chip">${esc(catName(i.category))}</span></div>`:""}
+    ${ordControls?`<div class="ord"><button data-u>↑</button><button data-d>↓</button></div>`:""}`;
+  c.onclick=e=>{if(e.target.closest(".ord"))return;openEditor(i);};
+  if(ordControls){c.querySelector("[data-u]").onclick=e=>{e.stopPropagation();moveItem(i,-1);};
+    c.querySelector("[data-d]").onclick=e=>{e.stopPropagation();moveItem(i,1);};}
+  return c;
+}
+function match(i,q){q=q.toLowerCase();return[i.title,i.title_en,i.body,i.body_en,(i.tags||[]).join(" "),Object.values(i.meta||{}).join(" ")].join(" ").toLowerCase().includes(q);}
+function esc(s){return(s==null?"":String(s)).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
+
+/* category ops */
+async function addCat(){const n=prompt("새 카테고리 이름");if(n&&n.trim()){const d=await api("category.add",{name:n.trim()});sel=d.categories[d.categories.length-1].id;render();}}
+async function renameCat(c){const n=prompt("카테고리 이름 변경",c.name);if(n&&n.trim())await api("category.rename",{id:c.id,name:n.trim()});}
+async function delCat(c){const n=itemsOf(c.id).length;if(!confirm(`"${c.name}" 카테고리${n?` 및 항목 ${n}개`:""}를 삭제할까요?`))return;await api("category.delete",{id:c.id,cascade:true});if(sel===c.id)sel="__all";render();}
+async function moveCat(id,dir){const ids=S.categories.sort((a,b)=>(a.order||0)-(b.order||0)).map(c=>c.id);const i=ids.indexOf(id),j=i+dir;if(j<0||j>=ids.length)return;[ids[i],ids[j]]=[ids[j],ids[i]];await api("category.reorder",{ids});}
+async function moveItem(it,dir){const ids=itemsOf(it.category).map(i=>i.id);const i=ids.indexOf(it.id),j=i+dir;if(j<0||j>=ids.length)return;[ids[i],ids[j]]=[ids[j],ids[i]];await api("item.reorder",{category:it.category,ids});}
+
+/* editor */
+function openEditor(it){
+  editing=it||{category:sel==="__all"?(S.categories[0]||{}).id:sel,title:"",title_en:"",body:"",body_en:"",tags:[],meta:{}};
+  $("#edTitle").textContent=it?"항목 편집":"새 항목";
+  $("#edCat").textContent=catName(editing.category);
+  $("#f_title").value=editing.title||"";$("#f_title_en").value=editing.title_en||"";
+  $("#f_body").value=editing.body||"";$("#f_body_en").value=editing.body_en||"";
+  $("#f_tags").value=(editing.tags||[]).join(", ");
+  renderMeta(editing.meta||{});
+  $("#edDelete").style.display=it?"block":"none";
+  $("#ov").classList.add("on");$("#f_title").focus();
+}
+function renderMeta(meta){const box=$("#metaRows");box.innerHTML="";Object.entries(meta).forEach(([k,v])=>box.appendChild(metaRow(k,v)));}
+function metaRow(k,v){const r=el("div","metarow");
+  r.innerHTML=`<input class="mk" placeholder="key" value="${esc(k)}"><input class="mv" placeholder="value" value="${esc(v)}"><button title="삭제">✕</button>`;
+  r.querySelector("button").onclick=()=>r.remove();return r;}
+function collectMeta(){const m={};document.querySelectorAll("#metaRows .metarow").forEach(r=>{const k=r.querySelector(".mk").value.trim();const v=r.querySelector(".mv").value;if(k)m[k]=v;});return m;}
+function closeEditor(){$("#ov").classList.remove("on");editing=null;}
+
+async function saveEditor(){
+  const payload={title:$("#f_title").value,title_en:$("#f_title_en").value,
+    body:$("#f_body").value,body_en:$("#f_body_en").value,
+    tags:$("#f_tags").value.split(",").map(s=>s.trim()).filter(Boolean),meta:collectMeta()};
+  if(editing.id)await api("item.update",{id:editing.id,...payload});
+  else await api("item.add",{category:editing.category,...payload});
+  toast("저장됨");closeEditor();
+}
+async function delEditor(){if(!editing.id)return;if(!confirm("이 항목을 삭제할까요?"))return;await api("item.delete",{id:editing.id});toast("삭제됨");closeEditor();}
+
+/* wire */
+$("#addItem").onclick=()=>openEditor(null);
+$("#addMeta").onclick=()=>$("#metaRows").appendChild(metaRow("",""));
+$("#edSave").onclick=saveEditor;$("#edCancel").onclick=closeEditor;$("#edDelete").onclick=delEditor;
+$("#ov").onclick=e=>{if(e.target.id==="ov")closeEditor();};
+$("#q").oninput=e=>{query=e.target.value.trim();render();};
+document.onkeydown=e=>{if(e.key==="Escape"&&$("#ov").classList.contains("on"))closeEditor();
+  if((e.metaKey||e.ctrlKey)&&e.key==="Enter"&&$("#ov").classList.contains("on"))saveEditor();};
+loadState();
+</script>
+</body>
+</html>
